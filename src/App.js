@@ -1,5 +1,11 @@
-function App() {
-  return <h1>Estación Otaku</h1>;
-}
+import Hero from "./components/Hero";
+
+const App = () => {
+  return (
+    <main className="main">
+      <Hero />
+    </main>
+  );
+};
 
 export default App;
