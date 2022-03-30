@@ -1,0 +1,109 @@
+@mixin letters($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: #fff;
+}
+
+header {
+  background-color: #0b1437;
+  padding: 0.2rem 0;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  max-width: 1251px;
+  margin: 0 auto;
+}
+.header-container-login,
+.header-container-logo {
+  display: flex;
+  align-items: center;
+}
+.header-container-login {
+  gap: 0.2rem;
+}
+.header-container-logo {
+  gap: 0.5rem;
+}
+.header__image-container,
+.header__search-container,
+.header__avatar-container,
+.header__arrow-container {
+  display: flex;
+  margin: 0;
+}
+.header__image-container {
+  width: 100px;
+}
+.header__search-container {
+  width: 15px;
+}
+.header__avatar-container {
+  width: 40px;
+}
+.header__arrow-container {
+  width: 10px;
+}
+.header__image,
+.search__image,
+.avatar__image,
+.arrow__image {
+  width: 100%;
+}
+.header__username {
+  @include letters(700, 0.625rem, 0.756rem);
+  margin: 0;
+}
+.header__select {
+  @include letters(700, 0.625rem, 0.756rem);
+  background-color: #0b1437;
+}
+.header__button {
+  background-color: #5e39f0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 1.2rem;
+  @include letters(700, 0.625rem, 0.756rem);
+}
+.header-container__search {
+  background-color: transparent;
+  border: 0.1rem solid white;
+  padding: 0.1rem 0.2rem;
+  @include letters(700, 0.625rem, 0.756rem);
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 0.2rem 0;
+  }
+  .header-container {
+    padding: 0 3rem;
+  }
+  .header-container-login,
+  .header-container-logo {
+    gap: 1rem;
+  }
+  .header__image-container {
+    width: 150px;
+  }
+  .header__search-container {
+    width: 30px;
+  }
+  .header__avatar-container {
+    width: 60px;
+  }
+  .header__arrow-container {
+    width: 20px;
+  }
+  .header__button {
+    padding: 1rem 1.5rem;
+    @include letters(700, 1.2rem, 0.756rem);
+  }
+  .header__select,
+  .header__username {
+    @include letters(700, 1.2rem, 0.756rem);
+  }
+} ;
