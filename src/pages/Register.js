@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAuth } from "../context/authContext";
 
 
 const Register = () => {
@@ -7,6 +8,8 @@ const Register = () => {
         password: "",
       });
 
+    const {signup} = useAuth();
+
     const handleChange = e => {
         const {target: {name, value}} = e;
         setUser({...user,[name]:value});
@@ -14,7 +17,8 @@ const Register = () => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        console.log(user);
+        // console.log(user);
+        signup(user.email, user.password);
     }
 
 
