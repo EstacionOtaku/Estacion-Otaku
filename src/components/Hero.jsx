@@ -3,15 +3,16 @@ import mobileDecorationImageRight from "../assets/images/hero-anime-right.png";
 import mobileDecorationImageLeft from "../assets/images/hero-anime-left.png";
 
 import "../styles/css/Hero.css";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
       <section className="hero">
         <div className="hero-wrapper">
           <h1 className="hero__cta-text">Tus animes favoritos en un solo lugar</h1>
-          <a className="hero__cta-button" href="">
+          <Link to="/register" className="hero__cta-button">
             Únete gratis
-          </a>
+          </Link>
         </div>
         <div className="hero__gradient-background"></div>
         <figure className="mobile-hero__image-container">
