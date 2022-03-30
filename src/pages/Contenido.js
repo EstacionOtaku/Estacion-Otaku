@@ -1,15 +1,17 @@
 import { useAuth } from "../context/authContext";
 
-
 const Contenido = () => {
-    const {user} = useAuth()
-    console.log(user);
 
-    return (
-        <>
-            <div>Contenido</div>
-        </>
-      );
-}
- 
+  const { user } = useAuth();
+
+
+  return (
+    <>
+      <div>Contenido</div>
+      <h1> Wellcome </h1>
+
+    </>
+  );
+};
+
 export default Contenido;
