@@ -7,7 +7,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const { login } = useAuth();
+  const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
   const handleChange = ({ target: { name, value } }) => {
@@ -30,29 +30,38 @@ const Login = () => {
       }
     }
   };
+  const handleGoogleSignin = async () => {
+    try {
+      await loginWithGoogle();
+      navigate("/contenido");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
   return (
     <div>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        placeholder="ingresa tú correo"
-        name="email"
-        id="email"
-        onChange={handleChange}
-      />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          placeholder="ingresa tú correo"
+          name="email"
+          id="email"
+          onChange={handleChange}
+        />
 
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        placeholder="******"
-        name="password"
-        id="password"
-        onChange={handleChange}
-      />
-      <button>Login</button>
-    </form>
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          placeholder="******"
+          name="password"
+          id="password"
+          onChange={handleChange}
+        />
+        <button>Login</button>
+      </form>
+      <button onClick={handleGoogleSignin}>Login with Google</button>
     </div>
   );
 };
