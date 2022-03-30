@@ -8,7 +8,7 @@ const Contenido = () => {
   return (
     <>
       <div>Contenido</div>
-      <h1> Wellcome </h1>
+      <h1> Wellcome, {user.email} </h1>
 
     </>
   );
