@@ -106,4 +106,8 @@ header {
   .header__username {
     @include letters(700, 1.2rem, 0.756rem);
   }
+  .header-container__search {
+    padding: 0.3rem 0.5rem;
+    @include letters(700, 1.2rem, 0.756rem);
+  }
 } ;
