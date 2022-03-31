@@ -74,6 +74,25 @@ header {
   padding: 0.1rem 0.2rem;
   @include letters(700, 0.625rem, 0.756rem);
 }
+.header__avatar-options{
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header__modal-user{
+  background-color: #0b1437;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: 5.25rem;
+  left: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; 
+}
+.header__modal-user--active{
+  display: none;
+}
 
 @media (min-width: 1200px) {
   header {
