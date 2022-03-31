@@ -11,7 +11,7 @@ import StarPage from "./pages/StartPage";
 
 import Avatar from "./pages/Avatar";
 import { useEffect, useState } from "react";
-
+import Categoria from "./pages/Categoria";
 
 const App = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -44,6 +44,14 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Contenido />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/Categoria"
+            element={
+              <ProtectedRoute>
+                <Categoria />
               </ProtectedRoute>
             }
           />
