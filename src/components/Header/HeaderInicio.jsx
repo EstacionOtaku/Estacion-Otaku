@@ -7,16 +7,14 @@ import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 
 const HeaderInicio = () => {
-  
   const { user, logout } = useAuth();
-  const handleLogout = async() => {
+  const handleLogout = async () => {
     try {
-      await logout()
+      await logout();
     } catch (error) {
       console.log(error);
     }
-
-}
+  };
   return (
     <header className="header  ">
       <div className="header-container ">
