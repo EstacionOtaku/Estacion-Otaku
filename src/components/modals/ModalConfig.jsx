@@ -1,0 +1,55 @@
+import logo from "../../assets/Header/logo.png";
+import avatar from "../../assets/Header/avatar.png";
+import "../../styles/scss/ModalConfig.scss";
+const ModalConfig = () => {
+  return (
+    <section className="modal">
+      <div className="modal-behind">
+        <figure className="modal-behind__image-container">
+          <img src={logo} className="modal-behind__image"></img>
+        </figure>
+        <div className="modal-behind-text">
+          <figure className="modal-behind-text__image-container">
+            <img className="modal-behind-text__image-container"></img>
+          </figure>
+          <p className="modal-behind-text__atras">Atras</p>
+        </div>
+      </div>
+      <div className="modal-about">
+        <h1 className="modal-about__title">Configuracion de la cuenta</h1>
+        <h3 className="modal-about__edit">Edita tu perfil</h3>
+        <div className="modal-about-description">
+          <figure className="modal-about-description__image-container">
+            <img className="modal-about-description__image" src={avatar}></img>
+          </figure>
+          <div className="modal-about-description-name">
+            <input
+              className="modal-about-description-name__input"
+              placeholder="nombre localstorage"
+            ></input>
+            <label className="modal-about-description-name__label">
+              Ingrese tu Nombre de Perfil
+            </label>
+          </div>
+        </div>
+        <h3 className="modal-about__password">Cambia la contraseña de tu cuenta</h3>
+        <input
+          className="modal-about__input"
+          type="text"
+          placeholder="Ingresa la contraseña actual"
+        ></input>
+        <input
+          type="text"
+          className="modal-about__input"
+          placeholder="Ingresa la nueva contraseña"
+        ></input>
+        <div className="modal-about-button-container">
+          <button className="modal-about-button__save">Guardar</button>
+          <button className="modal-about-button__remove">Eliminar Cuenta</button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ModalConfig;
