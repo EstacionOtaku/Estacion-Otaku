@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
-
+import "../styles/css/FormSesion.css"
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -93,6 +93,7 @@ const Login = () => {
           onChange={handleChange}
         />
         <button>Login</button>
+        <Link to="/register">¿Eres nuevo por aquí? Registrate ahora</Link>
         <a href="#!"
           onClick={handleResetPassword}
         >Forgot Password?</a>
