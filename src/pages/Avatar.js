@@ -6,9 +6,10 @@ import DragonBallz from "../components/Cards/DragonBallzCard";
 import Kaisen from "../components/Cards/KaisenCard";
 import NarutoCard from "../components/Cards/NaturoCard";
 import OnePiece from "../components/Cards/OnePieceCard";
+import HeaderInicio from "../components/Header/HeaderInicio";
 import "../styles/scss/Avatar.scss";
 
-const Avatar = () => {
+const Avatar = ({ setImageHeader }) => {
   return (
     <>
       <section className="portada">
@@ -27,12 +28,12 @@ const Avatar = () => {
       </section>
       <section className="card">
         <div className="card-container">
-          <DragonBallz></DragonBallz>
-          <NarutoCard></NarutoCard>
-          <AttackTitanCard></AttackTitanCard>
-          <DemonCard></DemonCard>
-          <OnePiece></OnePiece>
-          <Kaisen></Kaisen>
+          <DragonBallz setImageHeader={setImageHeader}></DragonBallz>
+          <NarutoCard setImageHeader={setImageHeader}></NarutoCard>
+          <AttackTitanCard setImageHeader={setImageHeader}></AttackTitanCard>
+          <DemonCard setImageHeader={setImageHeader}></DemonCard>
+          <OnePiece setImageHeader={setImageHeader}></OnePiece>
+          <Kaisen setImageHeader={setImageHeader}></Kaisen>
         </div>
       </section>
     </>

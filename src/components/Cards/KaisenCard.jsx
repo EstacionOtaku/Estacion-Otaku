@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../styles/css/Spinner.css";
 
-const Kaisen = () => {
+const Kaisen = ({ setImageHeader }) => {
   const [kaisen, setKaisen] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +17,7 @@ const Kaisen = () => {
   }, []);
 
   const handleImg = (e) => {
-    console.log(e.target.currentSrc);
+    setImageHeader(e.target.currentSrc);
   };
   return (
     <>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../styles/css/Spinner.css";
 
-const AttackTitanCard = () => {
+const AttackTitanCard = ({ setImageHeader }) => {
   const [titan, setTitan] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +17,7 @@ const AttackTitanCard = () => {
   }, []);
 
   const handleImg = (e) => {
-    console.log(e.target.currentSrc);
+    setImageHeader(e.target.currentSrc);
   };
   return (
     <>

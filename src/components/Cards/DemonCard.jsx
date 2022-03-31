@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../styles/css/Spinner.css";
 
-const DemonCard = () => {
+const DemonCard = ({ setImageHeader }) => {
   const [demon, setDemon] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +17,7 @@ const DemonCard = () => {
   }, []);
 
   const handleImg = (e) => {
-    console.log(e.target.currentSrc);
+    setImageHeader(e.target.currentSrc);
   };
   return (
     <>
