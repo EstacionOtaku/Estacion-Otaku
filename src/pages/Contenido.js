@@ -1,18 +1,20 @@
 import { useAuth } from "../context/authContext";
 
+import HeaderInicio from "../components/Header/HeaderInicio";
 const Contenido = () => {
-
-  const { user, logout } = useAuth();
-  const handleLogout = async() => {
-    await logout()
-}
-
   return (
     <>
+      <HeaderInicio />
+      <img
+        className="prueba_image"
+        src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
+        alt="portada"
+      />
       <div>Contenido</div>
-      <h1> Wellcome, {user.email} </h1>
-      <hr/>
-      <button onClick={handleLogout}>salir</button>
+      <hr />
+      <h3>Aqui estaran los carrusel, etc :V</h3>
+
+      <h4>Bota tu gaaaaaa</h4>
     </>
   );
 };

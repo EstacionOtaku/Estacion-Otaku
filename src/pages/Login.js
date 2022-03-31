@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { AlertError } from "../components/Alert/AlertError";
+import Swal from "sweetalert2";
+
 
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
-  const { login, loginWithGoogle } = useAuth();
+  const { login, loginWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
   const handleChange = ({ target: { name, value } }) => {
@@ -18,6 +21,15 @@ const Login = () => {
     setError("");
     try {
       await login(user.email, user.password);
+      Swal.fire({
+        position: 'center',
+        imageUrl: 'https://i.postimg.cc/63m6pLNt/logo-estacion-otaku.jpg',
+        imageHeight: 300,
+        imageAlt: 'A tall image',
+        title: 'Wellcome to Estacion Otaku',
+        showConfirmButton: false,
+        timer: 1500
+      })
       navigate("/contenido");
     } catch (error) {
       setError(error.mesagge);
@@ -33,14 +45,35 @@ const Login = () => {
   const handleGoogleSignin = async () => {
     try {
       await loginWithGoogle();
+      Swal.fire({
+        position: 'center',
+        imageUrl: 'https://i.postimg.cc/63m6pLNt/logo-estacion-otaku.jpg',
+        imageHeight: 300,
+        imageAlt: 'A tall image',
+        title: 'Wellcome to Estacion Otaku',
+        showConfirmButton: false,
+        timer: 1500
+      })
       navigate("/contenido");
     } catch (error) {
       setError(error.message);
     }
   };
+
+  const handleResetPassword = async() => {
+    if (!user.email) return setError("Porfavor ingrese su correo");
+    try {
+      await resetPassword(user.email);
+      alert('Se envio un mensaje a su correo');
+    } catch (error) {
+      setError(error.mesagge) 
+    }
+  }
+
+
   return (
     <div>
-      {error && <p>{error}</p>}
+      {error && <AlertError mesagge={error}/>}
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input
@@ -60,6 +93,9 @@ const Login = () => {
           onChange={handleChange}
         />
         <button>Login</button>
+        <a href="#!"
+          onClick={handleResetPassword}
+        >Forgot Password?</a>
       </form>
       <button onClick={handleGoogleSignin}>Login with Google</button>
     </div>
