@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { AlertError } from "../components/Alert/AlertError";
+import Swal from "sweetalert2";
+
+
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -21,6 +25,13 @@ const Register = () => {
         // console.log(user);
         try {
           await signup(user.email, user.password);
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Success Register',
+            showConfirmButton: false,
+            timer: 1500
+          })
           navigate("/login");
         } catch (error) {
           setError(error.mesagge);
@@ -43,7 +54,7 @@ const Register = () => {
   return (
     <>
       <div>
-        {error && <p>{error}</p>}
+      {error && <AlertError mesagge={error}/>}
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input
