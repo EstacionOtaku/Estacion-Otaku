@@ -6,12 +6,14 @@ const DemonCard = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Demon")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((demon) => {
-        setDemon(demon);
+      .then((response) => {
+        setDemon(response.Demon);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const DemonCard = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>

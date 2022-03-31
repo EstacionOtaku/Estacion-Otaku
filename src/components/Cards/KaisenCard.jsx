@@ -6,12 +6,14 @@ const Kaisen = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Kaisen")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((kaisen) => {
-        setKaisen(kaisen);
+      .then((response) => {
+        setKaisen(response.Kaisen);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const Kaisen = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>
