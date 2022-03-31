@@ -3,6 +3,8 @@ import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
+import '../styles/css/gina.css';
+
 
 
 const Login = () => {
@@ -97,7 +99,7 @@ const Login = () => {
           onClick={handleResetPassword}
         >Forgot Password?</a>
       </form>
-      <button onClick={handleGoogleSignin}>Login with Google</button>
+      <button onClick={handleGoogleSignin} className="button_gina">Login with Google</button>
     </div>
   );
 };

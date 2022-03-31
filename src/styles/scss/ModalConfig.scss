@@ -1,0 +1,167 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: #070a19;
+  padding: 2rem 1rem;
+  border-radius: 30px;
+  gap: 1rem;
+}
+.modal-behind {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-behind__image-container {
+  width: 100px;
+}
+.modal-behind__image {
+  width: 100%;
+}
+.modal-behind-text {
+  display: flex;
+  align-items: center;
+}
+.modal-behind-text__image-container {
+  display: flex;
+  width: 10px;
+}
+.modal-behind-text__image {
+  width: 100%;
+}
+.modal-behind-text__atras {
+  font-size: 0.8rem;
+}
+.modal-about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal-about__title {
+  font-size: 1.2rem;
+}
+.modal-about__edit {
+  color: #fff6;
+}
+.modal-about-description {
+  display: flex;
+  padding: 1rem 0;
+  text-align: left;
+  justify-content: space-around;
+}
+.modal-about-description__image-container {
+  width: 50px;
+}
+.modal-about-description__image {
+  width: 100%;
+}
+.modal-about-description-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  gap: 0.5rem;
+}
+.modal-about-description-name__input {
+  padding: 0.2rem 0.2rem;
+  border: 0;
+  background-color: transparent;
+  border: 1px solid #fff5;
+  font-size: 0.6rem;
+}
+.modal-about-description-name__input::placeholder {
+  color: #fff;
+}
+.modal-about-description-name__label {
+  color: #fff6;
+}
+.modal-about__password {
+  color: #fff6;
+}
+.modal-about__input {
+  color: #fff5;
+  background-color: transparent;
+  border: 1px solid #fff5;
+  width: 200px;
+  margin: 0 auto;
+}
+.modal-about-button-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.modal-about-button__save,
+.modal-about-button__remove {
+  width: 150px;
+  border: 0px;
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+.modal-about-button__save {
+  background-color: #5e39f0;
+  color: #fff;
+}
+.modal-about-button__remove {
+  color: #fff5;
+  background-color: transparent;
+  border: 1px solid #fff5;
+}
+
+@media (min-width: 900px) {
+  .modal-container {
+    padding: 2.5rem 3rem;
+    gap: 2rem;
+  }
+  .modal-behind__image-container {
+    width: 150px;
+  }
+  .modal-behind-text__image-container {
+    width: 29px;
+  }
+  .modal-behind-text__atras {
+    font-size: 1rem;
+  }
+  .modal-about {
+    gap: 1rem;
+  }
+  .modal-about__title {
+    font-size: 1.8rem;
+  }
+  .modal-about-description {
+    padding: 1.2rem 0;
+  }
+  .modal-about-description__image-container {
+    width: 90px;
+  }
+  .modal-about-description-name {
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+  .modal-about-description-name__input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .modal-about__input {
+    padding: 0.5rem;
+  }
+  .modal-about-button-container {
+    padding: 1.5rem 0;
+    gap: 1rem;
+  }
+  .modal-about-button__save,
+  .modal-about-button__remove {
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
