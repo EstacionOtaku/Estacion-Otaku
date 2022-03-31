@@ -6,12 +6,14 @@ const OnePiece = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/OnePiece")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((onePiece) => {
-        setOnePiece(onePiece);
+      .then((response) => {
+        setOnePiece(response.OnePiece);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const OnePiece = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>

@@ -6,12 +6,14 @@ const NarutoCard = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Naruto")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((naruto) => {
-        setNaruto(naruto);
+      .then((response) => {
+        setNaruto(response.Naruto);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const NarutoCard = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>

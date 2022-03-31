@@ -6,12 +6,14 @@ const DragonBallz = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/DragonBallz")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((dragon) => {
-        setDragon(dragon);
+      .then((response) => {
+        setDragon(response.DragonBallz);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const DragonBallz = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>

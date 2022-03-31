@@ -6,12 +6,14 @@ const AttackTitanCard = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/Titan")
+    fetch(
+      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
+    )
       .then((response) => {
         return response.json();
       })
-      .then((titan) => {
-        setTitan(titan);
+      .then((response) => {
+        setTitan(response.Titan);
         setLoading(true);
       });
   }, []);
@@ -45,7 +47,7 @@ const AttackTitanCard = ({ setImageHeader }) => {
           </div>
         </section>
       ) : (
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>
