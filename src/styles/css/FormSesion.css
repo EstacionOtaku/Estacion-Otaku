@@ -1,18 +1,26 @@
-.form-container {
+.form-container-all,
+.form-message,
+.form-input-container,
+.form__buttons
+.button-register-container,
+.other_enlaces{
     display: flex;
     flex-direction: column;
-    line-height: 2.7rem;
     align-items: center;
-    width: 100%;
-    height: 100vh;
     justify-content: center;
 }
 
+
+.form-container-all{   
+    width: 100%;
+    height: 100vh;
+    gap: 1.5rem;
+}
+
 .form-message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    padding: 0 .8rem;
 }
 
 .form-message-title {
@@ -23,48 +31,73 @@
     font-size: 0.9rem;
 }
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+.form-input-container,
+.button-register-container{
+    gap: 1rem;
+}
+
 .form-input {
-    width: 25rem;
+    width: 20rem;
     border-color: #728FFF;
     background-color: transparent;
     border-radius: 0.4rem;
-    padding: 0.4rem;
+    padding: .5rem ;
     color: white;
 
 }
 
-.button-register {
-    width: 12.5rem;
+.button-option {
+    width: 15rem;
     border-radius: 1.3rem;
     background-color: #5E39F0;
     color: white;
-    padding: 1rem;
+    padding: .75rem 0;
     border: none;
     font-weight: 600;
-    
 }
 
-.button-register-container{
-    display: flex;
-    gap: 1rem;
-}
 .form__buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 1rem;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .button-info-register {
     background-color: transparent;
     border: 1px solid #5E39F0;
     border-radius: 1.3rem;
-    width: 20.5rem;
-
+    width: 15rem;
+    padding: .5rem ;
+    font-size: .9rem;
 }
 
+.other-option,
 .forgot-passoword-register{
+    font-size: .9rem;
+    text-decoration: underline;
+}
+.other_enlaces{
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+
+.error-form-container{
+    background-color: #fdb1b1;
+    text-align: center;
+    width: 20rem;
+    padding: .5rem 0;
+    border-radius: .5rem;
+}
+.error-form-message{
+    color: #ba002e;
+    font-style: italic;
+    font-size: .9rem;
     text-decoration: underline;
 }

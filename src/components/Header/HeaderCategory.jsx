@@ -4,7 +4,6 @@ import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import ModalConfig from "../modals/ModalConfig";
 
