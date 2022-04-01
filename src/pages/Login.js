@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
-
+import "../styles/css/FormSesion.css"
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -60,46 +60,58 @@ const Login = () => {
     }
   };
 
-  const handleResetPassword = async() => {
+  const handleResetPassword = async () => {
     if (!user.email) return setError("Porfavor ingrese su correo");
     try {
       await resetPassword(user.email);
       alert('Se envio un mensaje a su correo');
     } catch (error) {
-      setError(error.mesagge) 
+      setError(error.mesagge)
     }
   }
 
 
   return (
-    <div>
-      {error && <AlertError mesagge={error}/>}
+    <div className="form-container">
+      <div className="form-message">
+        <h2 className="form-message-title">Inicia sesión </h2>
+        <h3 className="form-message-subtitle">Ingresa tu dirección de correo eléctronico y contraseña para acceder a tu cuenta</h3>
+      </div>
+      {error && <AlertError mesagge={error} />}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          placeholder="ingresa tú correo"
-          name="email"
-          id="email"
-          onChange={handleChange}
-        />
+        <div className="form-input-container">
+          <input className="form-input"
+            type="email"
+            placeholder="ingresa tú correo"
+            name="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
 
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          placeholder="******"
-          name="password"
-          id="password"
-          onChange={handleChange}
-        />
-        <button>Login</button>
-        <a href="#!"
-          onClick={handleResetPassword}
-        >Forgot Password?</a>
+        <div className="form-input-container">
+          <input className="form-input"
+            type="password"
+            placeholder="******"
+            name="password"
+            id="password"
+            onChange={handleChange}
+          />
+        </div>
+
+        <section className="form__buttons">
+          <div className="button-register-container">
+          <button className="button-register">Login</button>
+          <button className="button-register" onClick={handleGoogleSignin}>Login with Google</button>
+          </div>
+          <Link to="/register" className="button-info-register">¿Eres nuevo por aquí? Registrate ahora</Link>
+          <a href="#!"
+            onClick={handleResetPassword} className="forgot-passoword-register"
+          >¿Olvidaste tu contraseña?</a>
+        </section>
       </form>
-      <button onClick={handleGoogleSignin}>Login with Google</button>
     </div>
-  );
+  ); 
 };
 
 export default Login;

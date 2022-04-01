@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
+import "../styles/css/FormSesion.css"
 
 
 
@@ -53,27 +54,56 @@ const Register = () => {
 
   return (
     <>
-      <div>
+      <div className="form-container"> 
+        <div className="form-message">
+          <h2 className="form-message-title">Registrate aquí</h2>
+          <h3 className="form-message-subtitle">Ingresa tus datos para registrarte.</h3>
+        </div>
       {error && <AlertError mesagge={error}/>}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input
+        <form onSubmit={handleSubmit} >
+        <div className="form-input-container">
+          <input className="form-input"
+            type="text"
+            placeholder="Ingresa tu nommbre"
+            name="name"
+            id="name"
+          />
+         </div>
+
+        <div className="form-input-container">
+          <input className="form-input"
             type="email"
             placeholder="ingresa tú correo"
             name="email"
             id="email"
             onChange={handleChange}
           />
+         </div>
 
-          <label htmlFor="password">Password</label>
-          <input
+         <div className="form-input-container">
+          <input className="form-input"
             type="password"
-            placeholder="******"
+            placeholder="Contraseña"
             name="password"
             id="password"
             onChange={handleChange}
           />
-          <button>Register</button>
+          </div>
+
+        <div className="form-input-container">
+          <input className="form-input"
+            type="password"
+            placeholder="Confirma tu contraseña"
+            name="password-confirm"
+            id="password-confirm"
+          />
+          </div>
+          
+          <div className="form__buttons">
+          <button className="button-register">Registrate ahora</button>
+          <p>o</p>
+          <Link to="/login"> Iniciar sesión</Link>
+          </div>
         </form>
       </div>
     </>
