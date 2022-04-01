@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
+import "../styles/css/FormSesion.css"
 
 
 
 const Register = () => {
     const [user, setUser] = useState({
         email: "",
-        password: "",
+        password: ""
       });
     const [error, setError] = useState(); 
     const navigate = useNavigate();
@@ -18,13 +19,18 @@ const Register = () => {
     const handleChange = e => {
         const {target: {name, value}} = e;
         setUser({...user,[name]:value});
+        
     }
     const handleSubmit = async e => {
         e.preventDefault();
         setError('');
-        // console.log(user);
-        try {
+        console.log(user);
+        if (user.password !== user.passwordconfirm){
+          setError('Las contraseñas son distintas');
+        } else {
+        try {  
           await signup(user.email, user.password);
+          localStorage.setItem('nombre',user.name);
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -47,33 +53,68 @@ const Register = () => {
           else if (error.code === "auth/email-already-in-use"){
             setError('Este correo ya está registrado');
           }
+          else if (user.password !== user.passwordconfirm){
+            setError('Las contraseñas son distintas');
+          }
         }
+      }
     }
 
-
+  
   return (
     <>
-      <div>
+      <div className="form-container"> 
+        <div className="form-message">
+          <h2 className="form-message-title">Registrate aquí</h2>
+          <h3 className="form-message-subtitle">Ingresa tus datos para registrarte.</h3>
+        </div>
       {error && <AlertError mesagge={error}/>}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input
+        <form onSubmit={handleSubmit} >
+        <div className="form-input-container">
+          <input className="form-input"
+            type="text"
+            placeholder="Ingresa tu nommbre"
+            name="name"
+            id="name"
+            onChange={handleChange}
+          />
+         </div>
+
+        <div className="form-input-container">
+          <input className="form-input"
             type="email"
             placeholder="ingresa tú correo"
             name="email"
             id="email"
             onChange={handleChange}
           />
+         </div>
 
-          <label htmlFor="password">Password</label>
-          <input
+         <div className="form-input-container">
+          <input className="form-input"
             type="password"
-            placeholder="******"
+            placeholder="Contraseña"
             name="password"
             id="password"
             onChange={handleChange}
           />
-          <button>Register</button>
+          </div>
+
+        <div className="form-input-container">
+          <input className="form-input"
+            type="password"
+            placeholder="Confirma tu contraseña"
+            name="passwordconfirm"
+            id="passwordconfirm"
+            onChange={handleChange}
+          />
+          </div>
+          
+          <div className="form__buttons">
+          <button className="button-register">Registrate ahora</button>
+          <p>o</p>
+          <Link to="/login"> Iniciar sesión</Link>
+          </div>
         </form>
       </div>
     </>

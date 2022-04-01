@@ -5,9 +5,12 @@ import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const HeaderInicio = () => {
+
   const { user, logout } = useAuth();
+  const [userModal, setUserModal] = useState(false)
   const handleLogout = async () => {
     try {
       await logout();
@@ -15,6 +18,14 @@ const HeaderInicio = () => {
       console.log(error);
     }
   };
+  const handleUserOptions = () => {
+    if (!userModal){
+      setUserModal(true);
+    }
+    else {
+      setUserModal(false);
+    }
+  }
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -54,10 +65,21 @@ const HeaderInicio = () => {
           <figure className="header__avatar-container">
             <img src={avatar} className="avatar__image"></img>
           </figure>
-          <figure className="header__arrow-container">
-            <img src={arrow} className="arrow__image"></img>
-          </figure>
-          <button onClick={handleLogout}>salir</button>
+          <button
+            className="header__avatar-options"
+            onClick={handleUserOptions}
+          >
+            <figure className="header__arrow-container">
+              <img src={arrow} className="arrow__image"></img>
+            </figure>
+          </button>
+
+          {userModal && (
+            <div className="header__modal-user">
+              <Link to="/settings-acount" className="header__button-logout">Editar Cuenta</Link>
+              <button className="header__button-logout" onClick={handleLogout}>Cerrar Sesión</button>
+            </div>
+          )}  
         </div>
       </div>
     </header>

@@ -1,9 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import Hero from "./components/Hero";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { AuthProvider } from "./context/authContext";
-import Contenido from "./pages/Contenido";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 import StarPage from "./pages/StartPage";
@@ -11,7 +9,8 @@ import StarPage from "./pages/StartPage";
 
 import Avatar from "./pages/Avatar";
 import { useEffect, useState } from "react";
-
+import Categoria from "./pages/Categoria";
+import Inicio from "./pages/Inicio";
 
 const App = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -39,11 +38,20 @@ const App = () => {
           <Route path="/" element={<StarPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+        
           <Route
-            path="/contenido"
+            path="/categoria"
             element={
               <ProtectedRoute>
-                <Contenido />
+                <Categoria />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/inicio"
+            element={
+              <ProtectedRoute>
+                <Inicio />
               </ProtectedRoute>
             }
           />
