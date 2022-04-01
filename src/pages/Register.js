@@ -97,8 +97,8 @@ const Register = () => {
             name="password-confirm"
             id="password-confirm"
           />
-
           </div>
+          
           <div className="form__buttons">
           <button className="button-register">Registrate ahora</button>
           <p>o</p>
