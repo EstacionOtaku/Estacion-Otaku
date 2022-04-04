@@ -16,3 +16,10 @@
 .prueba_image{
   width: 100%;
 }
+
+@media (max-width:992px) {
+  .footer-logo {
+ width: 23%; 
+}
+  
+}
