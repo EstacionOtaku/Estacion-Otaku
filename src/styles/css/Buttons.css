@@ -1,0 +1,26 @@
+:root {
+ --main-cta-purple:#5E39F0;
+ --main-cta-purple-hover:#4c2fc0;
+ --lighter-bg-color:#0B1437 ;
+ --btn-transition: all 0.5s;
+ --main-white:white;
+ --round-border:50px;
+ --main-letter-spacing: -0.15rem;
+}
+.hero__cta-button{ 
+ text-align: center;
+color: var(--main-white);
+font-weight: 600;
+font-size: 1.3em;
+background-color: var(--main-cta-purple);
+padding: 0.7rem 2rem ;
+border-radius: var(--round-border);
+transition: var(--btn-transition);
+text-decoration: none;
+width: fit-content;
+margin: 0 auto;
+}
+.hero__cta-button:hover {
+ background-color: var(--main-cta-purple-hover);
+ color: inherit;
+}
