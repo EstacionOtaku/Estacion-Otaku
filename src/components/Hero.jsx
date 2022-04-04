@@ -3,6 +3,7 @@ import mobileDecorationImageRight from "../assets/images/hero-anime-right.png";
 import mobileDecorationImageLeft from "../assets/images/hero-anime-left.png";
 
 import "../styles/css/Hero.css";
+
 const Hero = () => {
   return (
     <>

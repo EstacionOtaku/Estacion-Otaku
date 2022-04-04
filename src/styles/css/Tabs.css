@@ -1,0 +1,253 @@
+:root {
+   --tab-section-bg: #1b1b1b;
+  --tab-section-table-gray: #262626;
+}
+
+.tabs {
+  background-color: var(--background-color);
+  z-index: 1;
+  /* color: white; */
+}
+
+.tabs__header-container {
+  width: min(1250px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tabs__tab-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 0 0.7rem;
+  color: var(--primary-gray);
+  fill: #767676;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-align: center;
+  color:#767676 ;
+}
+
+.tabs__tab-item:hover {
+  color: white;
+}
+
+.tabs__tab-item--active {
+  border-bottom: solid var(--primary-red);
+  color: white;
+  transition: all 0.1s;
+}
+
+.tab__icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: #767676;
+  transform: scale(1);
+  margin: -0.3rem 0;
+  transition: all 0.5s;
+}
+
+.tab__icon:hover {
+  background-color: #fff;
+}
+
+.tab__icon--active {
+  background-color: #fff;
+}
+
+.tab__icon--hover {
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.tab__icon--devices {
+  mask: url("../../assets/images/tab-devices-icon.svg") center no-repeat;
+  /* width: 10rem; */
+  transform: scale(1.8);
+
+  -webkit-mask: url("../../assets/images/tab-devices-icon.svg") center no-repeat;
+}
+
+.tab__icon--door {
+  mask: url("../../assets/images/tab-no-commitment-icon.svg") center no-repeat;
+  -webkit-mask: url("../../assets/images/tab-no-commitment-icon.svg") center no-repeat;
+  transform: scale(1.5);
+}
+
+.tab__icon--price {
+  mask: url("../../assets/images/tab-prices-icon.svg") center no-repeat;
+  -webkit-mask: url("../../assets/images/tab-prices-icon.svg") center no-repeat;
+  transform: scale(0.6);
+}
+
+.tabs__tab-title {
+  margin-top: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.tabs__tab-title:hover{
+  color: white
+}
+
+.tab-content {
+  width: min(1250px, 90%);
+  margin: 0 auto;
+  color: white;
+}
+
+.tab-1-content,
+.tab-2-content,
+.tab-3-content {
+  display: none;
+  opacity: 0;
+}
+
+.show {
+  display: block !important;
+  opacity: 1 !important;
+  transition: all 1s;
+}
+
+.tab-content__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.tab-content__inner-cta {
+  padding: 4rem 0;
+  width: min(90%, 800px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.tab-content__dynamic-date {
+  margin-top: -0.2rem;
+  font-size: 0.8em;
+}
+
+.tab-content__inner-cta--cancel {
+  padding: 4rem 0 1rem;
+}
+
+.tab-content__description {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.tab-content__description-subtitle {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.tab-content__image-container {
+  width: min(90%, 400px);
+}
+
+.tab-content__image {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tab-content__button {
+  padding: 1rem;
+  border-radius: 2px;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: var(--primary-red);
+  font-weight: 5 00;
+  width: fit-content;
+  justify-self: center;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.tab-content__button:hover {
+  border: 0.1rem solid var(--backgroud-color);
+  font-weight: bold;
+  background-color: var(--button-hover-color);
+}
+
+.tab-2-content-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.tab-content__item {
+  padding-bottom: 4rem;
+}
+
+.table {
+  width: min(90%, 700px);
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto;
+  margin-top: -1.5rem;
+}
+
+.table__title {
+  color: var(--text-color);
+}
+
+.table thead th {
+  text-transform: uppercase;
+  padding: 0.8rem;
+}
+
+.table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table tbody tr td {
+  color: #999;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+}
+
+.table tbody tr td:first-child {
+  text-align: left;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #222;
+}
+
+@media (min-width: 854px) {
+  .tab-2-content-bottom {
+    flex-direction: row;
+  }
+
+  .tab-content__inner-cta {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 3rem;
+  }
+  .tab-content__dynamic-date {
+    align-self: start;
+    grid-column: 2/3;
+    margin-top: -2rem;
+  }
+
+  .tab-content__button {
+    width: 100%;
+  }
+  .table {
+    margin: 0;
+  }
+
+}
