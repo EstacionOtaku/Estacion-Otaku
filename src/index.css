@@ -6,8 +6,13 @@
 
 .body {
   font-family: "Inter", sans-serif;
+  color: #fff;
 }
 
 .main { 
   background-color: #0B1437
+}
+
+.prueba_image{
+  width: 100%;
 }
