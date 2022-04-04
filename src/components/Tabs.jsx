@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaCheck, FaTimes } from "react-icons/fa";
 import "../styles/css/Tabs.css";
 
 const Tabs = () => {
@@ -165,25 +166,31 @@ const Tabs = () => {
                   <tr>
                     <td>HD Disponible</td>
                     <td>
-                      <i className="fas fa-times"></i>
+                      <i className="fas fa-times"><FaTimes/></i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Ultra HD Disponible</td>
                     <td>
-                      <i className="fas fa-times"></i>
+                      <i className="fas fa-times"><FaTimes/></i>
                     </td>
                     <td>
-                      <i className="fas fa-times"></i>
+                      <i className="fas fa-times"><FaTimes/></i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                   <tr>
@@ -195,49 +202,73 @@ const Tabs = () => {
                   <tr>
                     <td>Mira en tu laptop, TV, smartphone y tablet.</td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Películas y series ilimitadas</td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Cancela cuando quieras</td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Primer mes gratis</td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                     <td>
-                      <i className="fas fa-check"></i>
+                      <i className="fas fa-check">
+                        <FaCheck />
+                      </i>
                     </td>
                   </tr>
                 </tbody>
