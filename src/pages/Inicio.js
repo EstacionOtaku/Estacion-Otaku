@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import HeaderCategory from "../components/Header/HeaderCategory";
 const Inicio = () => {
   return (
@@ -8,6 +9,7 @@ const Inicio = () => {
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
         alt="portada"
       />
+      <Footer></Footer>
     </>
   );
 };
