@@ -144,6 +144,7 @@ const Nosotros = () => {
           </div>
         </article>
       </form>
+      <Footer></Footer>
     </>
   );
 };
