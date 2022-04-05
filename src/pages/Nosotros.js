@@ -6,6 +6,7 @@ import Logo from "../assets/Nosotros/nk.png";
 import Footer from "../components/Footer/Footer";
 import FormNosotros from "../components/Form/FormNosotros";
 import NosotrosCards from "../components/Cards/NosotrosCards";
+import CarruselInfoNosotros from "../components/Carrusel/CarruselInfoNosotros";
 
 const Nosotros = () => {
   return (
@@ -25,6 +26,7 @@ const Nosotros = () => {
           </p>
         </div>
       </article>
+      <CarruselInfoNosotros></CarruselInfoNosotros>
       <NosotrosCards></NosotrosCards>
       <FormNosotros></FormNosotros>
       <Footer></Footer>
