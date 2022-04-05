@@ -1,6 +1,14 @@
+import FotoJeanFranco from "../../assets/Nosotros/Equipo/Jeanfranco.jpg"
+import FotoBruno from "../../assets/Nosotros/Equipo/Bruno.jpg"
+import FotoClarissa from "../../assets/Nosotros/Equipo/Clarissa.jpg"
+import FotoDiego from "../../assets/Nosotros/Equipo/Diego.jpg"
+import FotoPaula from "../../assets/Nosotros/Equipo/Paula.jpg"
+import FotoGina from "../../assets/Nosotros/Equipo/Gina.jpg"
+import FotoValeria from "../../assets/Nosotros/Equipo/Valeria.jpg"
+
 const CarruselInfoNosotros = () => {
     return ( 
-        <section className="equipo_carrusel bg-primary text-white">
+        <section className="equipo_carrusel text-white">
         <div className="container p-3">
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
@@ -15,7 +23,7 @@ const CarruselInfoNosotros = () => {
                 <div className="carousel-inner">
                   <div className="carousel-item active mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Jeanfranco.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoJeanFranco} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">
@@ -27,7 +35,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Clarissa.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoClarissa}alt="" className="rounded-circle img-perfil"  />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">
@@ -39,7 +47,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Bruno.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoBruno} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">
@@ -51,7 +59,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Paula.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoPaula} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">
@@ -64,7 +72,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Valeria.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoValeria} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">
@@ -76,7 +84,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/Diego.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoDiego} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">                         
@@ -88,7 +96,7 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/melodias.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src={FotoGina} alt="" className="rounded-circle img-perfil" />
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">                          
