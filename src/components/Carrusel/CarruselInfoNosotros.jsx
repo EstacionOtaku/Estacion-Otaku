@@ -21,7 +21,7 @@ const CarruselInfoNosotros = () => {
                         <div className="col-md-8 offset-md-2">
                             <p>La simplicidad es la clave de la verdadera elegancia</p>
                             <h3>Jeanfranco Lazarinos</h3>
-                            <h5 className="">FrontEnd Developer - Graph Design UX</h5>
+                            <h5 className="">FrontEnd Developer - Graph Design UI</h5>
                         </div>
                     </div>
                   </div>
@@ -76,13 +76,13 @@ const CarruselInfoNosotros = () => {
                   </div>
                   <div className="carousel-item mb-4">
                     <div className="col-lg-12 col-md-12 mb-4 text-center">       
-                        <img src="./img/Equipo/merlin.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
+                        <img src="./img/Equipo/Diego.jpg" alt="" className="rounded-circle" style="width: 15rem; height: 15rem;"/>
                     </div>
                     <div className="col-lg-12 col-md-12 mb-4  text-center">
                         <div className="col-md-8 offset-md-2">                         
-                            <p>Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus</p>
-                            <h3>Merlín.</h3>
-                            <h5 className="">Desarrolladora</h5>
+                            <p>Me apasiona el potencial que tiene el Internet para cambiar y mejorar el mundo</p>
+                            <h3>Diego Huamán</h3>
+                            <h5 className="">Desarrollador - Diseñador</h5>
                         </div>
                     </div>
                   </div>
