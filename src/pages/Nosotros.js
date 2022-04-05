@@ -7,6 +7,7 @@ import Footer from "../components/Footer/Footer";
 import FormNosotros from "../components/Form/FormNosotros";
 import NosotrosCards from "../components/Cards/NosotrosCards";
 import CarruselInfoNosotros from "../components/Carrusel/CarruselInfoNosotros";
+import CarruselAliadosNosotros from "../components/Carrusel/CarruselAliadosNosotros";
 
 const Nosotros = () => {
   return (
@@ -27,6 +28,7 @@ const Nosotros = () => {
         </div>
       </article>
       <CarruselInfoNosotros></CarruselInfoNosotros>
+      <CarruselAliadosNosotros></CarruselAliadosNosotros>
       <NosotrosCards></NosotrosCards>
       <FormNosotros></FormNosotros>
       <Footer></Footer>

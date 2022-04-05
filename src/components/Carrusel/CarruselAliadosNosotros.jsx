@@ -1,6 +1,15 @@
+import ImagenCe from "../../assets/Nosotros/Aliados/ce.png"
+import ImagenGhibli from "../../assets/Nosotros/Aliados/ghibli.png"
+import ImagenHayad from "../../assets/Nosotros/Aliados/hayad.png"
+import ImagenMadhouse from "../../assets/Nosotros/Aliados/madhouse.png"
+import ImagenPeru from "../../assets/Nosotros/Aliados/peru.png"
+import ImagenPierrot from "../../assets/Nosotros/Aliados/pierrot.png"
+import ImagenSunsire from "../../assets/Nosotros/Aliados/sunrise.png"
+import ImagenToei from "../../assets/Nosotros/Aliados/toei.png"
+import ImagenTrigger from "../../assets/Nosotros/Aliados/trigger.png"
 const CarruselAliadosNosotros = () => {
     return (
-        <section className="equipo_carrusel bg-primary text-white">
+        <section className="equipo_carrusel text-white">
         <div className="container p-3">
           <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">           
@@ -11,21 +20,21 @@ const CarruselAliadosNosotros = () => {
                       <div className="row">
                         <div className="col-lg-4 col-sm-4 col-sm-4 d-sm-block">                      
                             <img
-                              src="/img/Aliados/ce.png"
+                              src={ImagenCe}
                               className="card-img-top"
                               alt=""
                             />                      
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/ghibli.png"
+                              src={ImagenGhibli}
                               className="card-img-top"
                               alt=""
                             />                     
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/hayad.png"
+                              src={ImagenHayad}
                               className="card-img-top"
                               alt=""
                             />           
@@ -38,21 +47,21 @@ const CarruselAliadosNosotros = () => {
                       <div className="row">
                         <div className="col-lg-4 col-sm-4 col-sm-4 d-sm-block">                      
                             <img
-                              src="/img/Aliados/sunrise.png"
+                              src={ImagenSunsire}
                               className="card-img-top"
                               alt=""
                             />                      
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/peru.png"
+                              src={ImagenPeru}
                               className="card-img-top"
                               alt=""
                             />                     
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/madhouse.png"
+                              src={ImagenMadhouse}
                               className="card-img-top"
                               alt=""
                             />           
@@ -65,21 +74,21 @@ const CarruselAliadosNosotros = () => {
                       <div className="row">
                         <div className="col-lg-4 col-sm-4 col-sm-4 d-sm-block">                      
                             <img
-                              src="/img/Aliados/trigger.png"
+                              src={ImagenTrigger}
                               className="card-img-top"
                               alt=""
                             />                      
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/toei.png"
+                              src={ImagenToei}
                               className="card-img-top"
                               alt=""
                             />                     
                         </div>           
                         <div className="col-lg-4 d-none d-lg-block col-sm-4 d-sm-block">                       
                             <img
-                              src="img/Aliados/pierrot.png"
+                              src={ImagenPierrot}
                               className="card-img-top"
                               alt=""
                             />           
