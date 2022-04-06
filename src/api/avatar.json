@@ -1,0 +1,158 @@
+{
+  "DragonBallz": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/JzPgfMYb/personaje-1.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/GmcVgHKL/personaje-2.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/xTVWHsbb/personaje-3.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/05cRDGPk/Mask-group.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/4NyC5Kxz/Mask-group-1.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/br67PP3D/Mask-group-2.png"
+    }
+  ],
+  "Naruto": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/VvsrJ91r/personaje-1.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/25vBM826/personaje-2.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/QtJKNYLZ/personaje-3.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/mkXp4pdm/4.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/ZKnDHZR2/5.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/XNQz9XV9/6.png"
+    }
+  ],
+  "Titan": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/ZRX3k1pb/Mask-group.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/G24Y5cBg/Mask-group-1.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/KYqBfKYg/Mask-group-2.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/Dzy11Q7T/Mask-group-3.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/bwRQGVcg/Mask-group-4.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/DwhrwkDm/Mask-group-5.png"
+    }
+  ],
+  "Demon": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/YCHtDkDr/Mask-group.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/kX8nyDcY/Mask-group-1.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/8kxpWLhr/Mask-group-2.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/d1SfbmqR/Mask-group-3.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/zBfM2P1X/Mask-group-4.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/tgkw5GwM/Mask-group-5.png"
+    }
+  ],
+  "OnePiece": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/66SYVpjP/Mask-group.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/vTphG0xy/Mask-group-1.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/C5ZJy31J/Mask-group-2.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/sDQHbhGy/Mask-group-3.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/9MLNHPBX/Mask-group-4.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/W46HXcFk/Mask-group-5.png"
+    }
+  ],
+  "Kaisen": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/hGPRnDdK/Mask-group.png"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/T3cvBLhk/Mask-group-1.png"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/59H1j2k0/Mask-group-2.png"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/BZd3FfdC/Mask-group-3.png"
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/nzPd6ZvS/Mask-group-4.png"
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/7LXtnSbk/Mask-group-5.png"
+    }
+  ]
+}
