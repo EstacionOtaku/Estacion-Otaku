@@ -7,12 +7,14 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import StarPage from "./pages/StartPage";
 // import HeaderLanding from "./components/Header/HeaderLanding";
 
-import Avatar from "./pages/Avatar";
 import { useEffect, useState } from "react";
 import Categoria from "./pages/Categoria";
 import Inicio from "./pages/Inicio";
+import AjustesCuenta from "./pages/AjustesCuenta";
+
 
 const App = () => {
+
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
   if (LocalHeaderImage) {
   } else {
@@ -27,9 +29,13 @@ const App = () => {
       localStorage.setItem(
         "image-url-header",
         JSON.stringify(["https://i.postimg.cc/9MLNHPBX/Mask-group-4.png"])
-      );
-    }
-  }, [imageHeader]);
+        );
+      }
+    }, [imageHeader]);
+    // window.confirm("Seguro de cambiar su Avatar?")
+
+ 
+
 
   return (
     <main className="main">
@@ -39,6 +45,14 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         
+          <Route
+            path="/ajustes-usuario"
+            element={
+              <ProtectedRoute>
+                <AjustesCuenta imageHeader={imageHeader} setImageHeader={setImageHeader} />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/categoria"
             element={
@@ -54,10 +68,6 @@ const App = () => {
                 <Inicio />
               </ProtectedRoute>
             }
-          />
-          <Route
-            path="/Avatar"
-            element={<Avatar imageHeader={imageHeader} setImageHeader={setImageHeader}></Avatar>}
           />
         </Routes>
       </AuthProvider>

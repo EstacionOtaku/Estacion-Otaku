@@ -7,10 +7,15 @@ import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const HeaderInicio = () => {
+const HeaderInicio = ({imageHeader}) => {
 
   const { user, logout } = useAuth();
   const [userModal, setUserModal] = useState(false)
+  
+  const nameUser = localStorage.getItem('nombre');
+
+
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -31,7 +36,7 @@ const HeaderInicio = () => {
       <div className="header-container ">
         <div className="header-container-logo">
           <figure className="header__image-container">
-            <img src={logo} className="header__image"></img>
+            <img src={logo} className="header__image" alt="logo"></img>
           </figure>
           <select
             name="Generos"
@@ -59,24 +64,24 @@ const HeaderInicio = () => {
         </div>
         <div className="header-container-login">
           <figure className="header__search-container">
-            <img src={search} className="search__image"></img>
+            <img src={search} className="search__image" alt="search"></img>
           </figure>
-          <p className="header__username">{user.displayName || user.email}</p>
+          <p className="header__username">{nameUser || user.email}</p>
           <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
+            <img src={avatar} className="avatar__image" alt="avatar"></img>
           </figure>
           <button
             className="header__avatar-options"
             onClick={handleUserOptions}
           >
             <figure className="header__arrow-container">
-              <img src={arrow} className="arrow__image"></img>
+              <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>
           </button>
 
           {userModal && (
             <div className="header__modal-user">
-              <Link to="/settings-acount" className="header__button-logout">Editar Cuenta</Link>
+              <Link to="/ajustes-usuario" className="header__button-logout">Editar Cuenta</Link>
               <button className="header__button-logout" onClick={handleLogout}>Cerrar Sesión</button>
             </div>
           )}  

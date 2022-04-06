@@ -10,7 +10,7 @@ const HeaderSearch = () => {
       <div className="header-container ">
         <div className="header-container-logo">
           <figure className="header__image-container">
-            <img src={logo} className="header__image"></img>
+            <img src={logo} className="header__image" alt="logo"></img>
           </figure>
         </div>
         <div className="header-container-login">
@@ -20,10 +20,10 @@ const HeaderSearch = () => {
             className="header-container__search"
           ></input>
           <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
+            <img src={avatar} className="avatar__image" alt="avatar"></img>
           </figure>
           <figure className="header__arrow-container">
-            <img src={arrow} className="arrow__image"></img>
+            <img src={arrow} className="arrow__image" alt="arrow"></img>
           </figure>
         </div>
       </div>

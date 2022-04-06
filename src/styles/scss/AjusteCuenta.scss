@@ -1,0 +1,172 @@
+.user-settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .user-settings-container {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    background-color: #070a19;
+    padding: 2rem 1rem;
+    border-radius: 30px;
+    gap: 1rem;
+  }
+  .user-settings-behind {
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-settings-behind__image-container {
+    width: 100px;
+  }
+  .user-settings-behind__image {
+    width: 100%;
+  }
+  .user-settings-behind-text {
+    display: flex;
+    align-items: center;
+  }
+  .user-settings-behind-text__image-container {
+    display: flex;
+    width: 10px;
+  }
+  .user-settings-behind-text__image {
+    width: 100%;
+  }
+  .user-settings-behind-text__atras {
+    font-size: 0.8rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  .user-settings-about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .user-settings-about__title {
+    font-size: 1.2rem;
+  }
+  .user-settings-about__edit {
+    color: #fff6;
+  }
+  .user-settings-about-description {
+    display: flex;
+    padding: 1rem 0;
+    text-align: left;
+    justify-content: space-around;
+  }
+  .user-settings-about-description__image-container {
+    width: 50px;
+  }
+  .user-settings-about-description__image {
+    width: 100%;
+  }
+  .user-settings-about-description-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+    gap: 0.5rem;
+  }
+  .user-settings-about-description-name__input {
+    padding: 0.2rem 0.2rem;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid #fff5;
+    font-size: 0.6rem;
+    color: #fff;
+  }
+  .user-settings-about-description-name__input::placeholder {
+    color: #fff;
+  }
+  .user-settings-about-description-name__label {
+    color: #fff6;
+  }
+  .user-settings-about__password {
+    color: #fff6;
+  }
+  .user-settings-about__input {
+    color: #fff5;
+    background-color: transparent;
+    border: 1px solid #fff5;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .user-settings-about-button-container {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .user-settings-about-button__save,
+  .user-settings-about-button__remove {
+    width: 150px;
+    border: 0px;
+    border-radius: 10px;
+    padding: 0.2rem;
+  }
+  
+  .user-settings-about-button__save {
+    background-color: #5e39f0;
+    color: #fff;
+  }
+  .user-settings-about-button__remove {
+    color: #fff5;
+    background-color: transparent;
+    border: 1px solid #fff5;
+  }
+  
+  @media (min-width: 900px) {
+    .user-settings-container {
+      padding: 2.5rem 3rem;
+      gap: 2rem;
+    }
+    .user-settings-behind__image-container {
+      width: 150px;
+    }
+    .user-settings-behind-text__image-container {
+      width: 29px;
+    }
+    .user-settings-behind-text__atras {
+      font-size: 1rem;
+    }
+    .user-settings-about {
+      gap: 1rem;
+    }
+    .user-settings-about__title {
+      font-size: 1.8rem;
+    }
+    .user-settings-about-description {
+      padding: 1.2rem 0;
+    }
+    .user-settings-about-description__image-container {
+      width: 90px;
+    }
+    .user-settings-about-description-name {
+      font-size: 1rem;
+      gap: 0.8rem;
+    }
+    .user-settings-about-description-name__input {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .user-settings-about__input {
+      padding: 0.5rem;
+    }
+    .user-settings-about-button-container {
+      padding: 1.5rem 0;
+      gap: 1rem;
+    }
+    .user-settings-about-button__save,
+    .user-settings-about-button__remove {
+      width: 200px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+  

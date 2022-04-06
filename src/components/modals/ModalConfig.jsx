@@ -3,19 +3,25 @@ import avatar from "../../assets/Header/avatar.png";
 import "../../styles/scss/ModalConfig.scss";
 import arrowLeft from "../../assets/Header/arrow-left.png";
 
-const ModalConfig = () => {
+const ModalConfig = ({nameUser}) => {
+
+  const handleReturn = () => {
+    
+  }
+
+
   return (
     <section className="modal">
       <section className="modal-container">
         <div className="modal-behind">
           <figure className="modal-behind__image-container">
-            <img src={logo} className="modal-behind__image"></img>
+            <img src={logo} className="modal-behind__image" alt="logo"></img>
           </figure>
           <div className="modal-behind-text">
             <figure className="modal-behind-text__image-container">
-              <img src={arrowLeft} className="modal-behind-text__image"></img>
+              <img src={arrowLeft} className="modal-behind-text__image" alt="arrowLeft"></img>
             </figure>
-            <p className="modal-behind-text__atras">Atras</p>
+            <button className="modal-behind-text__atras" onClick={handleReturn}>Atras</button>
           </div>
         </div>
         <div className="modal-about">
@@ -23,7 +29,7 @@ const ModalConfig = () => {
           <h3 className="modal-about__edit">Edita tu perfil</h3>
           <div className="modal-about-description">
             <figure className="modal-about-description__image-container">
-              <img className="modal-about-description__image" src={avatar}></img>
+              <img className="modal-about-description__image" src={avatar} alt="avatar"></img>
             </figure>
             <div className="modal-about-description-name">
               <label className="modal-about-description-name__label">
@@ -32,6 +38,7 @@ const ModalConfig = () => {
               <input
                 className="modal-about-description-name__input"
                 placeholder="nombre localstorage"
+                value={nameUser}
               ></input>
             </div>
           </div>

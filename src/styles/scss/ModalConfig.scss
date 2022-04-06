@@ -7,7 +7,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 100;
+  // z-index: 100;
 }
 .modal-container {
   display: flex;
@@ -41,6 +41,11 @@
 }
 .modal-behind-text__atras {
   font-size: 0.8rem;
+  background: transparent;
+  color: #fff;
+  border: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 .modal-about {
   text-align: center;
@@ -78,6 +83,7 @@
   background-color: transparent;
   border: 1px solid #fff5;
   font-size: 0.6rem;
+  color: #fff;
 }
 .modal-about-description-name__input::placeholder {
   color: #fff;
@@ -118,6 +124,11 @@
   color: #fff5;
   background-color: transparent;
   border: 1px solid #fff5;
+}
+.forgot-passoword-register{
+  background: transparent;
+  border: none;
+  color:#fff;
 }
 
 @media (min-width: 900px) {

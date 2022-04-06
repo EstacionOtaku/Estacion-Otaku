@@ -5,13 +5,15 @@ import arrow from "../../assets/Header/arrow-down.png";
 import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
 import { useState } from "react";
-import ModalConfig from "../modals/ModalConfig";
+import { Link } from "react-router-dom";
 
-const HeaderCategory = () => {
+const HeaderCategory = ({imageHeader}) => {
   const { user, logout } = useAuth();
   const [userModal, setUserModal] = useState(false);
-  const [settingsUser, setSettingsUser] = useState(false);
   const nameUser = localStorage.getItem('nombre');
+  
+  imageHeader = localStorage.getItem("image-url-header")
+  console.log(imageHeader);
 
   const handleLogout = async () => {
     try {
@@ -27,54 +29,37 @@ const HeaderCategory = () => {
       setUserModal(false);
     }
   };
-  const handleSettingsUser = () => {
-    if (!settingsUser) {
-      setSettingsUser(true);
-    } else {
-      setSettingsUser(false);
-    }
-  };
   return (
     <header className="header  ">
       <div className="header-container ">
         <div className="header-container-logo">
           <figure className="header__image-container">
-            <img src={logo} className="header__image"></img>
+            <img src={logo} className="header__image" alt="logo"></img>
           </figure>
         </div>
         <div className="header-container-login">
           <figure className="header__search-container">
-            <img src={search} className="search__image"></img>
+            <img src={search} className="search__image" alt="search"></img>
           </figure>
-          <p className="header__username">{user.displayName || nameUser || user.email}</p>
+          <p className="header__username">{nameUser || user.email}</p>
           <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
+            <img src={imageHeader} className="avatar__image" alt="avatar"></img>
           </figure>
           <button
             className="header__avatar-options"
             onClick={handleUserOptions}
           >
             <figure className="header__arrow-container">
-              <img src={arrow} className="arrow__image"></img>
+              <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>
           </button>
 
-          {settingsUser && <ModalConfig />}
           {userModal && (
             <div className="header__modal-user">
-              <button
-                className="header__button-logout"
-                onClick={handleSettingsUser}
-                >
-                Editar Cuenta
-              </button>
-
-
-              <button className="header__button-logout" onClick={handleLogout}>
-                Cerrar Sesión
-              </button>
+              <Link to="/ajustes-usuario" className="header__button-logout">Editar Cuenta</Link>
+              <button className="header__button-logout" onClick={handleLogout}>Cerrar Sesión</button>
             </div>
-          )}
+          )}  
         </div>
       </div>
     </header>

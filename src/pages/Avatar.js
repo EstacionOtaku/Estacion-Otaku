@@ -6,12 +6,13 @@ import DragonBallz from "../components/Cards/DragonBallzCard";
 import Kaisen from "../components/Cards/KaisenCard";
 import NarutoCard from "../components/Cards/NaturoCard";
 import OnePiece from "../components/Cards/OnePieceCard";
-import HeaderInicio from "../components/Header/HeaderInicio";
+import HeaderCategory from "../components/Header/HeaderCategory";
 import "../styles/scss/Avatar.scss";
 
 const Avatar = ({ setImageHeader }) => {
   return (
     <>
+    <HeaderCategory/>
       <section className="portada">
         <figure className="portada__image-contaiener">
           <img src={Portada} className="portada__image"></img>
