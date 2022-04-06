@@ -29,14 +29,14 @@
 
 .faq-title {
   margin-bottom: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.1em;
   font-weight: 700;
   font-size: 3em;
   margin-bottom:4rem;
 }
 
 .accordion {
-  width: 75%;
+  width: min(900px, 90%);
   margin: 2rem auto;
 }
 
@@ -51,7 +51,7 @@
   margin: 0 0 0.063rem;
   width: 100%;
   border: 0;
-  border-bottom: solid 0.3px white;
+  border-bottom: solid 0.3px rgba(255, 255, 255, 0.534);
   font-weight: 400;
   padding: 1.8rem 3.3rem 1.8rem 1.8rem;
   font-size: 0.9em;
@@ -83,21 +83,18 @@
 }
 
 .accordion-body {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 300;
   margin-bottom: 0.5rem;
-  background-color: var(--faq-section-bg);
+line-height: 1.7em;
   text-align: start;
 
 }
 /* arrow up */
 .accordion-button::after {
-    background-image: url("./../../assets/Faq/arrow-up.svg")!important;
-    
-   }
+    background-image: url("./../../assets/Faq/arrow-up.svg")!important;   
+}
 /* arrow down */
- .accordion-button:not(.collapsed)::after {
- background-image: url("./../../assets/Faq/arrow-down.svg");
-
-
+.accordion-button:not(.collapsed)::after {
+    background-image: url("./../../assets/Faq/arrow-down.svg");
 } 

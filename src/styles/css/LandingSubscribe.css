@@ -1,0 +1,84 @@
+
+.main {
+  overflow-x: hidden;
+}
+.subscribe-container {
+  height:80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(11, 20, 55, 0.4), rgba(11, 20, 55, 0.4)),
+    linear-gradient(
+      360deg,
+      #0b1437 0%,
+      rgba(11, 20, 55, 0.60) 32.59%,
+      rgba(11, 20, 55, 0.60) 32.6%,
+      rgba(11, 20, 55, 0.60) 69.79%,
+      #0b1437 100%
+    ),
+    url("../../../public/images/background-anime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 2rem;
+}
+.subscribe__text {
+  padding: 0 10%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size:2em;
+  line-height: 1.1em;
+  text-align: center;
+  font-weight: 400;
+}
+
+.subscribe-email__container {
+ width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+
+.subscribe-input {
+  width: 100%;
+ 
+  padding: 0.5rem .8rem ;
+  border-radius: 50px;
+}
+
+.subscribe-button {
+  width: fit-content;
+background: #5E39F0;
+color: inherit;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .5rem 1.5rem;
+  transition: all 0.5s;
+}
+.subscribe-button:hover {
+ background-color: #482db4;
+}
+.subscribe__text-bold {
+ font-weight: 700;
+}
+@media (min-width:863px) {
+ .subscribe-container {
+  height: 100vh;
+ }
+}
+@media (max-width: 863px) {
+  .subscribe__text {
+    line-height: 1.2em;
+    font-size: 1.6em;
+  }
+}
