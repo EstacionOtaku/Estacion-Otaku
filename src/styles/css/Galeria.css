@@ -58,14 +58,6 @@
         grid-gap: 20px;
     }
 
-    .paquete-container {
-        padding: 1rem 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-    }
-
     .paquete__title {
         margin-top: 121px;
         font-size: 30px;
@@ -74,8 +66,8 @@
     }
 
     .paquete-image {
-        width: 230px;
-        height: 280px;
+        width: 255px;
+        height: 315px;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 }

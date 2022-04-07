@@ -1,6 +1,7 @@
 import HeaderInicio from "../components/Header/HeaderInicio";
 import Galeria from "../components/Cards/Galeria"
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer/Footer";
 
 const Categoria = () => {
 
@@ -11,7 +12,7 @@ const Categoria = () => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          "https://api.jikan.moe/v3/search/anime?q=Fullmetal%20Alchemist"
+          "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48"
         );
         const data = await response.json();
         setGallery(data.results);
@@ -21,6 +22,7 @@ const Categoria = () => {
       } finally {
 
       }
+      
     };
 
     apiAnimes();
@@ -38,6 +40,8 @@ const Categoria = () => {
       <section>
         <Galeria data={gallery} />
       </section>
+      
+      <Footer></Footer>
 
     </>
   );

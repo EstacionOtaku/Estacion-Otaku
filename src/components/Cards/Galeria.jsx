@@ -1,6 +1,6 @@
 import "../../styles/css/Galeria.css";
-import StarPage from "../../pages/StartPage"
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const Galeria = (props) => {
 
@@ -22,7 +22,10 @@ const Galeria = (props) => {
                 return (
                   <article className="paquete-list-container" key={mal_id} >
                     <figure className="paquete-image-container">
-                      <a href="https://www.google.com/"> <img src={image_url} alt={title} className="paquete-image zoom" /> </a>
+                      
+                      <Link to={`/anime/${mal_id}`}>
+                      <img src={image_url} alt={title} className="paquete-image zoom" />
+                        </Link>
                     </figure>
                   </article>
                 );

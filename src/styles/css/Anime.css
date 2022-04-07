@@ -1,0 +1,13 @@
+.episodes-container {
+    display: flex;
+    flex-direction: row;
+    margin: 51px;
+    justify-content: center;
+}
+
+.paquete-list-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    align-items: center;
+}

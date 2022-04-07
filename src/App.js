@@ -10,6 +10,7 @@ import StarPage from "./pages/StartPage";
 import Avatar from "./pages/Avatar";
 import { useEffect, useState } from "react";
 import Categoria from "./pages/Categoria";
+import Anime from "./pages/Anime";
 import Inicio from "./pages/Inicio";
 
 const App = () => {
@@ -38,7 +39,7 @@ const App = () => {
           <Route path="/" element={<StarPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-        
+
           <Route
             path="/categoria"
             element={
@@ -47,6 +48,20 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/anime/:id"
+            element={
+              <ProtectedRoute>
+                <Anime/>
+              </ProtectedRoute>
+            }
+            />
+          {/* <Route exact path="/anime/:id" render={(props) => (
+            <ProtectedRoute>
+            <Anime id={props.match.params.id} />
+            </ProtectedRoute>
+          )} /> */}
+
           <Route
             path="/inicio"
             element={
