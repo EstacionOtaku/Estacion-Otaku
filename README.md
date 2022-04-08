@@ -57,7 +57,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
           <img src="https://i.postimg.cc/rF6WrLjr/html.png" width="100%" />
         </td>
         <td>
-          <img src="https://i.postimg.cc/mgSDG9F2/css.png" width="100%" />
+          <img src="https://w7.pngwing.com/pngs/945/441/png-transparent-web-development-cascading-style-sheets-html-logo-css3-storm-blue-angle-text.png" width="100%" />
         </td>
         <td>
           <img
