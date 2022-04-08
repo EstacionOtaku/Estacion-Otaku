@@ -10,9 +10,15 @@ const StarPage = () => {
     <>
       <HeaderLanding />
       <Hero />
-      <Tabs />
-      <BlogsCards></BlogsCards>
-      <Footer />
+      <section className="px-2">
+        <Tabs />
+      </section>
+      <section className="p-4" style={{ maxWidth: "1400px", margin: "auto" }}>
+        <BlogsCards></BlogsCards>
+      </section>
+      <section className="py-4">
+        <Footer />
+      </section>
     </>
   );
 };

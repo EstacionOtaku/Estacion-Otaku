@@ -7,8 +7,8 @@ const BlogsCards = () => {
 
   return (
     <div className="blog__list-wrap">
-      {blogs.map((blog) => (
-        <BlogsCard blog={blog} />
+      {blogs.map((blogs) => (
+        <BlogsCard blogs={blogs} />
       ))}
     </div>
   );

@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
-const BlogsCard = ({
-  blog: { description, title, createdAt, authorName, authorAvatar, cover, id },
-}) => {
+const BlogsCard = ({ blogs }) => {
+  const { description, title, createdAt, authorName, authorAvatar, cover, id } = blogs;
+  console.log(blogs);
   return (
     <div className="blog">
       <img className="blog__cover" src={cover} alt="cover" />
@@ -16,9 +14,6 @@ const BlogsCard = ({
             <p>{createdAt}</p>
           </div>
         </div>
-        <Link className="blog__link" to={`/blog/${id}`}>
-          ➝
-        </Link>
       </footer>
     </div>
   );
