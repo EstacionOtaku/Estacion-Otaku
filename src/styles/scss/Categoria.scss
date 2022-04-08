@@ -1,0 +1,83 @@
+.hero--color {
+  height: 60vh;
+  margin: 0;
+  background-size: "cover";
+}
+.categoria__portada {
+  position: absolute;
+  width: 100%;
+  max-height: 500px;
+}
+.prueba_image {
+  max-height: 500px;
+}
+
+.hero--vertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #060a19 10%, transparent 90%);
+}
+
+.hero--horizontal {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #060a19 30%, transparent 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-bottom: 100px;
+  padding-top: 70px;
+}
+
+.back--button {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.hero--category {
+  display: inline-block;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero--year {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+
+.hero--name {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-container {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.play--button {
+  padding: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #5e39f0;
+  color: #fff;
+  opacity: 1;
+  width: 145px;
+}
+
+.play--button:hover {
+  opacity: 0.7;
+}
