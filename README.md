@@ -3,7 +3,7 @@
 El presente proyecto constó de proponer una web denominada "Estación Otaku". Estación Otaku es una comunidad para los fans del anime.
 Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para estudiantes amantes de la cultura japonesa donde puedan encontrar contenido relacionado a series y películas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
 
-[![logo.png](https://i.postimg.cc/LXdQ94j6/logo.png)](https://postimg.cc/mcwyVsd0)
+[![logo-estacion.jpg](https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg)](https://postimg.cc/nXRKVLGX)
 
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
@@ -37,6 +37,8 @@ Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecno
         <th>SASS</th>
         <th>Axios</th>
         <th>Google Fonts</th>
+        <th>Bootstrap</th>
+        <th>Json</th>
       </tr>
     </thead>
     <tbody>
@@ -52,7 +54,7 @@ Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecno
         </td>
         <td>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="100%" />
+            src="https://eduliticas.com/wp-content/uploads/2018/01/Javascript-shield.png" width="100%" />
         </td>
         <td>
           <img src="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png" width="100%" />
@@ -64,10 +66,18 @@ Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecno
         <td>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Google_Fonts_logo.svg/2560px-Google_Fonts_logo.svg.png" width="100%" />
-        </td>      
+        </td>
+        <td>
+          <img
+            src="https://ironsolutionsit.com.ar/img/works/bootstrap.jpg" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png" width="100%" />
+        </td>   
       </tr>
     </tbody>
-  </table>
+</table>
 
 ```
 Todos los derechos reservados.
