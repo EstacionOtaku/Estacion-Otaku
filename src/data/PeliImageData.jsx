@@ -13,36 +13,35 @@ import multicar12 from "../assets/Pelis/multicar12.jpeg";
 import multicar13 from "../assets/Pelis/multicar13.jpeg";
 import multicar14 from "../assets/Pelis/multicar14.jpeg";
 import multicar15 from "../assets/Pelis/multicar15.jpeg";
-import categoria1 from "../assets/Pelis/categoria1.png";
-import categoria2 from "../assets/Pelis/categoria2.png";
-import categoria3 from "../assets/Pelis/categoria3.png";
-import categoria4 from "../assets/Pelis/categoria4.png";
-import categoria5 from "../assets/Pelis/categoria5.png";
-import categoria6 from "../assets/Pelis/categoria6.png";
-import categoria7 from "../assets/Pelis/categoria7.png";
-import categoria8 from "../assets/Pelis/categoria8.png";
-import categoria9 from "../assets/Pelis/categoria9.png";
-import categoria10 from "../assets/Pelis/categoria10.png";
-import categoria11 from "../assets/Pelis/categoria11.png";
-import categoria12 from "../assets/Pelis/categoria12.png";
-import categoria13 from "../assets/Pelis/categoria13.png";
-import categoria14 from "../assets/Pelis/categoria14.png";
+import Pelea from "../assets/Pelis/categoria1.png";
+import Aventura from "../assets/Pelis/categoria2.png";
+import Comedia from "../assets/Pelis/categoria3.png";
+import Drama from "../assets/Pelis/categoria4.png";
+import Kids from "../assets/Pelis/categoria5.png";
+import Fantasia from "../assets/Pelis/categoria6.png";
+import Militar from "../assets/Pelis/categoria7.png";
+import Misterio from "../assets/Pelis/categoria8.png";
+import Policial from "../assets/Pelis/categoria9.png";
+import Sliceoflife from "../assets/Pelis/categoria10.png";
+import Deportes from "../assets/Pelis/categoria11.png";
+import CienciaFiccion from "../assets/Pelis/categoria12.png";
+import Psicologico from "../assets/Pelis/categoria13.png";
+import Terror from "../assets/Pelis/categoria14.png";
 
 export const CategoriaImageData = [
-  categoria1,
-  categoria2,
-  categoria3,
-  categoria4,
-  categoria5,
-  categoria6,
-  categoria7,
-  categoria8,
-  categoria9,
-  categoria10,
-  categoria11,
-  categoria12,
-  categoria13,
-  categoria14,
+  { img: Pelea, categoria: "Pelea" },
+  { img: Aventura, categoria: "Aventura" },
+  { img: Comedia, categoria: "Comedia" },
+  { img: Drama, categoria: "Drama" },
+  { img: Kids, categoria: "Kids" },
+  { img: Fantasia, categoria: "Fantasia" },
+  { img: Militar, categoria: "Militar" },
+  { img: Policial, categoria: "Policial" },
+  { img: Sliceoflife, categoria: "Sliceoflife" },
+  { img: Deportes, categoria: "Deportes" },
+  { img: CienciaFiccion, categoria: "CienciaFiccion" },
+  { img: Psicologico, categoria: "Psicologico" },
+  { img: Terror, categoria: "Terror" },
 ];
 
 export const Top10 = [

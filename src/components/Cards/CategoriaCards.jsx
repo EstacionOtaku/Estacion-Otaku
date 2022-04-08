@@ -53,36 +53,39 @@ const carouselProperties = {
   ],
 };
 
-const CategoriaCards = () => {
+const CategoriaCards = ({ setTema }) => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {CategoriaImageData.map((item) => (
-          <MovieCard item={item}></MovieCard>
-        ))}
+        {CategoriaImageData.map((item) => {
+          const { img, categoria } = item;
+          return <MovieCard img={img} categoria={categoria} setTema={setTema}></MovieCard>;
+        })}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ item }) => {
-  console.log(item);
+const MovieCard = ({ img, categoria, setTema }) => {
+  const onClickImage = (e) => {
+    setTema(e.target.alt);
+  };
   return (
-    <Link to="/categoria">
-      <div style={{ textAlign: "center" }}>
-        <img
-          className="card__multi-image"
-          src={item}
-          alt="movie"
-          style={{
-            width: "100%",
-            height: "170px",
-            objectFit: "contain",
-            marginBottom: "10px",
-          }}
-        />
-      </div>
-    </Link>
+    // <Link to="/categoria">
+    <div style={{ textAlign: "center" }} onClick={onClickImage}>
+      <img
+        className="card__multi-image"
+        src={img}
+        alt={categoria}
+        style={{
+          width: "100%",
+          height: "170px",
+          objectFit: "contain",
+          marginBottom: "10px",
+        }}
+      />
+    </div>
+    // </Link>
   );
 };
 

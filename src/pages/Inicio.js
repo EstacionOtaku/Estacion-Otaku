@@ -6,7 +6,7 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Sugerencias from "../components/Cards/Sugerencias";
-const Inicio = () => {
+const Inicio = ({ setTema }) => {
   return (
     <>
       <HeaderCategory></HeaderCategory>
@@ -16,7 +16,7 @@ const Inicio = () => {
         alt="portada"
       />
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-        <CategoriaCards></CategoriaCards>
+        <CategoriaCards setTema={setTema}></CategoriaCards>
       </section>
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <LoMasVistoCards></LoMasVistoCards>

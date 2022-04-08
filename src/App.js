@@ -33,6 +33,9 @@ const App = () => {
     }
   }, [imageHeader]);
 
+  const [tema, setTema] = useState("");
+  console.log(tema);
+
   return (
     <main className="main">
       <AuthProvider>
@@ -41,11 +44,14 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-
-
-          <Route path="/nosotros" element={<ProtectedRoute>
+          <Route
+            path="/nosotros"
+            element={
+              <ProtectedRoute>
                 <Nosotros />
-              </ProtectedRoute>} />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/categoria"
@@ -59,10 +65,10 @@ const App = () => {
             path="/anime/:id"
             element={
               <ProtectedRoute>
-                <Anime/>
+                <Anime />
               </ProtectedRoute>
             }
-            />
+          />
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />
@@ -73,7 +79,7 @@ const App = () => {
             path="/inicio"
             element={
               <ProtectedRoute>
-                <Inicio />
+                <Inicio setTema={setTema} />
               </ProtectedRoute>
             }
           />

@@ -65,7 +65,6 @@ const Sugerencias = () => {
 };
 
 const MovieCard = ({ item }) => {
-  console.log(item);
   return (
     <div style={{ textAlign: "center" }}>
       <img
