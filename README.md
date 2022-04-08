@@ -4,8 +4,6 @@ El presente proyecto constó de proponer una web para el proyecto "Estación Ota
 
 [![logo.png](https://i.postimg.cc/LXdQ94j6/logo.png)](https://postimg.cc/mcwyVsd0)
 
-## Introducción
-
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
 - Abrir la terminal de comandos
