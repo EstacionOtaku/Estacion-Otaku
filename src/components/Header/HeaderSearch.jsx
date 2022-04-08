@@ -19,9 +19,11 @@ const HeaderSearch = () => {
             placeholder="Titulo, categorias"
             className="header-container__search"
           ></input>
-          <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
-          </figure>
+          <Link to="/avatar">
+            <figure className="header__avatar-container">
+              <img src={avatar} className="avatar__image"></img>
+            </figure>
+          </Link>
           <figure className="header__arrow-container">
             <img src={arrow} className="arrow__image"></img>
           </figure>
