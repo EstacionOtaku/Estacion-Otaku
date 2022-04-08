@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import "../styles/scss/Categoria.scss";
 import { Link } from "react-router-dom";
+import CategoriaPeli from "../components/Cards/CategoriaPeli";
 
 const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
@@ -50,7 +51,7 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-
+      <CategoriaPeli />
       <Footer></Footer>
     </>
   );
