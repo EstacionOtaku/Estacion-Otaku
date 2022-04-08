@@ -65,7 +65,7 @@ const App = () => {
             }
             />
             <Route
-              path="/anime/play"
+              path="/anime/:id-:n"
               element={
                 <ProtectedRoute>
                 <ReproducirAnime/>

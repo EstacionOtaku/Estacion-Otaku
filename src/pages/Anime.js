@@ -13,7 +13,8 @@ const Anime = () => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1"
+          // "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1"
+          "https://api.jsonbin.io/b/62504f5b7b69e806cf4ac257"
         );
         const data = await response.json();
         const animeSelected = data.results.filter(function (element) {
@@ -21,11 +22,9 @@ const Anime = () => {
         });
         setInfoAnime(animeSelected);
         console.log(infoAnime);
-
       } catch (error) {
         console.log(error);
       } finally {
-
       }
     };
 
@@ -47,83 +46,97 @@ const Anime = () => {
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
         alt="portada"
       />
-      
+
       <div className="anime">
         <h2>anime - {id}</h2>
       </div>
 
-      
       <div className="episodes-container">
+        <div className="episode">
+          <div>
+            <h2>Episodios</h2>
 
-        <div className="episode" >
-        <div>
-        <h2>Episodios</h2>
-      
-
-          {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-            return (
-              <article className="episodes-list" key={mal_id} >
-                <h3>EP 1</h3>
-                <figure className="image-container">
-                  <img src={episodes[0].image} alt="im" className="image-episode" />
-                </figure>
-                <p className="sysnopsis-text"> {episodes[0].synopsis} </p>
-                </article> 
-            );
-          })}
+            {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+              return (
+                <article className="episodes-list" key={mal_id}>
+                  <h3>EP 1</h3>
+                  <figure className="image-container">
+                    <Link to={`/anime/${mal_id}-${0}`}>
+                      <img
+                        src={episodes[0].image}
+                        alt="im"
+                        className="image-episode"
+                      />
+                    </Link>
+                    <div className="play"></div>
+                  </figure>
+                  <p className="sysnopsis-text"> {episodes[0].synopsis} </p>
+                </article>
+              );
+            })}
+          </div>
         </div>
 
+        {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+          return (
+            <article className="episodes-list" key={mal_id}>
+              <h3>EP 2 </h3>
+              <figure className="image-container">
+                <Link to={`/anime/${mal_id}-${1}`}>
+                  <img
+                    src={episodes[1].image}
+                    alt="im"
+                    className="image-episode"
+                  />
+                </Link>
+                <div className="play"></div>
+              </figure>
+              <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
+            </article>
+          );
+        })}
+
+        {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+          return (
+            <article className="episodes-list" key={mal_id}>
+              <h3>EP 3 </h3>
+              <figure className="image-container">
+                <Link to={`/anime/${mal_id}-${2}`}>
+                  <img
+                    src={episodes[2].image}
+                    alt="im"
+                    className="image-episode"
+                  />
+                </Link>
+                <div className="play"></div>
+              </figure>
+              <p className="sysnopsis-text"> {episodes[2].synopsis} </p>
+            </article>
+          );
+        })}
+
+        {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+          return (
+            <article className="episodes-list" key={mal_id}>
+              <h3>EP 4 </h3>
+              <figure className="image-container">
+                <Link to={`/anime/${mal_id}-${3}`}>
+                  <img
+                    src={episodes[3].image}
+                    alt="im"
+                    className="image-episode"
+                  />
+                </Link>
+                <div className="play"></div>
+                <div>
+                  <p> {episodes[3].episodio_1} </p>
+                </div>
+              </figure>
+              <p className="sysnopsis-text"> {episodes[3].synopsis} </p>
+            </article>
+          );
+        })}
       </div>
-
-      
-
-          {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-            return (
-              <article className="episodes-list" key={mal_id} >
-                <h3>EP 2 </h3>
-                <figure className="image-container">
-                  <Link to={"/anime/play"}>
-                  <img src={episodes[1].image} alt="im" className="image-episode" />
-                  </Link>
-                </figure>
-                <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
-                </article> 
-            );
-          })}
-        
-  
-          {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-            return (
-              <article className="episodes-list" key={mal_id} >
-                <h3>EP 3 </h3>
-                <figure className="image-container">
-                  <img src={episodes[2].image} alt="im" className="image-episode" />
-                </figure>
-                <p className="sysnopsis-text"> {episodes[2].synopsis} </p>
-                </article> 
-            );
-          })}
-        
-
-          {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-            return (
-              <article className="episodes-list" key={mal_id} >
-                <h3>EP 4 </h3>
-                <figure className="image-container">
-                  <img src={episodes[3].image} alt="im" className="image-episode" />
-                  <div>
-                    <p> {episodes[3].episodio_1} </p>
-                  </div>
-                </figure>
-                <p className="sysnopsis-text"> {episodes[3].synopsis} </p>
-                </article> 
-            );
-          })}
-        
-      </div>
-
-
-
 
       <Footer></Footer>
     </>
