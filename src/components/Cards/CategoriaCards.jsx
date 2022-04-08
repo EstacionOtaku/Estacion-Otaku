@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { CategoriaImageData } from "../../data/data";
+import { CategoriaImageData } from "../../data/CategoriaImageData";
 
 const PreviousBtn = (props) => {
   console.log(props);
