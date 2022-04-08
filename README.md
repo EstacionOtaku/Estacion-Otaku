@@ -25,7 +25,35 @@ Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y a
 ### Vista responsive en mobile
 
 ## Lenguajes y herramientas
-Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
+En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
+  
+<table>
+    <thead>
+      <tr>
+        <th>Figma</th>
+        <th>Photoshop</th>
+        <th>Illustrator</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="100%" />
+        </td>
+        <td>
+          <img src="https://i.pinimg.com/736x/ee/81/f3/ee81f3c9d585db4130946120aeca8aac.jpg" width="100%" />
+        </td>
+        <td>
+          <img src="https://logodownload.org/wp-content/uploads/2017/04/adobe-Illustrator-logo-3-1.png" width="100%" />
+        </td>        
+      </tr>
+    </tbody>
+</table>
+     
+- Para visualizar todos los gráficos y esquemas, visitar los siguientes links:
+
+
+En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
   
 <table>
     <thead>
