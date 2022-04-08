@@ -39,6 +39,7 @@ Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecno
         <th>React Icons</th>
         <th>Bootstrap</th>
         <th>Json</th>
+        <th>Slick.js</th>
       </tr>
     </thead>
     <tbody>
@@ -74,19 +75,23 @@ Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecno
         <td>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png" width="100%" />
-        </td>   
+        </td>  
+        <td>
+          <img
+            src="https://cms-assets.tutsplus.com/uploads/users/30/posts/31355/preview_image/pre.png" width="100%" />
+        </td>  
       </tr>
     </tbody>
 </table>
 
-```
-Todos los derechos reservados.
-```
-
 ## Contribuciones
 
 Te pedimos leas los códigos de conducta de GitHub y el presente "README.md" para poder utilizar y contribuir con el proyecto. Se recomienda el uso del proyecto únicamente para fines académicos y educativos. Prohibido su uso para fines comerciales.
-
+  
+```
+Todos los derechos reservados.
+```
+  
 ## Autores
 ### Neko Coders
 
