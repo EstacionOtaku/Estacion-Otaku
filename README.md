@@ -27,7 +27,7 @@ Te pedimos leas los códigos de conducta de GitHub y el presente "README.md" par
 
 - **Cerpa Salas, Valeria**
 - **Chan Yance, Bruno**
-- **Lazarinas Armendariz, Jeanfranco**
+- **Lazarinos Armendariz, Jeanfranco**
 - **Huamán Lazo, Diego**
 - **Palomino Portugal, Clarissa**
 - **Peña Pacora, Gina**
