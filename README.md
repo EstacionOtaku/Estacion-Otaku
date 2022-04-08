@@ -44,3 +44,4 @@ Este proyecto contiene una licencia MIT - ver el archivo adjunto en el repositor
 - Profesor Elliot Garamendi, por la enseñanza
 - Fundación Es Hoy y CODIGO, por la oportunidad de formarnos en desarrollo web.
    
+_Este proyecto fue desarrollado con ❤️ por Neko coders
