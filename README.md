@@ -26,33 +26,9 @@ Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y a
 
 ## Lenguajes y herramientas
 En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
-  
-<table>
-    <thead>
-      <tr>
-        <th>Figma</th>
-        <th>Photoshop</th>
-        <th>Illustrator</th>  
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/photoshop-8-226474.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://1000marcas.net/wp-content/uploads/2020/11/illustrator-Logo-2007.jpg" width="100%" />
-        </td>        
-      </tr>
-    </tbody>
-</table>
-     
+       
 - Para visualizar todos los gráficos y esquemas, visitar los siguientes links:
-
-
+    
 En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
   
 <table>
@@ -68,6 +44,9 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         <th>Bootstrap</th>
         <th>Json</th>
         <th>Slick.js</th>
+        <th>Figma</th>
+        <th>Photoshop</th>
+        <th>Illustrator</th> 
       </tr>
     </thead>
     <tbody>
@@ -108,6 +87,15 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
           <img
             src="https://cms-assets.tutsplus.com/uploads/users/30/posts/31355/preview_image/pre.png" width="100%" />
         </td>  
+        <td>
+          <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://cdn.iconscout.com/icon/free/png-256/photoshop-8-226474.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://1000marcas.net/wp-content/uploads/2020/11/illustrator-Logo-2007.jpg" width="100%" />
+        </td>
       </tr>
     </tbody>
 </table>
