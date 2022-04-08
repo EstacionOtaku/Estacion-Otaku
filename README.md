@@ -90,7 +90,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
           <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="100%" />
         </td>
         <td>
-          <img src="https://png.pngtree.com/templates/md/20180519/md_5b001b7d401bb.jpg" width="100%" />
+          <img src="http://pngimg.com/uploads/photoshop/photoshop_PNG54.png" width="100%" />
         </td>    
       </tr>
     </tbody>
