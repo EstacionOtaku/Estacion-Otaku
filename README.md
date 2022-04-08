@@ -6,6 +6,17 @@ El presente proyecto constó de proponer una web para el proyecto "Estación Ota
 
 ## Introducción
 
+## Instalación 💻
+- Ubicarse en la carpeta que contendrá el proyecto
+- Abrir la terminal de comandos
+  - git clone https://github.com/EstacionOtaku/Estacion-Otaku.git
+  - cd Estacion-Otaku
+  - npm install
+  - npm start
+    - Levanta un servidor con la aplicación
+  - npm run build
+    - Genera un paquete para el despliegue en producción
+
 ## Esquemas
 
 ## Vistas del proyecto
