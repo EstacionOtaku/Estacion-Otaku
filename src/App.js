@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { AuthProvider } from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import ReproducirAnime from "./pages/ReproducirAnime";
 
 import StarPage from "./pages/StartPage";
 // import HeaderLanding from "./components/Header/HeaderLanding";
@@ -82,6 +83,15 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/anime/:id-:n"
+            element={
+              <ProtectedRoute>
+                <ReproducirAnime />
+              </ProtectedRoute>
+            }
+          />
+
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />
@@ -98,7 +108,12 @@ const App = () => {
           />
           <Route
             path="/Avatar"
-            element={<Avatar imageHeader={imageHeader} setImageHeader={setImageHeader}></Avatar>}
+            element={
+              <Avatar
+                imageHeader={imageHeader}
+                setImageHeader={setImageHeader}
+              ></Avatar>
+            }
           />
         </Routes>
       </AuthProvider>
