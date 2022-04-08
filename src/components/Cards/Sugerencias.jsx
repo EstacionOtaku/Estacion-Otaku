@@ -1,6 +1,6 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import Slider from "react-slick/lib/slider";
-import { PelisImageData } from "../../data/PeliImageData";
+import { Sugerencia } from "../../data/PeliImageData";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -56,7 +56,7 @@ const Sugerencias = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {PelisImageData.map((item) => (
+        {Sugerencia.map((item) => (
           <MovieCard item={item} />
         ))}
       </Slider>
