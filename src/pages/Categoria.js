@@ -3,8 +3,9 @@ import Galeria from "../components/Cards/Galeria";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import "../styles/scss/Categoria.scss";
+import { Link } from "react-router-dom";
 
-const Categoria = () => {
+const Categoria = ({ tema }) => {
   const [gallery, setGallery] = useState([]);
   // const recurso = `galeria`;
 
@@ -37,9 +38,9 @@ const Categoria = () => {
           <div class="hero--horizontal">
             <div class="back-container"></div>
             <a href="" class="back--button">
-              ⏪ Atrás
+              <Link to="/inicio">⏪ Atrás</Link>
             </a>
-            <h3 class="hero--category">Drama</h3>
+            <h3 class="hero--category">{tema}</h3>
             <h5 class="hero--year">2016</h5>
             <h1 class="hero--name">Shigatsu wa Kimi no Uso</h1>
             <div class="play-container"></div>

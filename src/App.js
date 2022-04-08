@@ -21,6 +21,7 @@ const App = () => {
     LocalHeaderImage = ["https://i.postimg.cc/9MLNHPBX/Mask-group-4.png"];
   }
   const [imageHeader, setImageHeader] = useState(LocalHeaderImage);
+
   useEffect(() => {
     let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
     if (LocalHeaderImage) {
@@ -33,8 +34,20 @@ const App = () => {
     }
   }, [imageHeader]);
 
-  const [tema, setTema] = useState("");
-  console.log(tema);
+  let LocalTema = JSON.parse(localStorage.getItem("Local-Tema"));
+  if (LocalTema) {
+  } else {
+    LocalTema = [""];
+  }
+  const [tema, setTema] = useState(LocalTema);
+  useEffect(() => {
+    let LocalTema = JSON.parse(localStorage.getItem("Local-Tema"));
+    if (LocalTema) {
+      localStorage.setItem("Local-Tema", JSON.stringify(tema));
+    } else {
+      localStorage.setItem("Local-Tema", JSON.stringify([""]));
+    }
+  }, [tema]);
 
   return (
     <main className="main">
@@ -57,7 +70,7 @@ const App = () => {
             path="/categoria"
             element={
               <ProtectedRoute>
-                <Categoria />
+                <Categoria tema={tema} />
               </ProtectedRoute>
             }
           />

@@ -71,21 +71,21 @@ const MovieCard = ({ img, categoria, setTema }) => {
     setTema(e.target.alt);
   };
   return (
-    // <Link to="/categoria">
-    <div style={{ textAlign: "center" }} onClick={onClickImage}>
-      <img
-        className="card__multi-image"
-        src={img}
-        alt={categoria}
-        style={{
-          width: "100%",
-          height: "170px",
-          objectFit: "contain",
-          marginBottom: "10px",
-        }}
-      />
-    </div>
-    // </Link>
+    <Link to="/categoria">
+      <div style={{ textAlign: "center" }} onClick={onClickImage}>
+        <img
+          className="card__multi-image"
+          src={img}
+          alt={categoria}
+          style={{
+            width: "100%",
+            height: "170px",
+            objectFit: "contain",
+            marginBottom: "10px",
+          }}
+        />
+      </div>
+    </Link>
   );
 };
 
