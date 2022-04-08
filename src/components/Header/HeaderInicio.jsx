@@ -1,7 +1,7 @@
 import "../../styles/scss/Header.scss";
 import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
-import avatar from "../../assets/Header/avatar.png";
+// import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
@@ -75,7 +75,7 @@ const HeaderInicio = (imageHeader) => {
           </Link>
           <button className="header__avatar-options" onClick={handleUserOptions}>
             <figure className="header__arrow-container">
-              <img src={arrow} className="arrow__image"></img>
+              <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>
           </button>
 

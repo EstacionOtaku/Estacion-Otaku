@@ -6,7 +6,6 @@ import "../styles/css/Anime.css";
 
 const Anime = () => {
   const { id } = useParams();
-
   const [infoAnime, setInfoAnime] = useState([]);
 
   useEffect(() => {
@@ -137,8 +136,27 @@ const Anime = () => {
           );
         })}
       </div>
+      {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+          return (
+            <article className="episodes-list" key={mal_id}>
+              <h3>EP 2 </h3>
+              <figure className="image-container">
+                <Link to={`/anime/${mal_id}-${1}`}>
+                  <img
+                    src={episodes[1].image}
+                    alt="im"
+                    className="image-episode"
+                  />
+                </Link>
+                <div className="play"></div>
+              </figure>
+              <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
+            </article>
+          );
+        })}
 
       <Footer></Footer>
+
     </>
   );
 };
