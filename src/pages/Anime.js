@@ -1,6 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import HeaderCategory from "../components/Header/HeaderCategory";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/css/Anime.css";
 
@@ -82,7 +82,9 @@ const Anime = () => {
               <article className="episodes-list" key={mal_id} >
                 <h3>EP 2 </h3>
                 <figure className="image-container">
+                  <Link to={"/anime/play"}>
                   <img src={episodes[1].image} alt="im" className="image-episode" />
+                  </Link>
                 </figure>
                 <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
                 </article> 
