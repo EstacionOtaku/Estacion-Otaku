@@ -51,7 +51,8 @@ const carouselProperties = {
     },
   ],
 };
-const Top10Cards = () => {
+
+const Sugerencias = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
@@ -81,5 +82,4 @@ const MovieCard = ({ item }) => {
     </div>
   );
 };
-
-export default Top10Cards;
+export default Sugerencias;
