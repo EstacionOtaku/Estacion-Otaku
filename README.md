@@ -38,13 +38,13 @@ En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica
     <tbody>
       <tr>
         <td>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="40%" />
+          <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="100%" />
         </td>
         <td>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/photoshop-8-226474.png" width="40%" />
+          <img src="https://cdn.iconscout.com/icon/free/png-256/photoshop-8-226474.png" width="100%" />
         </td>
         <td>
-          <img src="https://1000marcas.net/wp-content/uploads/2020/11/illustrator-Logo-2007.jpg" width="40%" />
+          <img src="https://1000marcas.net/wp-content/uploads/2020/11/illustrator-Logo-2007.jpg" width="100%" />
         </td>        
       </tr>
     </tbody>
