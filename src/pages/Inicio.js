@@ -1,4 +1,7 @@
+import CategoriaCards from "../components/Cards/CategoriaCards";
 import Footer from "../components/Footer/Footer";
+import "../styles/scss/Inicio.scss";
+
 import HeaderCategory from "../components/Header/HeaderCategory";
 const Inicio = () => {
   return (
@@ -9,6 +12,7 @@ const Inicio = () => {
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
         alt="portada"
       />
+      <CategoriaCards></CategoriaCards>
       <Footer></Footer>
     </>
   );
