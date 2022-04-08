@@ -44,6 +44,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         <th>Bootstrap</th>
         <th>Json</th>
         <th>Slick.js</th>
+        <th>Sweetalert2</th>
         <th>Figma</th>
         <th>Photoshop</th>
       </tr>
@@ -86,6 +87,10 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
           <img
             src="https://cms-assets.tutsplus.com/uploads/users/30/posts/31355/preview_image/pre.png" width="100%" />
         </td>  
+        <td>
+          <img
+            src="https://avatars.githubusercontent.com/u/35137722?s=200&v=4" width="100%" />
+        </td>
         <td>
           <img src="https://cdn.iconscout.com/icon/free/png-256/figma-3628771-3030133.png" width="100%" />
         </td>
