@@ -30,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "avatarserver": "json-server --watch src/api/avatar.json --port 5000"
+    "categoriaserver": "json-server --watch src/api/categoria.json --port 5000"
   },
   "eslintConfig": {
     "extends": [

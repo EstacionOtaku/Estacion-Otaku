@@ -1,8 +1,14 @@
-.hero {
+.hero--color {
   height: 100vh;
   margin: 0;
-  background-color: #060a19;
   background-size: "cover";
+}
+.categoria__portada {
+  position: absolute;
+  width: 100%;
+}
+.prueba_image {
+  max-height: 100vh;
 }
 
 .hero--vertical {

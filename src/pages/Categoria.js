@@ -6,34 +6,34 @@ import "../styles/scss/Categoria.scss";
 import { Link } from "react-router-dom";
 
 const Categoria = ({ tema }) => {
-  const [gallery, setGallery] = useState([]);
-  // const recurso = `galeria`;
+  const [theme, setTheme] = useState({});
 
   useEffect(() => {
-    const apiAnimes = async () => {
+    const category = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1");
+        const response = await fetch(`http://localhost:5000/${tema}`);
         const data = await response.json();
-        setGallery(data.results);
-        //console.log(data.galeria);
+
+        setTheme(data[0]);
       } catch (error) {
         console.log(error);
       } finally {
       }
     };
-
-    apiAnimes();
+    category();
   }, []);
+
+  const { titulo, img, año } = theme;
 
   return (
     <>
       <HeaderInicio></HeaderInicio>
-      {/* <img
-        className="prueba_image"
-        src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
-        alt="portada"
-      /> */}
-      <section class="hero">
+      <section className="categoria__portada">
+        <figure className="categoria__portada-container">
+          <img className="prueba_image" src={img} alt="portada" />
+        </figure>
+      </section>
+      <section class="hero hero--color">
         <div class="hero--vertical">
           <div class="hero--horizontal">
             <div class="back-container"></div>
@@ -41,8 +41,8 @@ const Categoria = ({ tema }) => {
               <Link to="/inicio">⏪ Atrás</Link>
             </a>
             <h3 class="hero--category">{tema}</h3>
-            <h5 class="hero--year">2016</h5>
-            <h1 class="hero--name">Shigatsu wa Kimi no Uso</h1>
+            <h5 class="hero--year">{año}</h5>
+            <h1 class="hero--name">{titulo}</h1>
             <div class="play-container"></div>
             <a href="" class="play--button">
               ▶️ Reproducir
@@ -50,9 +50,6 @@ const Categoria = ({ tema }) => {
           </div>
         </div>
       </section>
-      {/* <section>
-        <Galeria data={gallery} />
-      </section> */}
 
       <Footer></Footer>
     </>
