@@ -14,6 +14,8 @@ El presente proyecto constó de proponer una web para el proyecto "Estación Ota
 
 ### Vista responsive en mobile
 
+## Tecnologías utilizadas
+
 ```
 Todos los derechos reservados.
 ```
