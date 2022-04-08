@@ -199,6 +199,7 @@ const Tabs = () => {
           </div>
         </div>
       </section>
+     
     </>
   );
 };
