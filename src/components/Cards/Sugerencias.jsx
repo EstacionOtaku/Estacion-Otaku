@@ -56,8 +56,8 @@ const Sugerencias = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {Sugerencia.map((item) => (
-          <MovieCard item={item} />
+        {Sugerencia.map((item, index) => (
+          <MovieCard item={item} key={index} />
         ))}
       </Slider>
     </div>

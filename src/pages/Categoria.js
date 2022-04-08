@@ -33,18 +33,18 @@ const Categoria = ({ tema }) => {
           <img className="prueba_image" src={img} alt="portada" />
         </figure>
       </section>
-      <section class="hero hero--color">
-        <div class="hero--vertical">
-          <div class="hero--horizontal">
-            <div class="back-container"></div>
-            <a href="" class="back--button">
+      <section className="hero hero--color">
+        <div className="hero--vertical">
+          <div className="hero--horizontal">
+            <div className="back-container"></div>
+            <a href="" className="back--button">
               <Link to="/inicio">⏪ Atrás</Link>
             </a>
-            <h3 class="hero--category">{tema}</h3>
-            <h5 class="hero--year">{año}</h5>
-            <h1 class="hero--name">{titulo}</h1>
-            <div class="play-container"></div>
-            <a href="" class="play--button">
+            <h3 className="hero--category">{tema}</h3>
+            <h5 className="hero--year">{año}</h5>
+            <h1 className="hero--name">{titulo}</h1>
+            <div className="play-container"></div>
+            <a href="" className="play--button">
               ▶️ Reproducir
             </a>
           </div>
