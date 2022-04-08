@@ -1,0 +1,124 @@
+{
+  "Pelea": [
+    {
+      "titulo": "CodeGeass",
+      "año": "2006",
+      "descripcion": "Se desarrolla en una realidad alternativa donde el Sacro Imperio de Britannia, una superpotencia internacional, ha conquistado más de un tercio del planeta. El mundo, principalmente, es dividido entre esta y otras dos superpotencias: la Federación China y la Unión Europea.",
+      "img": "https://i.postimg.cc/ZqJ64qhs/mecha.jpg"
+    }
+  ],
+  "Aventura": [
+    {
+      "titulo": "Demon Slayer",
+      "año": "2020",
+      "descripcion": "Narra la historia de Tanjiro Kamado, un joven convertido en cazador de demonios cuando toda su familia es masacrada. Su objetivo es conseguir una cura para su hermana, que se está convirtiendo en demonio",
+      "img": "https://i.postimg.cc/GpzhYLTf/accion.jpg"
+    }
+  ],
+  "Comedia": [
+    {
+      "titulo": "Aggretsuko",
+      "año": "2018",
+      "descripcion": "Retsuko es una panda roja antropomórfica de 25 años, soltera, quien trabaja en el departamento de contabilidad de una compañía comercial japonesa ante la constante frustración cotidiana en su trabajo,ella desahoga sus emociones cantando death metal en el bar de karaoke todas las noches.",
+      "img": "https://i.postimg.cc/Y992z51C/comedia.jpg"
+    }
+  ],
+  "Drama": [
+    {
+      "titulo": "Shigatsu Wa Kimi No Uso",
+      "año": "2016",
+      "descripcion": "La historia sigue a un joven pianista llamado Kosei Arima, que pierde la capacidad de escuchar el piano después de la muerte de su madre.",
+      "img": "https://i.postimg.cc/s23gvQxS/drama.jpg"
+    }
+  ],
+
+  "Kids": [
+    {
+      "titulo": "Pokemon",
+      "año": "2019",
+      "descripcion": "Ash Ketchum es un muchacho entusiasta a quien le gustan los Pokémon y las batallas. Su gran pasión por los Pokémon lo ha llevado a proponerse el objetivo de convertirse en Maestro Pokémon, el más alto grado de entrenamiento Pokémon, motivo por el cual comienza un viaje en búsqueda de este título. ",
+      "img": "https://i.postimg.cc/J7F0PzYV/kids.jpg"
+    }
+  ],
+
+  "Fantasia": [
+    {
+      "titulo": "Fairy Tail",
+      "año": "2009",
+      "descripcion": "La serie relata las aventuras del joven mago Natsu Dragneel y su gato parlante Happy que viajan juntos en busca del dragón Igneel, el cual Natsu declara que es su padre adoptivo, hasta que un día conocen a una chica llamada Lucy Heartfilia, una maga de espíritus celestiales.    ",
+      "img": "https://i.postimg.cc/G90cr964/fantasia.jpg"
+    }
+  ],
+
+  "Militar": [
+    {
+      "titulo": "Shingeki No Kyojin",
+      "año": "2013",
+      "descripcion": "La historia de la Tierra cambió para siempre cuando aparecieron por primera vez monstruos gigantes llamados Titanes. Estas bestias tienen gusto por la carne humana, lo que obliga a la humanidad a esconderse dentro de ciudades amuralladas para sobrevivir.",
+      "img": "https://i.postimg.cc/P5WqXzXT/militar.jpg"
+    }
+  ],
+
+  "Misterio": [
+    {
+      "titulo": " Death Note",
+      "año": "2006",
+      "descripcion": "Los shinigami son dioses de la muerte que pueden matar a cualquier persona solo viendo su rostro y escribiendo el nombre de su víctima en un cuaderno llamado Death Note. Un día, un shinigami aburrido, decide dejar caer su Death Note al mundo de los humanos, solo para entretenerse un poco y ver cómo se desarrollaban las cosas.",
+      "img": "https://i.postimg.cc/bwcJfFjm/misterio.jpg"
+    }
+  ],
+
+  "Policial": [
+    {
+      "titulo": "Psycho-Pass",
+      "año": "2013",
+      "descripcion": "En el siglo 22 Japón implementa el Sistema Sibyl, tiene objetivo de determinar el nivel de amenaza de cada ciudadano al examinar su estado mental en busca de signos de intención criminal, conocido como su Psycho-Pass. ",
+      "img": "https://i.postimg.cc/7LpGbYvy/policial.jpg"
+    }
+  ],
+
+  "Sliceoflife": [
+    {
+      "titulo": "Violet Evergarden",
+      "año": "2018",
+      "descripcion": "La historia narra la vida de Violet, una joven la cual desde pequeña fue tomada como un arma de guerra. Sin embargo, una vez acabada la guerra ella ha dejado el campo de batalla. Esta ahora queda al cuidado por la Familia Evergarden.",
+      "img": "https://i.postimg.cc/fT0LFQ13/slice.jpg"
+    }
+  ],
+
+  "Deportes": [
+    {
+      "titulo": "Haikyuu!!",
+      "año": "2014",
+      "descripcion": "Basado en el manga de Haruichi Furudate, Haikyuu!! es una serie que sigue a Shôyô Hinata, un muchacho maravillado con el voleibol desde niño, hasta el punto de fundar su propio club de voleibol, convenciendo a otras cinco personas para que se unan y poder tener un equipo.    ",
+      "img": "https://i.postimg.cc/PJ0qxSvr/deporte.jpg"
+    }
+  ],
+
+  "CienciaFiccion": [
+    {
+      "titulo": "Steins Gate",
+      "año": "2011",
+      "descripcion": "La jugabilidad sigue una trama no lineal que se ramifica mediante un sistema de decisiones con múltiples finales. La historia gira en torno a Rintaro Okabe que, junto a sus amigos Mayuri Shiina e Itaru Hashida, descubre que ha creado por accidente una máquina capaz de enviar mensajes al pasado.",
+      "img": "https://i.postimg.cc/sxGVt5HF/scifi.jpg"
+    }
+  ],
+
+  "Psicologico": [
+    {
+      "titulo": "Erased",
+      "año": "2016",
+      "descripcion": "Satoru Fujinuma es un tipo de 28 años que trabaja como repartidor de pizzas y a la vez es un mangaka frustrado. Satoru tiene un don el cual sólo se “activa” cada vez que ocurre una tragedia cerca de él, éste le permite viajar unos minutos en el tiempo antes de que ocurriera la tragedia, tiempo el cual aprovecha para evitar que ocurra.",
+      "img": "https://i.postimg.cc/d1xsH5Bm/psicologico.jpg"
+    }
+  ],
+
+  "Terror": [
+    {
+      "titulo": "Another",
+      "año": "2012",
+      "descripcion": "Cuenta la historia de Koichi Sakakibara, un chico que se traslada al instituto Yomiyama North. Allí conoce a Mei Misaki, una estudiante aparentemente tranquila y tímida a la que muchos de sus compañeros de clase e incluso la maestra ignora.",
+      "img": "https://i.postimg.cc/zDyKJM9N/terror.jpg"
+    }
+  ]
+}
