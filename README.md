@@ -15,8 +15,8 @@ El presente proyecto constó de proponer una web para el proyecto "Estación Ota
 ### Vista responsive en mobile
 
 ## Lenguajes y herramientas
-Para desallorar este projecto, hemos utilizado los siguientes lenguajes y tecnologías, aprendidas durante el módulo Front End del Bootcap:
-
+Para desarrollar este proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
+  
 <table>
     <thead>
       <tr>
