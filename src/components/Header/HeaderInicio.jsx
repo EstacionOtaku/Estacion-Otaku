@@ -7,10 +7,9 @@ import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const HeaderInicio = () => {
-
+const HeaderInicio = (imageHeader) => {
   const { user, logout } = useAuth();
-  const [userModal, setUserModal] = useState(false)
+  const [userModal, setUserModal] = useState(false);
   const handleLogout = async () => {
     try {
       await logout();
@@ -19,13 +18,14 @@ const HeaderInicio = () => {
     }
   };
   const handleUserOptions = () => {
-    if (!userModal){
+    if (!userModal) {
       setUserModal(true);
-    }
-    else {
+    } else {
       setUserModal(false);
     }
-  }
+  };
+
+  // console.log(imageHeader.imageHeader.imageHeader.length);
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -62,13 +62,18 @@ const HeaderInicio = () => {
             <img src={search} className="search__image"></img>
           </figure>
           <p className="header__username">{user.displayName || user.email}</p>
-          <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
-          </figure>
-          <button
-            className="header__avatar-options"
-            onClick={handleUserOptions}
-          >
+          <Link to="/avatar">
+            {imageHeader.imageHeader.imageHeader ? (
+              <figure className="header__avatar-container">
+                <img src={imageHeader.imageHeader.imageHeader} className="avatar__image"></img>
+              </figure>
+            ) : (
+              <figure className="header__avatar-container">
+                <img src={imageHeader.imageHeader} className="avatar__image"></img>
+              </figure>
+            )}
+          </Link>
+          <button className="header__avatar-options" onClick={handleUserOptions}>
             <figure className="header__arrow-container">
               <img src={arrow} className="arrow__image"></img>
             </figure>
@@ -76,10 +81,14 @@ const HeaderInicio = () => {
 
           {userModal && (
             <div className="header__modal-user">
-              <Link to="/settings-acount" className="header__button-logout">Editar Cuenta</Link>
-              <button className="header__button-logout" onClick={handleLogout}>Cerrar Sesión</button>
+              <Link to="/settings-acount" className="header__button-logout">
+                Editar Cuenta
+              </Link>
+              <button className="header__button-logout" onClick={handleLogout}>
+                Cerrar Sesión
+              </button>
             </div>
-          )}  
+          )}
         </div>
       </div>
     </header>

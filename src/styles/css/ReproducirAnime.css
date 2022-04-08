@@ -1,0 +1,27 @@
+.page-reproductor{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-video{
+    font-size: 1.5rem;
+}
+.video-container{
+    width: 23rem;
+    height: 15rem;
+}
+
+
+@media (min-width:760px) {
+    .video-container{
+        width: 90%;
+        height: 90%;
+    }
+    .title-video{
+        font-size: 2.25rem;
+    }
+}
+

@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { CategoriaImageData } from "../../data/PeliImageData";
+import { Link } from "react-router-dom";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -23,7 +24,7 @@ const NextBtn = (props) => {
 const carouselProperties = {
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,
-  slidesToShow: 8,
+  slidesToShow: 7,
   centerMode: true,
   centerPadding: "170px",
   responsive: [
@@ -52,34 +53,41 @@ const carouselProperties = {
   ],
 };
 
-const CategoriaCards = () => {
+const CategoriaCards = ({ setTema }) => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {CategoriaImageData.map((item) => (
-          <MovieCard item={item}></MovieCard>
-        ))}
+        {CategoriaImageData.map((item, index) => {
+          const { img, categoria } = item;
+          return (
+            <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>
+          );
+        })}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ item }) => {
-  console.log(item);
+const MovieCard = ({ img, categoria, setTema }) => {
+  const onClickImage = (e) => {
+    setTema(e.target.alt);
+  };
   return (
-    <div style={{ textAlign: "center" }}>
-      <img
-        className="card__multi-image"
-        src={item}
-        alt="movie"
-        style={{
-          width: "100%",
-          height: "170px",
-          objectFit: "contain",
-          marginBottom: "10px",
-        }}
-      />
-    </div>
+    <Link to="/categoria">
+      <div style={{ textAlign: "center" }} onClick={onClickImage}>
+        <img
+          className="card__multi-image"
+          src={img}
+          alt={categoria}
+          style={{
+            width: "100%",
+            height: "170px",
+            objectFit: "contain",
+            marginBottom: "10px",
+          }}
+        />
+      </div>
+    </Link>
   );
 };
 

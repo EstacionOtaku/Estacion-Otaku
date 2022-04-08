@@ -23,7 +23,7 @@ const NextBtn = (props) => {
 const carouselProperties = {
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,
-  slidesToShow: 8,
+  slidesToShow: 7,
   centerMode: true,
   centerPadding: "170px",
   responsive: [
@@ -56,8 +56,8 @@ const Sugerencias = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {Sugerencia.map((item) => (
-          <MovieCard item={item} />
+        {Sugerencia.map((item, index) => (
+          <MovieCard item={item} key={index} />
         ))}
       </Slider>
     </div>
@@ -65,7 +65,6 @@ const Sugerencias = () => {
 };
 
 const MovieCard = ({ item }) => {
-  console.log(item);
   return (
     <div style={{ textAlign: "center" }}>
       <img

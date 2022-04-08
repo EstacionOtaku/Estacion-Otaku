@@ -13,6 +13,7 @@ import Categoria from "./pages/Categoria";
 import Anime from "./pages/Anime";
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
+// import ReproducirAnime from "./pages/ReproducirAnime";
 
 const App = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -21,6 +22,7 @@ const App = () => {
     LocalHeaderImage = ["https://i.postimg.cc/9MLNHPBX/Mask-group-4.png"];
   }
   const [imageHeader, setImageHeader] = useState(LocalHeaderImage);
+
   useEffect(() => {
     let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
     if (LocalHeaderImage) {
@@ -33,36 +35,54 @@ const App = () => {
     }
   }, [imageHeader]);
 
+  let LocalTema = JSON.parse(localStorage.getItem("Local-Tema"));
+  if (LocalTema) {
+  } else {
+    LocalTema = [""];
+  }
+  const [tema, setTema] = useState(LocalTema);
+  useEffect(() => {
+    let LocalTema = JSON.parse(localStorage.getItem("Local-Tema"));
+    if (LocalTema) {
+      localStorage.setItem("Local-Tema", JSON.stringify(tema));
+    } else {
+      localStorage.setItem("Local-Tema", JSON.stringify([""]));
+    }
+  }, [tema]);
+
   return (
     <main className="main">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<StarPage />} />
+          <Route path="/" element={<StarPage imageHeader={imageHeader} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-
-
-          <Route path="/nosotros" element={<ProtectedRoute>
-                <Nosotros />
-              </ProtectedRoute>} />
+          <Route
+            path="/nosotros"
+            element={
+              <ProtectedRoute>
+                <Nosotros imageHeader={imageHeader} />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/categoria"
             element={
               <ProtectedRoute>
-                <Categoria />
+                <Categoria tema={tema} imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/anime/:id"
             element={
               <ProtectedRoute>
-                <Anime/>
+                <Anime imageHeader={imageHeader} />
               </ProtectedRoute>
             }
-            />
+          /> */}
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />
@@ -73,7 +93,7 @@ const App = () => {
             path="/inicio"
             element={
               <ProtectedRoute>
-                <Inicio />
+                <Inicio setTema={setTema} imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />

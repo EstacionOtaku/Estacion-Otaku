@@ -6,19 +6,27 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Sugerencias from "../components/Cards/Sugerencias";
-const Inicio = () => {
+const Inicio = ({ setTema, imageHeader }) => {
   return (
     <>
-      <HeaderCategory></HeaderCategory>
+      <HeaderCategory imageHeader={imageHeader}></HeaderCategory>
       <img
         className="prueba_image"
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
         alt="portada"
       />
-      <CategoriaCards></CategoriaCards>
-      <LoMasVistoCards></LoMasVistoCards>
-      <Top10Cards></Top10Cards>
-      <Sugerencias></Sugerencias>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <CategoriaCards setTema={setTema}></CategoriaCards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <LoMasVistoCards></LoMasVistoCards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Top10Cards></Top10Cards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Sugerencias></Sugerencias>
+      </section>
       <Footer></Footer>
     </>
   );
