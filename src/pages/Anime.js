@@ -63,7 +63,7 @@ const Anime = () => {
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
               <article className="episodes-list" key={mal_id} >
-                <h3> 1</h3>
+                <h3>EP 1</h3>
                 <figure className="image-container">
                   <img src={episodes[0].image} alt="im" className="image-episode" />
                 </figure>
@@ -80,7 +80,7 @@ const Anime = () => {
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
               <article className="episodes-list" key={mal_id} >
-                <h3> 2 </h3>
+                <h3>EP 2 </h3>
                 <figure className="image-container">
                   <img src={episodes[1].image} alt="im" className="image-episode" />
                 </figure>
@@ -93,7 +93,7 @@ const Anime = () => {
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
               <article className="episodes-list" key={mal_id} >
-                <h3> 3 </h3>
+                <h3>EP 3 </h3>
                 <figure className="image-container">
                   <img src={episodes[2].image} alt="im" className="image-episode" />
                 </figure>
@@ -106,7 +106,7 @@ const Anime = () => {
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
               <article className="episodes-list" key={mal_id} >
-                <h3> 4 </h3>
+                <h3>EP 4 </h3>
                 <figure className="image-container">
                   <img src={episodes[3].image} alt="im" className="image-episode" />
                   <div>

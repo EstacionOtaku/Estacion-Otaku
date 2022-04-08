@@ -1,25 +1,51 @@
 .episodes-container {
     display: flex;
     flex-direction: column;
-    width: 1500px;
     margin: auto;
+    width: 100vw;
 }
 
 .episodes-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 3rem;
     align-items: center;
+    gap: 1rem 0;
     border-bottom: 1px solid;
-    margin-top: 2rem;
+    padding: 1.25rem;
+    /* margin: 2rem 0; */
 }
 
 .image-episode {
-    width: 300px;
-    height: 170px;
+    width: 180px;
+    height: 100px;
     border-radius: 25px;
 }
 
 .sysnopsis-text {
-    font-size: 20px;
+    font-size: 13px;
+    width: 80vw;
+    text-align: justify;
+    
+}
+
+@media (min-width:760px) {
+    .episodes-container {
+        width: 1300px;
+    }
+
+    .episodes-list {
+        flex-direction: row;
+        gap: .75rem;
+    }
+
+    .image-episode {
+        width: 260px;
+        height: 140px;
+    }
+    .sysnopsis-text {
+        font-size: 1.2rem;
+        padding: 0 .5rem ;
+    }
+
 }
