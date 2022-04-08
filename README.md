@@ -17,7 +17,61 @@ El presente proyecto constó de proponer una web para el proyecto "Estación Ota
 ## Lenguajes y herramientas
 Para desallorar este projecto, hemos utilizado los siguientes lenguajes y tecnologías, aprendidas durante el módulo Front End del Bootcap:
 
-<p><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/></a>  <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a></p>
+<table>
+    <thead>
+      <tr>
+        <th>React</th>
+        <th>HTML</th>
+        <th>CSS</th>
+        <th>JavaScript</th>
+        <th>SASS</th>
+        <th>React Router</th>
+        <th>Axios</th>
+        <th>Google Fonts</th>
+        <th>Animate.css</th>
+        <th>SweetAler2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://i.postimg.cc/rF6WrLjr/html.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://i.postimg.cc/mgSDG9F2/css.png" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png" width="100%" />
+        </td>
+        <td>
+          <img src="https://iconape.com/wp-content/files/sm/371377/svg/371377.svg" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Axios_logo_%282017%29.svg/1200px-Axios_logo_%282017%29.svg.png" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Google_Fonts_logo.svg/2560px-Google_Fonts_logo.svg.png" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://i.postimg.cc/mkp40CNs/animate-css.png" width="100%" />
+        </td>
+        <td>
+          <img
+            src="https://sweetalert2.github.io/images/SweetAlert2.png" width="100%" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 ```
 Todos los derechos reservados.
