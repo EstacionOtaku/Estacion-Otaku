@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Estación Otaku ⚡👓🏰🧙‍♂ - Reto Final (parte 1)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El presente proyecto constó de clonar y proponer nuevos componentes para la web oficlal "Wizarding World" del universo de Harry Potter y Animales Fantásticos. Cabe resaltar que este proyecto es hecho por fans para fans. En nuestra propuesta, se añadieron nuevas funcionalidades que permitirán que tu experiencia en el mundo mágico sea memorable.
 
-## Available Scripts
+[![logo.png](https://i.postimg.cc/LXdQ94j6/logo.png)](https://postimg.cc/mcwyVsd0)
 
-In the project directory, you can run:
+## Introducción
 
-### `npm start`
+## Esquemas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Vistas del proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Vista pantalla completa en laptop
 
-### `npm test`
+### Vista responsive en mobile
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Todos los derechos reservados.
+```
 
-### `npm run build`
+## Contribuciones
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Te pedimos leas los códigos de conducta de GitHub y el presente "README.md" para poder utilizar y contribuir con el proyecto. Se recomienda el uso del proyecto únicamente para fines académicos y educativos. Prohibido su uso para fines comerciales.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Autores
+### Neko Coders
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Cerpa Salas, Valeria**
+- **Chan Yance, Bruno**
+- **Lazarinas Armendariz, Jeanfranco**
+- **Huamán Lazo, Diego**
+- **Palomino Portugal, Clarissa**
+- **Peña Pacora, Gina**
+- **Yong Zea, Paula**
 
-### `npm run eject`
+## Licencia
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Este proyecto contiene una licencia MIT - ver el archivo adjunto en el repositorio para conocer los detalles.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Agradecimientos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Profesor Elliot Garamendi, por la enseñanza
+- Fundación Es Hoy y CODIGO, por la oportunidad de formarnos en desarrollo web.
+   
