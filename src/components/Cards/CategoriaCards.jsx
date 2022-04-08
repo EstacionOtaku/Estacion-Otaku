@@ -23,7 +23,7 @@ const NextBtn = (props) => {
 const carouselProperties = {
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,
-  slidesToShow: 8,
+  slidesToShow: 7,
   centerMode: true,
   centerPadding: "170px",
   responsive: [

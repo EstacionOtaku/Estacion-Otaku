@@ -15,10 +15,18 @@ const Inicio = () => {
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
         alt="portada"
       />
-      <CategoriaCards></CategoriaCards>
-      <LoMasVistoCards></LoMasVistoCards>
-      <Top10Cards></Top10Cards>
-      <Sugerencias></Sugerencias>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <CategoriaCards></CategoriaCards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <LoMasVistoCards></LoMasVistoCards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Top10Cards></Top10Cards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Sugerencias></Sugerencias>
+      </section>
       <Footer></Footer>
     </>
   );
