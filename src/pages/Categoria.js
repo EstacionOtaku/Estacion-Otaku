@@ -50,9 +50,9 @@ const Categoria = ({ tema }) => {
           </div>
         </div>
       </section>
-      {/* <section>
+      <section>
         <Galeria data={gallery} />
-      </section> */}
+      </section>
 
       <Footer></Footer>
     </>
