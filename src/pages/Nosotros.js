@@ -9,10 +9,10 @@ import NosotrosCards from "../components/Cards/NosotrosCards";
 import CarruselInfoNosotros from "../components/Carrusel/CarruselInfoNosotros";
 import CarruselAliadosNosotros from "../components/Carrusel/CarruselAliadosNosotros";
 
-const Nosotros = () => {
+const Nosotros = (imageHeader) => {
   return (
     <>
-      <HeaderInicio></HeaderInicio>
+      <HeaderInicio imageHeader={imageHeader}></HeaderInicio>
       <img class="portada" src={Portada} alt="portada" />
       <article class="container d-flex align-items-center justify-content-center alto-50 text-white mb-5">
         <img src={Logo} alt="nekocoders" />

@@ -3,8 +3,9 @@ import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.png";
+import { Link } from "react-router-dom";
 
-const HeaderSearch = () => {
+const HeaderSearch = (imageHeader) => {
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -21,7 +22,7 @@ const HeaderSearch = () => {
           ></input>
           <Link to="/avatar">
             <figure className="header__avatar-container">
-              <img src={avatar} className="avatar__image"></img>
+              <img src={imageHeader.imageHeader} className="avatar__image"></img>
             </figure>
           </Link>
           <figure className="header__arrow-container">

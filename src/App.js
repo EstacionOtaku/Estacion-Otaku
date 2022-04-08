@@ -53,7 +53,7 @@ const App = () => {
     <main className="main">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<StarPage />} />
+          <Route path="/" element={<StarPage imageHeader={imageHeader} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
@@ -61,7 +61,7 @@ const App = () => {
             path="/nosotros"
             element={
               <ProtectedRoute>
-                <Nosotros />
+                <Nosotros imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />
@@ -70,18 +70,18 @@ const App = () => {
             path="/categoria"
             element={
               <ProtectedRoute>
-                <Categoria tema={tema} />
+                <Categoria tema={tema} imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/anime/:id"
             element={
               <ProtectedRoute>
-                <Anime />
+                <Anime imageHeader={imageHeader} />
               </ProtectedRoute>
             }
-          />
+          /> */}
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />
@@ -92,7 +92,7 @@ const App = () => {
             path="/inicio"
             element={
               <ProtectedRoute>
-                <Inicio setTema={setTema} />
+                <Inicio setTema={setTema} imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />

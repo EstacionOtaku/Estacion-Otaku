@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import "../styles/scss/Categoria.scss";
 import { Link } from "react-router-dom";
 
-const Categoria = ({ tema }) => {
+const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Categoria = ({ tema }) => {
 
   return (
     <>
-      <HeaderInicio></HeaderInicio>
+      <HeaderInicio imageHeader={imageHeader}></HeaderInicio>
       <section className="categoria__portada">
         <figure className="categoria__portada-container">
           <img className="prueba_image" src={img} alt="portada" />
