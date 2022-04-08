@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { CategoriaImageData } from "../../data/PeliImageData";
+import { Link } from "react-router-dom";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -67,19 +68,21 @@ const CategoriaCards = () => {
 const MovieCard = ({ item }) => {
   console.log(item);
   return (
-    <div style={{ textAlign: "center" }}>
-      <img
-        className="card__multi-image"
-        src={item}
-        alt="movie"
-        style={{
-          width: "100%",
-          height: "170px",
-          objectFit: "contain",
-          marginBottom: "10px",
-        }}
-      />
-    </div>
+    <Link to="/categoria">
+      <div style={{ textAlign: "center" }}>
+        <img
+          className="card__multi-image"
+          src={item}
+          alt="movie"
+          style={{
+            width: "100%",
+            height: "170px",
+            objectFit: "contain",
+            marginBottom: "10px",
+          }}
+        />
+      </div>
+    </Link>
   );
 };
 

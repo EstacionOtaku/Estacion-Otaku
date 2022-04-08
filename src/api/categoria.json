@@ -1,0 +1,11 @@
+{
+  "Drama": [
+    {
+      "titulo": "drama",
+      "año": "2020",
+      "descripcion": "",
+      "img": "https://i.postimg.cc/fRjCH0W3/pushear-rama-que-no-sea-main.png"
+    }
+  ],
+  "Comedia": [{ "titulo": "comedia", "año": "2020", "descripcion": "" }]
+}
