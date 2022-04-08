@@ -13,7 +13,7 @@ const Anime = () => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48"
+          "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1"
         );
         const data = await response.json();
         const animeSelected = data.results.filter(function (element) {
@@ -58,16 +58,16 @@ const Anime = () => {
         <div className="episode" >
         <div>
         <h2>Episodios</h2>
-      </div>
+      
 
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
-              <article className="paquete-list-container" key={mal_id} >
+              <article className="episodes-list" key={mal_id} >
                 <h3> 1</h3>
                 <figure className="image-container">
                   <img src={episodes[0].image} alt="im" className="image-episode" />
                 </figure>
-                <p> {episodes[0].synopsis} </p>
+                <p className="sysnopsis-text"> {episodes[0].synopsis} </p>
                 </article> 
             );
           })}
@@ -75,46 +75,45 @@ const Anime = () => {
 
       </div>
 
-      <div className="episodes-container">
+      
 
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
-              <article className="paquete-list-container" key={mal_id} >
+              <article className="episodes-list" key={mal_id} >
                 <h3> 2 </h3>
                 <figure className="image-container">
-                  <img src={episodes[0].image} alt="im" className="image-episode" />
+                  <img src={episodes[1].image} alt="im" className="image-episode" />
                 </figure>
-                <p> {episodes[0].synopsis} </p>
+                <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
                 </article> 
             );
           })}
         
-      </div>
-      <div className="episodes-container">
-
+  
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
-              <article className="paquete-list-container" key={mal_id} >
+              <article className="episodes-list" key={mal_id} >
                 <h3> 3 </h3>
                 <figure className="image-container">
-                  <img src={episodes[0].image} alt="im" className="image-episode" />
+                  <img src={episodes[2].image} alt="im" className="image-episode" />
                 </figure>
-                <p> {episodes[0].synopsis} </p>
+                <p className="sysnopsis-text"> {episodes[2].synopsis} </p>
                 </article> 
             );
           })}
         
-      </div>
-      <div className="episodes-container">
 
           {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
             return (
-              <article className="paquete-list-container" key={mal_id} >
+              <article className="episodes-list" key={mal_id} >
                 <h3> 4 </h3>
                 <figure className="image-container">
-                  <img src={episodes[0].image} alt="im" className="image-episode" />
+                  <img src={episodes[3].image} alt="im" className="image-episode" />
+                  <div>
+                    <p> {episodes[3].episodio_1} </p>
+                  </div>
                 </figure>
-                <p> {episodes[0].synopsis} </p>
+                <p className="sysnopsis-text"> {episodes[3].synopsis} </p>
                 </article> 
             );
           })}
