@@ -46,7 +46,6 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         <th>Slick.js</th>
         <th>Figma</th>
         <th>Photoshop</th>
-        <th>Illustrator</th> 
       </tr>
     </thead>
     <tbody>
@@ -92,10 +91,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         </td>
         <td>
           <img src="https://cdn.iconscout.com/icon/free/png-256/photoshop-8-226474.png" width="100%" />
-        </td>
-        <td>
-          <img src="https://1000marcas.net/wp-content/uploads/2020/11/illustrator-Logo-2007.jpg" width="100%" />
-        </td>
+        </td>    
       </tr>
     </tbody>
 </table>
