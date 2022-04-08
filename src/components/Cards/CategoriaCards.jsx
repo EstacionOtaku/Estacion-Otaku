@@ -57,9 +57,11 @@ const CategoriaCards = ({ setTema }) => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {CategoriaImageData.map((item) => {
+        {CategoriaImageData.map((item, index) => {
           const { img, categoria } = item;
-          return <MovieCard img={img} categoria={categoria} setTema={setTema}></MovieCard>;
+          return (
+            <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>
+          );
         })}
       </Slider>
     </div>

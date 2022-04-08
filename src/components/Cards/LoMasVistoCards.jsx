@@ -56,8 +56,8 @@ const LoMasVistoCards = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {MasVistos.map((item) => (
-          <MovieCard item={item} />
+        {MasVistos.map((item, index) => (
+          <MovieCard item={item} key={index} />
         ))}
       </Slider>
     </div>

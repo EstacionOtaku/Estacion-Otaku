@@ -56,8 +56,8 @@ const Top10Cards = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {Top10.map((item) => (
-          <MovieCard item={item} />
+        {Top10.map((item, index) => (
+          <MovieCard item={item} key={index} />
         ))}
       </Slider>
     </div>

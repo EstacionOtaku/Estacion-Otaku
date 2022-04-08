@@ -6,10 +6,10 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Sugerencias from "../components/Cards/Sugerencias";
-const Inicio = ({ setTema }) => {
+const Inicio = ({ setTema, imageHeader }) => {
   return (
     <>
-      <HeaderCategory></HeaderCategory>
+      <HeaderCategory imageHeader={imageHeader}></HeaderCategory>
       <img
         className="prueba_image"
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
