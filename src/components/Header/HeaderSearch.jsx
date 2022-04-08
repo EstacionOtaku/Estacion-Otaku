@@ -3,6 +3,7 @@ import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.png";
+import { Link } from "react-router-dom";
 
 const HeaderSearch = () => {
   return (

@@ -20,6 +20,9 @@ const NextBtn = (props) => {
   );
 };
 
+
+
+
 const carouselProperties = {
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,

@@ -52,24 +52,24 @@ const carouselProperties = {
   ],
 };
 
-const Sugerencias = () => {
+const Sugerencias = ({image}) => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {Sugerencia.map((item) => (
-          <MovieCard item={item} />
-        ))}
+        {/* {Sugerencia.map((item) => ( */}
+          <MovieCard image={image} />
+        {/* ))} */}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ item }) => {
+const MovieCard = ({ image }) => {
   return (
     <div style={{ textAlign: "center" }}>
       <img
         className="card__multi-image"
-        src={item}
+        src={image}
         alt="movie"
         style={{
           width: "100%",
