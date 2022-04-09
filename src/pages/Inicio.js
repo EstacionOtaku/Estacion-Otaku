@@ -6,11 +6,10 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Sugerencias from "../components/Cards/Sugerencias";
-// import { useEffect, useState } from "react";
-const Inicio = ({ setTema }) => {
+const Inicio = ({ setTema, imageHeader }) => {
   return (
     <>
-      <HeaderCategory></HeaderCategory>
+      <HeaderCategory imageHeader={imageHeader}></HeaderCategory>
       <img
         className="prueba_image"
         src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
@@ -19,22 +18,15 @@ const Inicio = ({ setTema }) => {
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <CategoriaCards setTema={setTema}></CategoriaCards>
       </section>
-
-      <h3 className="fs-3 text-center">TOP 10 PERÚ</h3>
-      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-        <Top10Cards></Top10Cards>
-      </section>
-
-      <h3 className="fs-3 text-center">SUGERENCIAS</h3>
-      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-        <Sugerencias></Sugerencias>
-      </section>
-
-      <h3 className="fs-3 text-center">LO MÁS VISTO</h3>
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <LoMasVistoCards></LoMasVistoCards>
       </section>
-
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Top10Cards></Top10Cards>
+      </section>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <Sugerencias></Sugerencias>
+      </section>
       <Footer></Footer>
     </>
   );

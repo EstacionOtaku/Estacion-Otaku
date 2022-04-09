@@ -7,7 +7,7 @@ import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const HeaderInicio = () => {
+const HeaderInicio = (imageHeader) => {
   const { user, logout } = useAuth();
   const [userModal, setUserModal] = useState(false);
   const handleLogout = async () => {
@@ -24,6 +24,8 @@ const HeaderInicio = () => {
       setUserModal(false);
     }
   };
+
+  // console.log(imageHeader.imageHeader.imageHeader.length);
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -61,9 +63,15 @@ const HeaderInicio = () => {
           </figure>
           <p className="header__username">{user.displayName || user.email}</p>
           <Link to="/avatar">
-            <figure className="header__avatar-container">
-              <img src={avatar} className="avatar__image"></img>
-            </figure>
+            {imageHeader.imageHeader.imageHeader ? (
+              <figure className="header__avatar-container">
+                <img src={imageHeader.imageHeader.imageHeader} className="avatar__image"></img>
+              </figure>
+            ) : (
+              <figure className="header__avatar-container">
+                <img src={imageHeader.imageHeader} className="avatar__image"></img>
+              </figure>
+            )}
           </Link>
           <button className="header__avatar-options" onClick={handleUserOptions}>
             <figure className="header__arrow-container">

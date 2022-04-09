@@ -1,14 +1,9 @@
 import "../../styles/css/Galeria.css";
 import { Link } from "react-router-dom";
 
+
 const Galeria = (props) => {
-  // const data = props.data;
 
-  // const filtered = data.filter(function (element) {
-  //   return element.Category == "Drama";
-  // });
-
-  // console.log(filtered);
   return (
     <>
       <section className="paquete-page">
@@ -22,14 +17,15 @@ const Galeria = (props) => {
               <h3 className="spinner-load">L o a d i n g . . .</h3>
             </section>
           ) : (
-            <div className="paquete-despliegue">
-              {props.data.map(({ image_url, title, mal_id }) => {
+            <div className="paquete-despliegue" >
+              {props.data.map(({ image_url, title,mal_id }) => {
                 return (
-                  <article className="paquete-list-container" key={mal_id}>
+                  <article className="paquete-list-container" key={mal_id} >
                     <figure className="paquete-image-container">
+                      
                       <Link to={`/anime/${mal_id}`}>
-                        <img src={image_url} alt={title} className="paquete-image zoom" />
-                      </Link>
+                      <img src={image_url} alt={title} className="paquete-image zoom" />
+                        </Link>
                     </figure>
                   </article>
                 );

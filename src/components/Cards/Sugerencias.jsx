@@ -1,7 +1,6 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import Slider from "react-slick/lib/slider";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Sugerencia } from "../../data/PeliImageData";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -54,58 +53,31 @@ const carouselProperties = {
 };
 
 const Sugerencias = () => {
-
-  const [infoAnime, setInfoAnime] = useState([]);
-
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d"
-        );
-        const data = await response.json();
-        const animeSelected = data.results.filter(function (element) {
-          return element.airing === false;
-        });
-        setInfoAnime(animeSelected);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-    apiAnimes();
-  }, []);
-  console.log(infoAnime);
-
-  console.log(infoAnime.mal_id)
-
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {infoAnime.map(({image_url,mal_id}) => (
-          <MovieCard image_url={image_url} mal_id={mal_id} />
+        {Sugerencia.map((item, index) => (
+          <MovieCard item={item} key={index} />
         ))}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ image_url,mal_id }) => {
+const MovieCard = ({ item }) => {
   return (
     <div style={{ textAlign: "center" }}>
-      <Link to={`/anime/${mal_id}`}>
       <img
-        className="card__multi-image_url"
-        src={image_url}
+        className="card__multi-image"
+        src={item}
         alt="movie"
         style={{
           width: "100%",
-          height: "180px",
+          height: "170px",
           objectFit: "contain",
           marginBottom: "10px",
         }}
       />
-    </Link>
     </div>
   );
 };
