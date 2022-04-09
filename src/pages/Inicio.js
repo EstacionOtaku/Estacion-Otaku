@@ -18,14 +18,19 @@ const Inicio = ({ setTema, imageHeader }) => {
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <CategoriaCards setTema={setTema}></CategoriaCards>
       </section>
-      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-        <LoMasVistoCards></LoMasVistoCards>
-      </section>
+      <h3 className="fs-3 text-center">TOP 10 PERÚ</h3>
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <Top10Cards></Top10Cards>
       </section>
+
+      <h3 className="fs-3 text-center">SUGERENCIAS</h3>
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <Sugerencias></Sugerencias>
+      </section>
+
+      <h3 className="fs-3 text-center">LO MÁS VISTO</h3>
+      <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+        <LoMasVistoCards></LoMasVistoCards>
       </section>
       <Footer></Footer>
     </>
