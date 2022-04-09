@@ -15,24 +15,22 @@ const Categoria = ({ tema, imageHeader }) => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d"
-        );
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d");
         const data = await response.json();
         setGallery(data.results);
         //console.log(data.galeria);
       } catch (error) {
         console.log(error);
       } finally {
-
       }
-
     };
 
     apiAnimes();
   }, []);
 
-
+  // const filtered = gallery.filter(function (element) {
+  //   return (element.Category = "Acción");
+  // });
   useEffect(() => {
     const category = async () => {
       try {
@@ -40,6 +38,7 @@ const Categoria = ({ tema, imageHeader }) => {
         const data = await response.json();
 
         setTheme(data[0]);
+        // console.log(data[0]);
       } catch (error) {
         console.log(error);
       } finally {
@@ -48,14 +47,14 @@ const Categoria = ({ tema, imageHeader }) => {
     category();
   }, []);
 
-  const { titulo, img, año } = theme;
+  console.log(theme.img);
 
   return (
     <>
       <HeaderInicio imageHeader={imageHeader}></HeaderInicio>
       <section className="categoria__portada">
         <figure className="categoria__portada-container">
-          <img className="prueba_image" src={img} alt="portada" />
+          <img className="prueba_image" src={theme.img} alt="portada" />
         </figure>
       </section>
       <section className="hero hero--color">
@@ -66,8 +65,8 @@ const Categoria = ({ tema, imageHeader }) => {
               <Link to="/inicio">⏪ Atrás</Link>
             </a>
             <h3 className="hero--category">{tema}</h3>
-            <h5 className="hero--year">{año}</h5>
-            <h1 className="hero--name">{titulo}</h1>
+            <h5 className="hero--year">{theme.año}</h5>
+            <h1 className="hero--name">{theme.titulo}</h1>
             <div className="play-container"></div>
             <a href="" className="play--button">
               ▶️ Reproducir
@@ -75,7 +74,6 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-
       {/* <CategoriaPeli /> */}
       <section>
         <Galeria data={gallery} />

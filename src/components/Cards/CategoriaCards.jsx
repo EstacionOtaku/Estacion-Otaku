@@ -69,6 +69,7 @@ const CategoriaCards = ({ setTema }) => {
 const MovieCard = ({ img, categoria, setTema }) => {
   const onClickImage = (e) => {
     setTema(e.target.alt);
+    console.log(e.target.alt);
   };
   return (
     <Link to="/categoria">
