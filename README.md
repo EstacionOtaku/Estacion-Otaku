@@ -75,7 +75,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         </td>      
         <td>
           <img
-            src="https://logodix.com/logo/1916621.png" width="100%" />
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Axios_logo_%282020%29.svg/2560px-Axios_logo_%282020%29.svg.png" width="100%" />
         </td>
         <td>
           <img
