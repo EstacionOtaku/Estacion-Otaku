@@ -1,7 +1,7 @@
 # Estación Otaku ㊙📓🍥⛩️🎌 - Reto Final (parte 1)
 
-El presente proyecto constó de proponer una web denominada "Estación Otaku". Estación Otaku es una comunidad para los fans del anime.
-Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para estudiantes amantes de la cultura japonesa donde puedan encontrar contenido relacionado a series y películas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
+El presente proyecto constó de proponer una web denominada "Estación Otaku". Estación Otaku es una comunidad para fans donde podrán disfrutar de sus animes favoritos.
+Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para personas amantes de la cultura japonesa, un lugar donde puedan encontrar contenido relacionado a series y películas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
 
