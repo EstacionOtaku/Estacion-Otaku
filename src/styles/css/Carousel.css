@@ -1,4 +1,4 @@
-.carousel-slider {
+.carousel__main {
   margin: auto;
   margin-top: 80px;
   margin-bottom: 80px;
@@ -6,18 +6,8 @@
   min-width: 300px;
 }
 
-.carousel__title-photos {
-  font-weight: bold;
-  font-family: "sofia_prosemi_bold", sans-serif;
-  text-align: center;
-  font-size: 30px;
-  margin-top: 80px;
-  margin-bottom: 20px;
-}
-
-.carousel__phrase {
-  font-size: 18px;
-  font-weight: lighter;
+.carousel__title {
+  margin-bottom: 40px;
 }
 
 .slide__title {
@@ -30,4 +20,12 @@
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 5px;
+}
+
+.form__title {
+  font-family: "sofia_prosemi_bold", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }

@@ -6,14 +6,11 @@ const Carousel = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel-slider slide"
-      data-bs-ride="carousel-slider"
+      className="carousel slide carousel__main"
+      data-bs-ride="carousel"
     >
-      <div className="carousel__title-photos">
-        <h2 className="carousel__title-photos">🌸 ¿Reconoces estas escenas?</h2>
-        <h3 className="carousel__phrase">
-          Entérate más en nuestro catálogo de animes...
-        </h3>
+      <div className="carousel__title">
+        <h2 className="form__title">¿Reconoces estas escenas?</h2>
       </div>
       <div className="carousel-indicators">
         <button
