@@ -21,9 +21,9 @@ Estación Otaku, tu mejor experiencia en un solo lugar
 ## Esquemas
     
 [![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
-     
-[![moodboard-estacion-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-estacion-otaku.jpg)](https://postimg.cc/GHpp1kz1)
        
+[![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
+        
 ## Vistas del proyecto
      
 ### Vista pantalla completa en laptop
