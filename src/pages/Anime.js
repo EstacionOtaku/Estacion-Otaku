@@ -31,9 +31,9 @@ const Anime = () => {
   return (
     <>
       <HeaderCategory></HeaderCategory>
-      {infoAnime.map(({ image_url, info, mal_id, episodes, title }) => {
+      {infoAnime.map(({ image_url, info, mal_id, episodes, title }, index) => {
         return (
-          <section className="portada-anime-container">
+          <section className="portada-anime-container" key={index}>
             <div className="portada-anime-presentacion">
               <img className="portada-anime__image" src={image_url} alt={title} />
               <div className="portada-anime__text-container">

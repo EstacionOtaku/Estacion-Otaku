@@ -80,8 +80,8 @@ const Sugerencias = () => {
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {infoAnime.map(({ image_url, mal_id }) => (
-          <MovieCard image_url={image_url} mal_id={mal_id} />
+        {infoAnime.map(({ image_url, mal_id }, index) => (
+          <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
         ))}
       </Slider>
     </div>

@@ -7,8 +7,8 @@ const BlogsCards = () => {
 
   return (
     <div className="blog__list-wrap">
-      {blogs.map((blogs) => (
-        <BlogsCard blogs={blogs} />
+      {blogs.map((blogs, index) => (
+        <BlogsCard key={index} blogs={blogs} />
       ))}
     </div>
   );
