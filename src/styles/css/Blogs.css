@@ -25,6 +25,19 @@
   color: #a9a9a9;
 }
 
+.blog__title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.blogs__title-main {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .blog__description::before {
   position: absolute;
   content: "...";
@@ -47,6 +60,11 @@
 .blog__author {
   display: flex;
   align-items: center;
+}
+
+.blog__date {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .blog__author img {
