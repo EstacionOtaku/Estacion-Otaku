@@ -51,7 +51,8 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-      <CategoriaPeli />
+
+      {/* <CategoriaPeli /> */}
       <Footer></Footer>
     </>
   );
