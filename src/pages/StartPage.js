@@ -6,6 +6,7 @@ import HeaderLanding from "../components/Header/HeaderLanding";
 import Hero from "../components/Hero";
 import Tabs from "../components/Tabs/Tabs.jsx";
 import "../styles/css/Blogs.css";
+import PreguntasCards from "../components/Cards/PreguntasCards";
 
 const StarPage = () => {
   return (
@@ -24,6 +25,9 @@ const StarPage = () => {
       <section className="p-4" style={{ maxWidth: "1400px", margin: "auto" }}>
         <h2 className="blogs__title-main">Entérate de las últimas novedades</h2>
         <BlogsCards></BlogsCards>
+      </section>
+      <section className="p-4" style={{ maxWidth: "1400px", margin: "auto" }}>
+        <PreguntasCards></PreguntasCards>
       </section>
       <section className="py-4">
         <Footer />
