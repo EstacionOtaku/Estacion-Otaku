@@ -4,7 +4,9 @@ El presente proyecto constó de proponer una web denominada "Estación Otaku". E
 Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para personas amantes de la cultura japonesa, un lugar donde puedan encontrar contenido relacionado a series y películas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
-
+    
+Estación Otaku, tu mejor experiencia en un solo lugar
+    
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
 - Abrir la terminal de comandos
@@ -15,15 +17,19 @@ Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y a
     - Levanta un servidor con la aplicación
   - npm run build
     - Genera un paquete para el despliegue en producción
-
+     
 ## Esquemas
-
+    
+[![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
+     
+[![moodboard-estacion-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-estacion-otaku.jpg)](https://postimg.cc/GHpp1kz1)
+       
 ## Vistas del proyecto
-
+     
 ### Vista pantalla completa en laptop
-
+        
 ### Vista responsive en mobile
-
+        
 ## Lenguajes y herramientas
 En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
        
