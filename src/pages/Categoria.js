@@ -16,7 +16,7 @@ const Categoria = ({ tema, imageHeader }) => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1"
+          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d"
         );
         const data = await response.json();
         setGallery(data.results);

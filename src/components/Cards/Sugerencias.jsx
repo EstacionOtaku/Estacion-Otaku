@@ -1,6 +1,5 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import Slider from "react-slick/lib/slider";
-import { Sugerencia } from "../../data/PeliImageData";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -62,8 +61,7 @@ const Sugerencias = () => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          // "https://api.jsonbin.io/b/624b9e67fdd14a0f46801c48/1"
-          "https://api.jsonbin.io/b/62504f5b7b69e806cf4ac257/3"
+          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d"
         );
         const data = await response.json();
         const animeSelected = data.results.filter(function (element) {
@@ -102,7 +100,7 @@ const MovieCard = ({ image_url,mal_id }) => {
         alt="movie"
         style={{
           width: "100%",
-          height: "170px",
+          height: "180px",
           objectFit: "contain",
           marginBottom: "10px",
         }}
