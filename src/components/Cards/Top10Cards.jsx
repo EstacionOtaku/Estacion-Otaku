@@ -2,6 +2,7 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import Slider from "react-slick/lib/slider";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/css/CarouselCards.css"
 
 const PreviousBtn = (props) => {
   console.log(props);
