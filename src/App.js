@@ -13,6 +13,7 @@ import Categoria from "./pages/Categoria";
 import Anime from "./pages/Anime";
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
+import ReproducirAnime from "./pages/ReproducirAnime";
 
 const App = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -79,6 +80,14 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Anime imageHeader={imageHeader} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/anime/:id-:n"
+            element={
+              <ProtectedRoute>
+                <ReproducirAnime imageHeader={imageHeader} />
               </ProtectedRoute>
             }
           />
