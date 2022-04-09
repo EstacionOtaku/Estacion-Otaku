@@ -68,7 +68,7 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="py-4">
         <Galeria data={gallery} />
       </section>
       <Footer></Footer>
