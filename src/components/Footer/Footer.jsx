@@ -91,16 +91,8 @@ const Footer = () => {
                         </a>
                       </li>
                       <li className="mb-3">
-<<<<<<< HEAD
                         <a href="#!" className="text-decoration-none text-secondary">
                           Información corporativa
-=======
-                        <a
-                          href="#!"
-                          className="text-decoration-none text-secondary"
-                        >
-                          Inforación corporativa
->>>>>>> 9fa54f9ea2a1017736060a81817ef9f0515dc475
                         </a>
                       </li>
                     </ul>
