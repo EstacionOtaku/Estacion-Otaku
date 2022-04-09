@@ -3,7 +3,7 @@
 El presente proyecto constó de proponer una web denominada "Estación Otaku". Estación Otaku es una comunidad para los fans del anime.
 Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para estudiantes amantes de la cultura japonesa donde puedan encontrar contenido relacionado a series y películas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
 
-[![logo-estacion.jpg](https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg)](https://postimg.cc/nXRKVLGX)
+ <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
 
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
@@ -69,7 +69,7 @@ En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los s
         </td>      
         <td>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Axios_logo_%282017%29.svg/1200px-Axios_logo_%282017%29.svg.png" width="100%" />
+            src="https://logodix.com/logo/1916621.png" width="100%" />
         </td>
         <td>
           <img
@@ -126,7 +126,7 @@ Este proyecto contiene una licencia MIT - ver el archivo adjunto en el repositor
 
 ## Agradecimientos
 
-- Profesor Elliot Garamendi, por la enseñanza
+- Profesor Elliot Garamendi, por la enseñanza. 
 - Fundación Es Hoy y CODIGO, por la oportunidad de formarnos en desarrollo web.
    
 Este proyecto fue desarrollado con ❤️ por Neko coders

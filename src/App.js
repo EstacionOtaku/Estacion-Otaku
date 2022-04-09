@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Game from "./pages/Game";
 import { AuthProvider } from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
@@ -58,6 +59,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
+          <Route path="/game" element={<Game />} />
+
           <Route
             path="/nosotros"
             element={
@@ -107,7 +110,12 @@ const App = () => {
           />
           <Route
             path="/Avatar"
-            element={<Avatar imageHeader={imageHeader} setImageHeader={setImageHeader}></Avatar>}
+            element={
+              <Avatar
+                imageHeader={imageHeader}
+                setImageHeader={setImageHeader}
+              ></Avatar>
+            }
           />
         </Routes>
       </AuthProvider>
