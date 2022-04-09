@@ -6,8 +6,8 @@ const Carousel = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide"
-      data-bs-ride="carousel"
+      className="carousel-slider slide"
+      data-bs-ride="carousel-slider"
     >
       <div className="carousel__title-photos">
         <h2 className="carousel__title-photos">🌸 ¿Reconoces estas escenas?</h2>
