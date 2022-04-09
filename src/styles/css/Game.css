@@ -1,0 +1,30 @@
+.cards__app {
+  background: url(https://i.pinimg.com/originals/77/46/90/774690aeb4e69f4f05d8b828ab892148.jpg);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__app-container {
+  width: 1000px;
+  height: 600px;
+}
+
+.card {
+  display: inline-block;
+  margin: 5px;
+  height: calc(200px - 10px);
+  width: calc(250px - 10px);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(0.98);
+}
+
+.card__image {
+  height: calc(200px - 10px);
+  width: calc(250px - 10px);
+}
