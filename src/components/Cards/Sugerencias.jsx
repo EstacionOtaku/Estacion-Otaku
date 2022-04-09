@@ -1,4 +1,6 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
 import { Sugerencia } from "../../data/PeliImageData";
 
@@ -53,31 +55,55 @@ const carouselProperties = {
 };
 
 const Sugerencias = () => {
+  const [infoAnime, setInfoAnime] = useState([]);
+
+  useEffect(() => {
+    const apiAnimes = async () => {
+      try {
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d");
+        const data = await response.json();
+        const animeSelected = data.results.filter(function (element) {
+          return element.airing === false;
+        });
+        setInfoAnime(animeSelected);
+      } catch (error) {
+        console.log(error);
+      } finally {
+      }
+    };
+    apiAnimes();
+  }, []);
+  console.log(infoAnime);
+
+  console.log(infoAnime.mal_id);
+
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider {...carouselProperties}>
-        {Sugerencia.map((item, index) => (
-          <MovieCard item={item} key={index} />
+        {infoAnime.map(({ image_url, mal_id }) => (
+          <MovieCard image_url={image_url} mal_id={mal_id} />
         ))}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ item }) => {
+const MovieCard = ({ image_url, mal_id }) => {
   return (
     <div style={{ textAlign: "center" }}>
-      <img
-        className="card__multi-image"
-        src={item}
-        alt="movie"
-        style={{
-          width: "100%",
-          height: "170px",
-          objectFit: "contain",
-          marginBottom: "10px",
-        }}
-      />
+      <Link to={`/anime/${mal_id}`}>
+        <img
+          className="card__multi-image_url"
+          src={image_url}
+          alt="movie"
+          style={{
+            width: "100%",
+            height: "180px",
+            objectFit: "contain",
+            marginBottom: "10px",
+          }}
+        />
+      </Link>
     </div>
   );
 };

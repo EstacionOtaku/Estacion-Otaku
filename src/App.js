@@ -3,7 +3,6 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { AuthProvider } from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
-import ReproducirAnime from "./pages/ReproducirAnime";
 
 import StarPage from "./pages/StartPage";
 // import HeaderLanding from "./components/Header/HeaderLanding";
@@ -14,7 +13,6 @@ import Categoria from "./pages/Categoria";
 import Anime from "./pages/Anime";
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
-// import ReproducirAnime from "./pages/ReproducirAnime";
 
 const App = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -76,14 +74,14 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          {/* <Route
+          <Route
             path="/anime/:id"
             element={
               <ProtectedRoute>
                 <Anime imageHeader={imageHeader} />
               </ProtectedRoute>
             }
-          /> */}
+          />
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />
@@ -100,12 +98,7 @@ const App = () => {
           />
           <Route
             path="/Avatar"
-            element={
-              <Avatar
-                imageHeader={imageHeader}
-                setImageHeader={setImageHeader}
-              ></Avatar>
-            }
+            element={<Avatar imageHeader={imageHeader} setImageHeader={setImageHeader}></Avatar>}
           />
         </Routes>
       </AuthProvider>
