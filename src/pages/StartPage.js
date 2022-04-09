@@ -1,4 +1,5 @@
 import Discover from "../components/Discover/Discover";
+import Carousel from "../components/Carousel/Carousel";
 import BlogsCards from "../components/Cards/BlogsCards";
 import Footer from "../components/Footer/Footer";
 import HeaderLanding from "../components/Header/HeaderLanding";
@@ -13,6 +14,9 @@ const StarPage = () => {
       <Hero />
       <section className="px-2">
         <Tabs />
+      </section>
+      <section>
+        <Carousel />
       </section>
       <section>
         <Discover />

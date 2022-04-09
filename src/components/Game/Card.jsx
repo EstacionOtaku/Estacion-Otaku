@@ -33,7 +33,7 @@ const Card = ({
   };
 
   return (
-    <div className="card">
+    <div className="card__game">
       <ReactCardFlip isFlipped={isFlipped}>
         <img
           className="card__image"

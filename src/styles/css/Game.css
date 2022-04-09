@@ -12,7 +12,7 @@
   height: 600px;
 }
 
-.card {
+.card__game {
   display: inline-block;
   margin: 5px;
   height: calc(200px - 10px);
