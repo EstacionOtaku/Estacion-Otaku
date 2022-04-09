@@ -74,14 +74,14 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          {/* <Route
+          <Route
             path="/anime/:id"
             element={
               <ProtectedRoute>
                 <Anime imageHeader={imageHeader} />
               </ProtectedRoute>
             }
-          /> */}
+          />
           {/* <Route exact path="/anime/:id" render={(props) => (
             <ProtectedRoute>
             <Anime id={props.match.params.id} />

@@ -8,6 +8,23 @@ import CategoriaPeli from "../components/Cards/CategoriaPeli";
 
 const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
+  const [gallery, setGallery] = useState([]);
+
+  useEffect(() => {
+    const apiAnimes = async () => {
+      try {
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d");
+        const data = await response.json();
+        setGallery(data.results);
+        //console.log(data.galeria);
+      } catch (error) {
+        console.log(error);
+      } finally {
+      }
+    };
+
+    apiAnimes();
+  }, []);
 
   useEffect(() => {
     const category = async () => {
@@ -51,7 +68,9 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-      <CategoriaPeli />
+      <section>
+        <Galeria data={gallery} />
+      </section>
       <Footer></Footer>
     </>
   );
