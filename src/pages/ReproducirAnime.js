@@ -12,7 +12,7 @@ const ReproducirAnime = () => {
     const apiAnimes = async () => {
       try {
         const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d"
+          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
         );
         const data = await response.json();
         const animeSelected = data.results.filter(function (element) {
