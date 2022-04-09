@@ -68,9 +68,13 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
+
+      {/* <CategoriaPeli /> */}
+
       <section className="py-4">
         <Galeria data={gallery} />
       </section>
+
       <Footer></Footer>
     </>
   );
