@@ -1,7 +1,6 @@
-import mobileHeroImage from "../assets/images/mobile-hero-image.png";
 import mobileDecorationImageRight from "../assets/images/hero-anime-right.png";
 import mobileDecorationImageLeft from "../assets/images/hero-anime-left.png";
-
+import mobileHeroImage from "../assets/Footer/hero-portada.jpeg";
 import CtaButton from "./Buttons/CtaButton.jsx";
 import "../styles/css/Hero.css";
 

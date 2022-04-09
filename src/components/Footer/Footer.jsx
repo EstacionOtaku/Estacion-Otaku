@@ -1,5 +1,5 @@
-import "../../styles/scss/Footer.scss"
-import logo from "../../assets/Footer/logo.png"
+import "../../styles/scss/Footer.scss";
+import logo from "../../assets/Footer/logo.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -49,7 +49,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none texttext-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none texttext-decoration-none text-secondary"
+                        >
                           Avisos legales
                         </a>
                       </li>
@@ -64,7 +67,7 @@ const Footer = () => {
                       </li>
                       <li className="mb-3">
                         <a href="#!" className="text-decoration-none text-secondary">
-                          Inforación corporativa
+                          Información corporativa
                         </a>
                       </li>
                     </ul>
@@ -84,5 +87,5 @@ const Footer = () => {
     </>
   );
 };
- 
+
 export default Footer;

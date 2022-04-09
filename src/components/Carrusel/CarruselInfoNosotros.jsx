@@ -76,9 +76,9 @@ const CarruselInfoNosotros = () => {
               </div>
               <div className="col-lg-12 col-md-12 mb-4  text-center">
                 <div className="col-md-8 offset-md-2">
-                  <p className="py-1">Codifica tu camino hacia el éxito</p>
+                  <p className="py-1">Sueña, diseña y descifra el camino hacia tu destinoo</p>
                   <h3 className="py-1">Clarissa Palomino</h3>
-                  <h5 className="py-1">Diseñadora UX/UI</h5>
+                  <h5 className="py-1">Desarrolladora Web - Diseñadora UX/UII</h5>
                 </div>
               </div>
             </div>
@@ -140,9 +140,11 @@ const CarruselInfoNosotros = () => {
               </div>
               <div className="col-lg-12 col-md-12 mb-4  text-center">
                 <div className="col-md-8 offset-md-2">
-                  <p className="py-1">Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus</p>
+                  <p className="py-1">
+                    El único modo de hacer un gran trabajo es amar lo que haces
+                  </p>
                   <h3 className="py-1">Meliodas</h3>
-                  <h5 className="py-1">Desarrollador</h5>
+                  <h5 className="py-1">Frontend Developer - Docente de CeI</h5>
                 </div>
               </div>
             </div>
