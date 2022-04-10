@@ -6,6 +6,8 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Sugerencias from "../components/Cards/Sugerencias";
+import NosotrosButton from "../components/Buttons/NosotrosButton.jsx";
+
 const Inicio = ({ setTema, imageHeader }) => {
   return (
     <>
@@ -32,6 +34,10 @@ const Inicio = ({ setTema, imageHeader }) => {
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <LoMasVistoCards></LoMasVistoCards>
       </section>
+
+      <div className="discover__button">
+        <NosotrosButton text="Conoce al equipo" />
+      </div>
       <Footer></Footer>
     </>
   );

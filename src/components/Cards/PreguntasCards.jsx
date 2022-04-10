@@ -3,7 +3,9 @@ const PreguntasCards = () => {
     <>
       <div>
         <section id="preguntas frecuentes" className="p-2 col-10 offset-1 mb-5">
-          <h1 className="section__preguntas-title text-center mb-4">Preguntas frecuentes</h1>
+          <h1 className="section__preguntas-title text-center mb-4">
+            Preguntas frecuentes
+          </h1>
           <div className="accordion accordion-flush" id="accordionFlushExample">
             <div className="accordion-item">
               <h2 className=" accordion-header" id="flush-headingOne">
@@ -26,10 +28,12 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  EO es un servicio de streaming que ofrece una gran variedad de películas, series y
-                  documentales premiados en casi cualquier pantalla conectada a internet. Todo lo
-                  que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay
-                  algo nuevo por descubrir, ¡y todas las semanas se agregan más películas y series!
+                  EO es un servicio de streaming que ofrece una gran variedad de
+                  películas, series y documentales premiados en casi cualquier
+                  pantalla conectada a internet. Todo lo que quieras ver, sin
+                  límites ni comerciales, a un costo muy accesible. Siempre hay
+                  algo nuevo por descubrir, ¡y todas las semanas se agregan más
+                  películas y series!
                 </div>
               </div>
             </div>
@@ -53,9 +57,10 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  Disfruta<strong>Estación Otaku</strong> en tu smartphone, tablet, smart TV, laptop
-                  o dispositivo de streaming, todo por una tarifa plana mensual. Planes desde
-                  S/24.90 hasta S 44.90 al mes. Sin costos adicionales ni contratos.
+                  Disfruta<strong>Estación Otaku</strong> en tu smartphone,
+                  tablet, smart TV, laptop o dispositivo de streaming, todo por
+                  una tarifa plana mensual. Planes desde S/24.90 hasta S 44.90
+                  al mes. Sin costos adicionales ni contratos.
                 </div>
               </div>
             </div>
@@ -79,10 +84,12 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  EO es un servicio de streaming que ofrece una gran variedad de películas, series y
-                  documentales premiados en casi cualquier pantalla conectada a internet. Todo lo
-                  que quieras ver, sin límites ni comerciales, a un costo muy accesible. Siempre hay
-                  algo nuevo por descubrir, ¡y todas las semanas se agregan más películas y series!
+                  EO es un servicio de streaming que ofrece una gran variedad de
+                  películas, series y documentales premiados en casi cualquier
+                  pantalla conectada a internet. Todo lo que quieras ver, sin
+                  límites ni comerciales, a un costo muy accesible. Siempre hay
+                  algo nuevo por descubrir, ¡y todas las semanas se agregan más
+                  películas y series!
                 </div>
               </div>
             </div>
@@ -106,9 +113,9 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  EO es flexible. Sin contratos molestos ni compromisos. Cancela la membresía online
-                  con solo dos clics. No hay cargos por cancelación. Empieza y termina cuando
-                  quieras.
+                  EO es flexible. Sin contratos molestos ni compromisos. Cancela
+                  la membresía online con solo dos clics. No hay cargos por
+                  cancelación. Empieza y termina cuando quieras.
                 </div>
               </div>
             </div>
@@ -132,8 +139,9 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  EO tiene un amplio catálogo de películas, series, documentales, animes, originales
-                  premiados y más. Todo lo que quieras ver, cuando quieras.
+                  EO tiene un amplio catálogo de películas, series,
+                  documentales, animes, originales premiados y más. Todo lo que
+                  quieras ver, cuando quieras.
                 </div>
               </div>
             </div>
@@ -157,12 +165,14 @@ const PreguntasCards = () => {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  La experiencia de EO para niños está incluida en la membresía para que los padres
-                  tengan el control mientras los peques disfrutan series y películas familiares en
-                  su propio espacio. Los perfiles para niños incluyen controles parentales
-                  protegidos por PIN que te permiten restringir el contenido que pueden ver los
-                  niños en función de la clasificación por edad y bloquear determinados títulos que
-                  no quieras que los niños vean.
+                  La experiencia de EO para niños está incluida en la membresía
+                  para que los padres tengan el control mientras los peques
+                  disfrutan series y películas familiares en su propio espacio.
+                  Los perfiles para niños incluyen controles parentales
+                  protegidos por PIN que te permiten restringir el contenido que
+                  pueden ver los niños en función de la clasificación por edad y
+                  bloquear determinados títulos que no quieras que los niños
+                  vean.
                 </div>
               </div>
             </div>

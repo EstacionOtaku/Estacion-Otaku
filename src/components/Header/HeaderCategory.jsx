@@ -48,13 +48,21 @@ const HeaderCategory = (imageHeader) => {
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
           </figure>
-          <p className="header__username">{user.displayName || nameUser || user.email}</p>
+          <p className="header__username">
+            {user.displayName || nameUser || user.email}
+          </p>
           <Link to="/avatar">
             <figure className="header__avatar-container">
-              <img src={imageHeader.imageHeader} className="avatar__image"></img>
+              <img
+                src={imageHeader.imageHeader}
+                className="avatar__image"
+              ></img>
             </figure>
           </Link>
-          <button className="header__avatar-options" onClick={handleUserOptions}>
+          <button
+            className="header__avatar-options"
+            onClick={handleUserOptions}
+          >
             <figure className="header__arrow-container">
               <img src={arrow} className="arrow__image"></img>
             </figure>
@@ -63,7 +71,10 @@ const HeaderCategory = (imageHeader) => {
           {settingsUser && <ModalConfig />}
           {userModal && (
             <div className="header__modal-user">
-              <button className="header__button-logout" onClick={handleSettingsUser}>
+              <button
+                className="header__button-logout"
+                onClick={handleSettingsUser}
+              >
                 Editar Cuenta
               </button>
 

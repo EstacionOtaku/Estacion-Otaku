@@ -8,29 +8,45 @@ const Footer = () => {
         <div className="container p-3">
           <div className="row">
             <div className="col-lg-3 col-md-12 col-xs-12 mb-3 mb-md-3 mb-xs-12 d-flex justify-content-center align-items-center">
-              <img className="footer-logo" src={logo} alt="logo de estación otaku" />
+              <img
+                className="footer-logo"
+                src={logo}
+                alt="logo de estación otaku"
+              />
             </div>
             <div className="col-lg-9 col-md-12 col-xs-12 mb-3 mb-md-3 mb-xs-12 ">
               <section className="mb-2">
                 <p className="mb-0">¿Preguntas? Envianos un correo</p>
-                <p className="font-weight-bold color-text"> información@estaciónotaku.com</p>
+                <p className="font-weight-bold color-text">
+                  {" "}
+                  información@estaciónotaku.com
+                </p>
               </section>
               <section className="mb-2">
                 <div className="row">
                   <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 mb-2 mb-md-2">
                     <ul className="list-unstyled mb-0 ">
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Preguntas frecuentes
                         </a>
                       </li>
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Prensa
                         </a>
                       </li>
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Terminos de uso
                         </a>
                       </li>
@@ -39,12 +55,18 @@ const Footer = () => {
                   <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 mb-2 mb-md-2">
                     <ul className="list-unstyled mb-0">
                       <li className="mb-3 ">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Cuenta
                         </a>
                       </li>
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Nosotros
                         </a>
                       </li>
@@ -61,12 +83,18 @@ const Footer = () => {
                   <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 mb-2 mb-md-2">
                     <ul className="list-unstyled mb-0">
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Mi perfil
                         </a>
                       </li>
                       <li className="mb-3">
-                        <a href="#!" className="text-decoration-none text-secondary">
+                        <a
+                          href="#!"
+                          className="text-decoration-none text-secondary"
+                        >
                           Información corporativa
                         </a>
                       </li>
