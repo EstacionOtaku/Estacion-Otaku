@@ -5,7 +5,7 @@ Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesibl
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
     
-Para que puedas vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nuestra web en distintas paradas:
+Para vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nuestra web en paradas:
 
 1️⃣ Landing Page: te encontrarás con un Header que contiene un botón de Iniciar sesión. Además, tenemos un Hero y botones que te redireccionarán a la página de inscripción e inicio de sesión. Así también, en la sección de Tabs podrás ver vistas de la página en distintas pantallas y otra información de interés. Está página también contiene el acceso al juego de memoria. Tenemos al final una sección de Blog y Preguntas frecuentes.
 
