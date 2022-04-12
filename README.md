@@ -29,7 +29,8 @@ Estación Otaku, tu mejor experiencia en un solo lugar...
 
 
 ## Mira nuestro Figma
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F63VB7ghR6J2haGqwBUXpA8%2FEstaci%25C3%25B3n-Otaku%3Fnode-id%3D105%253A65" allowfullscreen></iframe>
+
+https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=105%3A65
 
 ## Vistas del proyecto
      
