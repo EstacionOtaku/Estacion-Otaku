@@ -21,7 +21,7 @@ const Avatar = ({ setImageHeader }) => {
         <figure className="title__image-container">
           <img src={logo} className="title__image"></img>
         </figure>
-        <h1 className="title__title-avatar">Eligue a tu Avatar</h1>
+        <h1 className="title__title-avatar">Elige a tu Avatar</h1>
         <p className="title__title-description">
           Elige un avatar de alguno de los animes mas populares para tu cuenta
         </p>

@@ -1,6 +1,7 @@
 .discover {
   max-width: 600px;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .discover__subtitle {
