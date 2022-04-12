@@ -9,14 +9,15 @@ Para vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nu
 
 1️⃣ Landing Page: te encontrarás con un Header que contiene un botón de Iniciar sesión. Además, tenemos un Hero y botones que te redireccionarán a la página de inscripción e inicio de sesión. Así también, en la sección de Tabs podrás ver vistas de la página en distintas pantallas y otra información de interés. Está página también contiene el acceso al juego de memoria. Tenemos al final una sección de Blog y Preguntas frecuentes.
 
-2️⃣ Iniciar sesión: registra tus datos escribiendo tu nombre, correo y contraseña. Disfruta la experiencia iniciando sesión. Podrás cerrar sesión cuando gustes.
+2️⃣ Iniciar sesión: registra tus datos escribiendo tu nombre, correo y contraseña. Disfruta de la experiencia iniciando sesión. Podrás cerrar sesión cuando gustes. En tu cuenta, podrás cambiar de avatar, seleccionando tu personaje favorito.
 
-3️⃣ Categorías: Descubre las más de 10 categorías que tenemos de tus animes y series favoritas. Podrás ver carruseles con lo más visto y nuestras sugerencias.
+3️⃣ Categorías: Descubre las más de 10 categorías que tenemos de tus animes y series favoritas. Podrás ver carruseles con lo más visto, tops trending en Perú y nuestras sugerencias.
 
-4️⃣ Filtro de películas: Seleccionando una de los géneros: ciencia ficción, terror, comedia, entre otros... podrás descubrir las películas de estos géneros que hemos filtrado para ti.
+4️⃣ Filtro de películas: Seleccionando el género de tu preferencia: ciencia ficción, terror, comedia, entre otros... podrás descubrir las películas de estos géneros que hemos filtrado para ti. Esto fue elaborado a partir de nuestra base de datos en json con cientos de animes.
 
-5️⃣ Películas: Y haciendo click en la portada de cada película, podrás acceder a la sinopsis y los 4 primeros episodios. Por ejemplo, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, debajo tenemos un carrusel con animes similares.
+5️⃣ Películas: Haciendo click en la portada de cada película, podrás acceder a la sinopsis, poster oficial y los 4 primeros episodios. Podrás dar click sobre cada video y automáticamente en nuestra página podrás verlo. Una recomendación, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, en la parte inferior tenemos un carrusel con animes similares.
 
+Nota: Podrás ver la página "Nosotros" con información de nuestro equipo, accediendo a través de un botón desde la sección "Categorías" (3).
 
 ### Estación Otaku, tu mejor experiencia en un solo lugar...
     
