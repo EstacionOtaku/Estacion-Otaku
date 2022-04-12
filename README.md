@@ -25,10 +25,10 @@ Estación Otaku, tu mejor experiencia en un solo lugar...
        
 [![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
         
-## Nuestra presentación
+### Nuestra presentación
 
 
-## Nuestro Figma
+### Nuestro Figma
 
 https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=105%3A65
 
