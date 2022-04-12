@@ -19,13 +19,17 @@ Estación Otaku, tu mejor experiencia en un solo lugar...
   - npm run build
     - Genera un paquete para el despliegue en producción
      
-## Esquemas
+## Esquemas / Moodboard
     
 [![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
        
 [![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
         
 ## Mira nuestra presentación
+
+
+## Mira nuestro Figma
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F63VB7ghR6J2haGqwBUXpA8%2FEstaci%25C3%25B3n-Otaku%3Fnode-id%3D105%253A65" allowfullscreen></iframe>
 
 ## Vistas del proyecto
      
