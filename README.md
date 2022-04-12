@@ -27,7 +27,9 @@ Estación Otaku, tu mejor experiencia en un solo lugar
 ## Vistas del proyecto
      
 ### Vista pantalla completa en laptop
-        
+     
+[![web1.jpg](https://i.postimg.cc/W4p03X3C/web1.jpg)](https://postimg.cc/68S8bVCf)
+          
 ### Vista responsive en mobile
         
 ## Lenguajes y herramientas
