@@ -67,7 +67,7 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
        
 [![mobile1.jpg](https://i.postimg.cc/05Fjwjbn/mobile1.jpg)](https://postimg.cc/s1P3FVPG)
            
-[![mobile2.jpg](https://i.postimg.cc/YC477zpz/mobile2.jpg)](https://postimg.cc/hXq6bxQX)
+[![mobile2.png](https://i.postimg.cc/xCW6mxtj/mobile2.png)](https://postimg.cc/DJPQkc9R)
       
 [![mobile3.jpg](https://i.postimg.cc/wjBXj3PV/mobile3.jpg)](https://postimg.cc/svtQnf3Q)
 
