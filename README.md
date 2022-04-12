@@ -57,7 +57,7 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
       
 [![arquitectura1.jpg](https://i.postimg.cc/GhzwWmWR/arquitectura1.jpg)](https://postimg.cc/ykJb9s6p)
        
-[![arquitectura2.jpg](https://i.postimg.cc/m21CqPzz/arquitectura2.jpg)](https://postimg.cc/gndxLkKm)
+[![arquitectura2.jpg](https://i.postimg.cc/pLxY3KwG/arquitectura2.jpg)](https://postimg.cc/WhWkkqbg)
       
 ## Lenguajes y herramientas
 En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
