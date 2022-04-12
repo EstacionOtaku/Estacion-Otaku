@@ -25,10 +25,10 @@ Estación Otaku, tu mejor experiencia en un solo lugar...
        
 [![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
         
-## Mira nuestra presentación
+## Nuestra presentación
 
 
-## Mira nuestro Figma
+## Nuestro Figma
 
 https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=105%3A65
 
@@ -51,7 +51,14 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
 [![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
       
 ### Vista responsive en mobile
-        
+  
+  
+## Arquitectura del proyecto
+      
+[![arquitectura1.jpg](https://i.postimg.cc/GhzwWmWR/arquitectura1.jpg)](https://postimg.cc/ykJb9s6p)
+       
+[![arquitectura2.jpg](https://i.postimg.cc/m21CqPzz/arquitectura2.jpg)](https://postimg.cc/gndxLkKm)
+      
 ## Lenguajes y herramientas
 En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
        
