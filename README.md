@@ -27,6 +27,7 @@ Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesibl
         
 ### Nuestra presentación
 
+https://docs.google.com/presentation/d/1oCbXdjY2Yj0tW9tRdCh2BASf1zgGjcGTz5A50pZuufw/edit?usp=sharing
 
 ### Nuestro Figma
 
