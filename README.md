@@ -17,8 +17,8 @@ Para que puedas vivir la experiencia completa en la Estación Otaku 🚉, hemos 
 
 5️⃣ Películas: Y haciendo click en la portada de cada película, podrás acceder a la sinopsis y los 4 primeros episodios. Por ejemplo, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, debajo tenemos un carrusel con animes similares.
 
-###Estación Otaku, tu mejor experiencia en un solo lugar...
 
+### Estación Otaku, tu mejor experiencia en un solo lugar...
     
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
