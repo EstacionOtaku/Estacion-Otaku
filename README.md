@@ -51,7 +51,17 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
 [![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
       
 ### Vista responsive en mobile
-  
+  [![Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg](https://i.postimg.cc/pLYkdsQM/Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg)](https://postimg.cc/VJvXGBHK)
+
+  [![Whats-App-Image-2022-04-12-at-12-44-08-AM.jpg](https://i.postimg.cc/52Ry8VSB/Whats-App-Image-2022-04-12-at-12-44-08-AM.jpg)](https://postimg.cc/sM53Rb8x)
+
+  [![Whats-App-Image-2022-04-12-at-12-44-26-AM.jpg](https://i.postimg.cc/SRf7Ks87/Whats-App-Image-2022-04-12-at-12-44-26-AM.jpg)](https://postimg.cc/MfXjPz9v)
+
+  [![Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg](https://i.postimg.cc/brt9fgYM/Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg)](https://postimg.cc/QKjTppTk)
+
+  [![Whats-App-Image-2022-04-12-at-12-44-06-AM.jpg](https://i.postimg.cc/25kGLnTb/Whats-App-Image-2022-04-12-at-12-44-06-AM.jpg)](https://postimg.cc/XrPdTGR4)
+
+  [![Whats-App-Image-2022-04-12-at-12-51-01-AM.jpg](https://i.postimg.cc/MKbqW8L6/Whats-App-Image-2022-04-12-at-12-51-01-AM.jpg)](https://postimg.cc/SJswrHq3)
   
 ## Arquitectura del proyecto
       
