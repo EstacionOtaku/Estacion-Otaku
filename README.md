@@ -5,7 +5,7 @@ Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesibl
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
     
-Estación Otaku, tu mejor experiencia en un solo lugar...
+###Estación Otaku, tu mejor experiencia en un solo lugar...
 
     
 ## Instalación 💻
