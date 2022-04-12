@@ -26,7 +26,7 @@ Estación Otaku, tu mejor experiencia en un solo lugar
         
 ## Mira nuestra presentación
 
-+## Vistas del proyecto
+## Vistas del proyecto
      
 ### Vista pantalla completa en laptop
      
