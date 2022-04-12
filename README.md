@@ -29,9 +29,19 @@ Estación Otaku, tu mejor experiencia en un solo lugar
 ## Vistas del proyecto
      
 ### Vista pantalla completa en laptop
-     
-[![web1.jpg](https://i.postimg.cc/W4p03X3C/web1.jpg)](https://postimg.cc/68S8bVCf)
       
+[![web1.jpg](https://i.postimg.cc/W4p03X3C/web1.jpg)](https://postimg.cc/68S8bVCf)
+    
+[![web2.jpg](https://i.postimg.cc/NfH1KKx8/web2.jpg)](https://postimg.cc/GHbBNhV9)
+         
+[![web3.jpg](https://i.postimg.cc/Y2JdDKn3/web3.jpg)](https://postimg.cc/kDvNDZd6)
+          
+[![web4.jpg](https://i.postimg.cc/XYgxvZVH/web4.jpg)](https://postimg.cc/DS81jw4L)
+             
+[![web5.jpg](https://i.postimg.cc/5yvSWy7m/web5.jpg)](https://postimg.cc/8fp6hpVF)
+       
+[![web6.jpg](https://i.postimg.cc/3J5ZCjNf/web6.jpg)](https://postimg.cc/PNyZdwm1)
+     
 ### Vista responsive en mobile
         
 ## Lenguajes y herramientas
