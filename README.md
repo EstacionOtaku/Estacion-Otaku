@@ -1,11 +1,24 @@
-# Estación Otaku ㊙📓🍥⛩️🎌 - Reto Final (parte 1)
+# Estación Otaku ㊙💻⛩️🎌 - Reto Final (parte 1)
 
 El presente proyecto constó de proponer una web llamada "Estación Otaku". Estación Otaku es una comunidad en la que los fans podrán disfrutar de sus animes favoritos.
-Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesible para personas amantes de la cultura japonesa, un lugar donde puedan encontrar contenido relacionado a series y películas de anime y disfrutar de la mejor experiencia.
+Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesible para personas amantes de la cultura japonesa. Un lugar donde puedan encontrar contenido relacionado a series y películas de anime, y disfrutar de la mejor experiencia.
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
     
-Estación Otaku, tu mejor experiencia en un solo lugar
+Para que puedas vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nuestra web en distintas paradas:
+
+1️⃣ Landing Page: te encontrarás con un Header que contiene un botón de Iniciar sesión. Además, tenemos un Hero y botones que te redireccionarán a la página de inscripción e inicio de sesión. Así también, en la sección de Tabs podrás ver vistas de la página en distintas pantallas y otra información de interés. Está página también contiene el acceso al juego de memoria. Tenemos al final una sección de Blog y Preguntas frecuentes.
+
+2️⃣ Iniciar sesión: registra tus datos escribiendo tu nombre, correo y contraseña. Disfruta la experiencia iniciando sesión. Podrás cerrar sesión cuando gustes.
+
+3️⃣ Categorías: Descubre las más de 10 categorías que tenemos de tus animes y series favoritas. Podrás ver carruseles con lo más visto y nuestras sugerencias.
+
+4️⃣ Filtro de películas: Seleccionando una de los géneros: ciencia ficción, terror, comedia, entre otros... podrás descubrir las películas de estos géneros que hemos filtrado para ti.
+
+5️⃣ Películas: Y haciendo click en la portada de cada película, podrás acceder a la sinopsis y los 4 primeros episodios. Por ejemplo, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, debajo tenemos un carrusel con animes similares.
+
+
+### Estación Otaku, tu mejor experiencia en un solo lugar...
     
 ## Instalación 💻
 - Ubicarse en la carpeta que contendrá el proyecto
@@ -18,23 +31,60 @@ Estación Otaku, tu mejor experiencia en un solo lugar
   - npm run build
     - Genera un paquete para el despliegue en producción
      
-## Esquemas
+## Esquemas / Moodboard
     
 [![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
        
 [![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
         
+### Nuestra presentación
+
+https://docs.google.com/presentation/d/1oCbXdjY2Yj0tW9tRdCh2BASf1zgGjcGTz5A50pZuufw/edit?usp=sharing
+
+### Nuestro Figma
+
+https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=105%3A65
+
 ## Vistas del proyecto
      
 ### Vista pantalla completa en laptop
-        
-### Vista responsive en mobile
-        
-## Lenguajes y herramientas
-En la primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI, hemos utilizado las siguientes herramientas:
-       
-- Para visualizar todos los gráficos y esquemas, visitar los siguientes links:
+      
+[![web1.jpg](https://i.postimg.cc/W4p03X3C/web1.jpg)](https://postimg.cc/68S8bVCf)
     
+[![web2.jpg](https://i.postimg.cc/NfH1KKx8/web2.jpg)](https://postimg.cc/GHbBNhV9)
+         
+[![web3.jpg](https://i.postimg.cc/Y2JdDKn3/web3.jpg)](https://postimg.cc/kDvNDZd6)
+          
+[![web4.jpg](https://i.postimg.cc/XYgxvZVH/web4.jpg)](https://postimg.cc/DS81jw4L)
+             
+[![web5.jpg](https://i.postimg.cc/5yvSWy7m/web5.jpg)](https://postimg.cc/8fp6hpVF)
+       
+[![web6.jpg](https://i.postimg.cc/3J5ZCjNf/web6.jpg)](https://postimg.cc/PNyZdwm1)
+       
+[![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
+      
+### Vista responsive en mobile
+       
+[![mobile1.jpg](https://i.postimg.cc/05Fjwjbn/mobile1.jpg)](https://postimg.cc/s1P3FVPG)
+           
+[![mobile-2.png](https://i.postimg.cc/85YJZx6W/mobile-2.png)](https://postimg.cc/HcQkxZ3s)
+      
+[![mobile3.png](https://i.postimg.cc/s2BWdV4x/mobile3.png)](https://postimg.cc/gwWj3b5b)
+      
+[![mobile4.png](https://i.postimg.cc/9FnTxRyK/mobile4.png)](https://postimg.cc/7fSfhLsn)
+     
+[![mobile5.png](https://i.postimg.cc/FKgYQ7J9/mobile5.png)](https://postimg.cc/v1TYr8zj)
+     
+[![mobile6.png](https://i.postimg.cc/4dQ2tb7r/mobile6.png)](https://postimg.cc/Kk45hT5N)
+     
+## Arquitectura del proyecto
+      
+[![arquitectura1.jpg](https://i.postimg.cc/GhzwWmWR/arquitectura1.jpg)](https://postimg.cc/ykJb9s6p)
+       
+[![arquitectura2.jpg](https://i.postimg.cc/pLxY3KwG/arquitectura2.jpg)](https://postimg.cc/WhWkkqbg)
+      
+## Lenguajes y herramientas
+Se utilizaron diversas herramientas en una primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI.
 En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
   
 <table>
