@@ -5,7 +5,7 @@ Nuestro sueño es crear una plataforma de streaming peruana, low-cost y accesibl
 
  <h2 align="center"> <img src="https://i.postimg.cc/rpcfJ0dN/logo-estacion.jpg"></h2>
     
-Para que puedas vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nuestra web en distintas paradas...
+Para que puedas vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nuestra web en distintas paradas:
 
 1️⃣ Landing Page: te encontrarás con un Header que contiene un botón de Iniciar sesión. Además, tenemos un Hero y botones que te redireccionarán a la página de inscripción e inicio de sesión. Así también, en la sección de Tabs podrás ver vistas de la página en distintas pantallas y otra información de interés. Está página también contiene el acceso al juego de memoria. Tenemos al final una sección de Blog y Preguntas frecuentes.
 
@@ -64,11 +64,11 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
 [![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
       
 ### Vista responsive en mobile
-  [![Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg](https://i.postimg.cc/pLYkdsQM/Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg)](https://postimg.cc/VJvXGBHK)
-
-  [![Whats-App-Image-2022-04-12-at-12-44-08-AM.jpg](https://i.postimg.cc/52Ry8VSB/Whats-App-Image-2022-04-12-at-12-44-08-AM.jpg)](https://postimg.cc/sM53Rb8x)
-
-  [![Whats-App-Image-2022-04-12-at-12-44-26-AM.jpg](https://i.postimg.cc/SRf7Ks87/Whats-App-Image-2022-04-12-at-12-44-26-AM.jpg)](https://postimg.cc/MfXjPz9v)
+[![Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg](https://i.postimg.cc/pLYkdsQM/Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg)](https://postimg.cc/VJvXGBHK)
+        
+[![mobile2.jpg](https://i.postimg.cc/YC477zpz/mobile2.jpg)](https://postimg.cc/hXq6bxQX)
+      
+[![mobile3.jpg](https://i.postimg.cc/wjBXj3PV/mobile3.jpg)](https://postimg.cc/svtQnf3Q)
 
   [![Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg](https://i.postimg.cc/brt9fgYM/Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg)](https://postimg.cc/QKjTppTk)
 
