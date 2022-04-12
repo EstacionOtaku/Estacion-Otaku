@@ -67,16 +67,16 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
        
 [![mobile1.jpg](https://i.postimg.cc/05Fjwjbn/mobile1.jpg)](https://postimg.cc/s1P3FVPG)
            
-[![mobile2.png](https://i.postimg.cc/xCW6mxtj/mobile2.png)](https://postimg.cc/DJPQkc9R)
+[![mobile2.jpg](https://i.postimg.cc/YC477zpz/mobile2.jpg)](https://postimg.cc/hXq6bxQX)
       
-[![mobile3.jpg](https://i.postimg.cc/wjBXj3PV/mobile3.jpg)](https://postimg.cc/svtQnf3Q)
-
-  [![Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg](https://i.postimg.cc/brt9fgYM/Whats-App-Image-2022-04-12-at-12-44-08-AM-1.jpg)](https://postimg.cc/QKjTppTk)
-
-  [![Whats-App-Image-2022-04-12-at-12-44-06-AM.jpg](https://i.postimg.cc/25kGLnTb/Whats-App-Image-2022-04-12-at-12-44-06-AM.jpg)](https://postimg.cc/XrPdTGR4)
-
-  [![Whats-App-Image-2022-04-12-at-12-51-01-AM.jpg](https://i.postimg.cc/MKbqW8L6/Whats-App-Image-2022-04-12-at-12-51-01-AM.jpg)](https://postimg.cc/SJswrHq3)
-  
+[![mobile3.png](https://i.postimg.cc/s2BWdV4x/mobile3.png)](https://postimg.cc/gwWj3b5b)
+      
+[![mobile4.png](https://i.postimg.cc/9FnTxRyK/mobile4.png)](https://postimg.cc/7fSfhLsn)
+     
+[![mobile5.png](https://i.postimg.cc/FKgYQ7J9/mobile5.png)](https://postimg.cc/v1TYr8zj)
+     
+[![mobile6.png](https://i.postimg.cc/4dQ2tb7r/mobile6.png)](https://postimg.cc/Kk45hT5N)
+     
 ## Arquitectura del proyecto
       
 [![arquitectura1.jpg](https://i.postimg.cc/GhzwWmWR/arquitectura1.jpg)](https://postimg.cc/ykJb9s6p)
