@@ -64,7 +64,8 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
 [![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
       
 ### Vista responsive en mobile
-[![Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg](https://i.postimg.cc/pLYkdsQM/Whats-App-Image-2022-04-12-at-12-42-38-AM-1.jpg)](https://postimg.cc/VJvXGBHK)
+       
+[![mobile1.jpg](https://i.postimg.cc/k4CDDpGm/mobile1.jpg)](https://postimg.cc/SXZmvVcT)
         
 [![mobile2.jpg](https://i.postimg.cc/YC477zpz/mobile2.jpg)](https://postimg.cc/hXq6bxQX)
       
