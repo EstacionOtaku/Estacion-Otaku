@@ -33,7 +33,7 @@ const HeaderInicio = (imageHeader) => {
           <figure className="header__image-container">
             <img src={logo} className="header__image"></img>
           </figure>
-          <select
+          {/* <select
             name="Generos"
             id="generos-select
         
@@ -55,7 +55,7 @@ const HeaderInicio = (imageHeader) => {
             <option value="Psicologico">Psicologico</option>
             <option value="Slice of Life">Slice of Life</option>
             <option value="Terror">Terror</option>
-          </select>
+          </select> */}
         </div>
         <div className="header-container-login">
           <figure className="header__search-container">
@@ -65,15 +65,24 @@ const HeaderInicio = (imageHeader) => {
           <Link to="/avatar">
             {imageHeader.imageHeader.imageHeader ? (
               <figure className="header__avatar-container">
-                <img src={imageHeader.imageHeader.imageHeader} className="avatar__image"></img>
+                <img
+                  src={imageHeader.imageHeader.imageHeader}
+                  className="avatar__image"
+                ></img>
               </figure>
             ) : (
               <figure className="header__avatar-container">
-                <img src={imageHeader.imageHeader} className="avatar__image"></img>
+                <img
+                  src={imageHeader.imageHeader}
+                  className="avatar__image"
+                ></img>
               </figure>
             )}
           </Link>
-          <button className="header__avatar-options" onClick={handleUserOptions}>
+          <button
+            className="header__avatar-options"
+            onClick={handleUserOptions}
+          >
             <figure className="header__arrow-container">
               <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>
