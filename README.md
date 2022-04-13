@@ -17,7 +17,7 @@ Para vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nu
 
 5️⃣ Películas: Haciendo click en la portada de cada película, podrás acceder a la sinopsis, poster oficial y los 4 primeros episodios. Podrás dar click sobre cada video y automáticamente en nuestra página podrás verlo. Una recomendación, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, en la parte inferior tenemos un carrusel con animes similares.
 
-Nota: Podrás ver la página "Nosotros" con información de nuestro equipo, accediendo a través de un botón desde la sección "Categorías" (3).
+Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo, accediendo a través de un botón desde la sección "Categorías" (3).
 
 ### Estación Otaku, tu mejor experiencia en un solo lugar...
     
