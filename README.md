@@ -22,7 +22,7 @@ Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo,
 ### Estación Otaku, tu mejor experiencia en un solo lugar...
     
 ## Instalación 💻
-- Ubicarse en la carpeta que contendrá el proyecto
+- Ubicarse en la carpeta del proyecto
 - Abrir la terminal de comandos
   - git clone https://github.com/EstacionOtaku/Estacion-Otaku.git
   - cd Estacion-Otaku
