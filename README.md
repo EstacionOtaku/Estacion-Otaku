@@ -86,7 +86,7 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
       
 ## Lenguajes y herramientas
 Se utilizaron diversas herramientas en una primera etapa, para el diseño gráfico, esquemas, mocks, y linea gráfica de la marca "Estación Otaku" y estudio UX/UI.
-En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los siguientes lenguajes y tecnologías durante el módulo Front End del Bootcamp:
+En la segunda etapa, para desarrollar la web del proyecto, hemos utilizado los siguientes lenguajes y tecnologías aprendidas durante el módulo Front End del Bootcamp:
   
 <table>
     <thead>
