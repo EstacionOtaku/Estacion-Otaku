@@ -36,7 +36,7 @@ Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo,
     
 [![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
        
-[![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
+[![moodboard-otaku.jpg](https://i.postimg.cc/ZKJ6kYsZ/moodboard-otaku.jpg)](https://postimg.cc/14Y8wSZY)
         
 ### Nuestra presentación
 
