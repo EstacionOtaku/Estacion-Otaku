@@ -17,12 +17,12 @@ Para vivir la experiencia completa en la Estación Otaku 🚉, hemos dividido nu
 
 5️⃣ Películas: Haciendo click en la portada de cada película, podrás acceder a la sinopsis, poster oficial y los 4 primeros episodios. Podrás dar click sobre cada video y automáticamente en nuestra página podrás verlo. Una recomendación, te invitamos a ver "Kikoy Senki Dragonar". Si deseas ver otro anime, en la parte inferior tenemos un carrusel con animes similares.
 
-Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo, accediendo a través de un botón desde la sección "Categorías" (3).
+Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo, accediendo a través de un botón desde la sección "Categorías".
 
 ### Estación Otaku, tu mejor experiencia en un solo lugar...
     
 ## Instalación 💻
-- Ubicarse en la carpeta que contendrá el proyecto
+- Ubicarse en la carpeta del proyecto
 - Abrir la terminal de comandos
   - git clone https://github.com/EstacionOtaku/Estacion-Otaku.git
   - cd Estacion-Otaku
@@ -36,7 +36,7 @@ Adicional: Podrás ver la página "Nosotros" con información de nuestro equipo,
     
 [![esquema-explicativo.jpg](https://i.postimg.cc/yNzR25Cm/esquema-explicativo.jpg)](https://postimg.cc/rDQzrfms)
        
-[![moodboard-otaku.jpg](https://i.postimg.cc/15GVwBq4/moodboard-otaku.jpg)](https://postimg.cc/GHpp1kz1)
+[![moodboard-otaku.jpg](https://i.postimg.cc/ZKJ6kYsZ/moodboard-otaku.jpg)](https://postimg.cc/14Y8wSZY)
         
 ### Nuestra presentación
 
@@ -65,19 +65,17 @@ https://www.figma.com/file/63VB7ghR6J2haGqwBUXpA8/Estaci%C3%B3n-Otaku?node-id=10
 [![web7.jpg](https://i.postimg.cc/X7GTXkh2/web7.jpg)](https://postimg.cc/SJ4ZvCm8)
       
 ### Vista responsive en mobile
+        
+[![otaku-mobile1.jpg](https://i.postimg.cc/Wz5GWQv0/otaku-mobile1.jpg)](https://postimg.cc/CnfndrdK)
        
-[![mobile1.jpg](https://i.postimg.cc/05Fjwjbn/mobile1.jpg)](https://postimg.cc/s1P3FVPG)
-           
-[![mobile-2.png](https://i.postimg.cc/85YJZx6W/mobile-2.png)](https://postimg.cc/HcQkxZ3s)
-      
-[![mobile3.png](https://i.postimg.cc/s2BWdV4x/mobile3.png)](https://postimg.cc/gwWj3b5b)
-      
-[![mobile4.png](https://i.postimg.cc/9FnTxRyK/mobile4.png)](https://postimg.cc/7fSfhLsn)
-     
-[![mobile5.png](https://i.postimg.cc/FKgYQ7J9/mobile5.png)](https://postimg.cc/v1TYr8zj)
-     
-[![mobile6.png](https://i.postimg.cc/4dQ2tb7r/mobile6.png)](https://postimg.cc/Kk45hT5N)
-     
+[![otaku-mobile2.jpg](https://i.postimg.cc/HWz9k7yj/otaku-mobile2.jpg)](https://postimg.cc/rzdrhsgL)
+        
+[![otaku-mobile3.jpg](https://i.postimg.cc/3JwC4JX1/otaku-mobile3.jpg)](https://postimg.cc/7bpTj4QJ)
+       
+[![otaku-mobile4.jpg](https://i.postimg.cc/YqyN1K8H/otaku-mobile4.jpg)](https://postimg.cc/YhYmHPJn)
+        
+[![otaku-mobile5.jpg](https://i.postimg.cc/YC51s6JD/otaku-mobile5.jpg)](https://postimg.cc/SnG2XMQc)
+       
 ## Arquitectura del proyecto
       
 [![arquitectura1.jpg](https://i.postimg.cc/GhzwWmWR/arquitectura1.jpg)](https://postimg.cc/ykJb9s6p)
