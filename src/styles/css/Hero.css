@@ -1,77 +1,113 @@
-
-
 :root {
- --main-cta-purple:#5E39F0;
- --main-cta-purple-hover:#4c2fc0;
- --lighter-bg-color:#0B1437 ;
- --btn-transition: all 0.5s;
- --main-white:white;
- --round-border:50px;
- --main-letter-spacing: -0.15rem;
+  --main-cta-purple: #5e39f0;
+  --main-cta-purple-hover: #4c2fc0;
+  --lighter-bg-color: #0b1437;
+  --btn-transition: all 0.5s;
+  --main-white: white;
+  --round-border: 50px;
+  --main-letter-spacing: -0.15rem;
 }
 .hero {
- height: 100vh;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content:space-between;
-flex-direction: column;
-position: relative;
-overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 .hero-wrapper {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 2rem;
-width: min(95%,800px);
-height: 50vh;
-z-index: 1;
-margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: min(95%, 800px);
+  height: 50vh;
+  z-index: 1;
+  margin-top: 5rem;
 }
 .hero__cta-text {
- font-size: 3.5rem;
- font-weight: 600;
- letter-spacing:var(--main-letter-spacing);
- text-align: center;
- line-height:3.5rem ;
- color: var(--main-white);
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: var(--main-letter-spacing);
+  text-align: center;
+  line-height: 3.5rem;
+  color: var(--main-white);
 }
 
-.hero__transparency-layer-hero { 
- background: linear-gradient(181.38deg, rgba(11, 20, 55, 0.79) 25.33%, rgba(11, 20, 55, 0) 50.6%);
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
+.hero__transparency-layer-hero {
+  background: linear-gradient(181.38deg, rgba(11, 20, 55, 0.79) 25.33%, rgba(11, 20, 55, 0) 50.6%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
- .hero__gradient-background {
-background: linear-gradient(180deg, rgba(11, 20, 55, 0.5) 13.02%, rgba(11, 20, 55, 0.332857) 29.69%, rgba(11, 20, 55, 0.11) 47.4%), conic-gradient(from 180deg at 50% 50%, rgba(94, 57, 240, 0.11) -99.38deg, rgba(94, 57, 240, 0.24) 90deg, rgba(10, 20, 55, 0) 178.12deg, rgba(94, 57, 240, 0.11) 260.62deg, rgba(94, 57, 240, 0.24) 450deg), conic-gradient(from 180deg at 50% 83.33%, rgba(74, 36, 222, 0.61) 0deg, rgba(71, 26, 248, 0.39) 76.88deg, #0B1437 136.88deg, #0B1437 210deg, rgba(74, 36, 222, 0.61) 360deg);
- width: 100%;
- height: 40%;
- position: absolute;
- bottom: 0;
- left: 0;
- }
-.mobile-hero__image-container { 
-
-transform:scale(1.6);
-
-margin-top: auto;
+.hero__gradient-background {
+  background: linear-gradient(
+      180deg,
+      rgba(11, 20, 55, 0.5) 13.02%,
+      rgba(11, 20, 55, 0.332857) 29.69%,
+      rgba(11, 20, 55, 0.11) 47.4%
+    ),
+    conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(94, 57, 240, 0.11) -99.38deg,
+      rgba(94, 57, 240, 0.24) 90deg,
+      rgba(10, 20, 55, 0) 178.12deg,
+      rgba(94, 57, 240, 0.11) 260.62deg,
+      rgba(94, 57, 240, 0.24) 450deg
+    ),
+    conic-gradient(
+      from 180deg at 50% 83.33%,
+      rgba(74, 36, 222, 0.61) 0deg,
+      rgba(71, 26, 248, 0.39) 76.88deg,
+      #0b1437 136.88deg,
+      #0b1437 210deg,
+      rgba(74, 36, 222, 0.61) 360deg
+    );
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.mobile-hero__image-container {
+width: 80%;
+z-index: 1;
+  margin-top: auto;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.hero__decoration-left-image-container, .hero__decoration-right-image-container  { position: absolute;
-transform: scale(1.6);
+.hero__decoration-left-image-container,
+.hero__decoration-right-image-container {
+  position: absolute;
+  transform: scale(0.9);
 }
 .hero__decoration-left-image-container {
- left: 4rem;
- top: 50%;
+  left: 2rem;
+  top: 50%;
 }
 .hero__decoration-right-image-container {
- right: 3rem;
- top: 40%;
+  right: 3rem;
+  top: 40%;
 }
-.hero__image, .hero__decoration-left-image, .hero__decoration-right-image  { width: 100%;}
+.hero__image,
+.hero__decoration-left-image,
+.hero__decoration-right-image {
+  width: 100%;
+}
+
+
+@media (max-width: 854px) {
+  .hero__cta-text {
+    font-size: 2.5em;
+    line-height: 1.1em;
+  }
+}

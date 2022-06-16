@@ -55,7 +55,9 @@ const TabHeader = ({ toggle, toggleItem }) => {
           >
             <div
               id="icon-tab-3"
-              className={toggle === 3 ? "tab__icon tab__icon--price tab__icon--active" : "tab__icon tab__icon--price"}
+              className={
+                toggle === 3 ? "tab__icon tab__icon--price tab__icon--active" : "tab__icon    tab__icon--price"
+              }
             ></div>
             <p className="tabs__tab-title">Escoge tu precio</p>
           </div>

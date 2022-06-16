@@ -5,9 +5,7 @@
 }
 
 .tabs {
-  /* background-color: var(--background-color); */
-  z-index: 1;
-  /* color: white; */
+  z-index: 1
 }
 
 .tabs__header-container {
@@ -235,7 +233,19 @@
 .table-tab tbody tr:nth-child(odd) {
   background: rgba(0, 0, 0, 0.384);
 }
-
+ 
+@media (max-width:854px) {
+  .tab__icon--devices, .tab__icon--door {
+    transform: scale(1.1)
+  }
+    .tab__icon--price {
+      transform: scale(0.5);
+    }
+    .tabs__tab-title {
+      font-size: 1.1em;
+      line-height:1.1em ;
+    }
+}
 @media (min-width: 854px) {
   .tab-2-content-bottom {
     flex-direction: row;
