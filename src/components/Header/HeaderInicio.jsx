@@ -1,16 +1,15 @@
 import "../../styles/scss/Header.scss";
 import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
-import avatar from "../../assets/Header/avatar.png";
+// import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const HeaderInicio = () => {
-
+const HeaderInicio = (imageHeader) => {
   const { user, logout } = useAuth();
-  const [userModal, setUserModal] = useState(false)
+  const [userModal, setUserModal] = useState(false);
   const handleLogout = async () => {
     try {
       await logout();
@@ -19,13 +18,14 @@ const HeaderInicio = () => {
     }
   };
   const handleUserOptions = () => {
-    if (!userModal){
+    if (!userModal) {
       setUserModal(true);
-    }
-    else {
+    } else {
       setUserModal(false);
     }
-  }
+  };
+
+  // console.log(imageHeader.imageHeader.imageHeader.length);
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -33,7 +33,7 @@ const HeaderInicio = () => {
           <figure className="header__image-container">
             <img src={logo} className="header__image"></img>
           </figure>
-          <select
+          {/* <select
             name="Generos"
             id="generos-select
         
@@ -55,31 +55,49 @@ const HeaderInicio = () => {
             <option value="Psicologico">Psicologico</option>
             <option value="Slice of Life">Slice of Life</option>
             <option value="Terror">Terror</option>
-          </select>
+          </select> */}
         </div>
         <div className="header-container-login">
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
           </figure>
           <p className="header__username">{user.displayName || user.email}</p>
-          <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
-          </figure>
+          <Link to="/avatar">
+            {imageHeader.imageHeader.imageHeader ? (
+              <figure className="header__avatar-container">
+                <img
+                  src={imageHeader.imageHeader.imageHeader}
+                  className="avatar__image"
+                ></img>
+              </figure>
+            ) : (
+              <figure className="header__avatar-container">
+                <img
+                  src={imageHeader.imageHeader}
+                  className="avatar__image"
+                ></img>
+              </figure>
+            )}
+          </Link>
           <button
             className="header__avatar-options"
             onClick={handleUserOptions}
           >
             <figure className="header__arrow-container">
-              <img src={arrow} className="arrow__image"></img>
+              <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>
           </button>
 
           {userModal && (
             <div className="header__modal-user">
-              <Link to="/settings-acount" className="header__button-logout">Editar Cuenta</Link>
-              <button className="header__button-logout" onClick={handleLogout}>Cerrar Sesión</button>
+              <Link to="/settings-acount" className="header__button-logout">
+                Editar Cuenta
+              </Link>
+              <button className="header__button-logout" onClick={handleLogout}>
+                Cerrar Sesión
+              </button>
             </div>
-          )}  
+          )}
         </div>
       </div>
     </header>

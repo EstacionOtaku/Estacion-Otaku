@@ -1,6 +1,6 @@
 @import url("./Hero.css");
 :root {
-   --tab-section-bg: #1b1b1b65;
+  --tab-section-bg: #1b1b1b65;
   --tab-section-table-gray: #26262641;
 }
 
@@ -13,7 +13,6 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .tabs__tab-item {
@@ -25,7 +24,7 @@
   fill: #767676;
   cursor: pointer;
   text-align: center;
-  color:#767676 ;
+  color: #767676;
   transition: all 0.5s;
 }
 
@@ -33,12 +32,10 @@
   color: white;
 }
 
-
 .tabs__tab-item--active {
-  border-bottom: solid  3px #5E39F0;
+  border-bottom: solid 3px #5e39f0;
   color: white;
-  transition:all .05s;
-
+  transition: all 0.05s;
 }
 
 .tab__icon {
@@ -49,7 +46,6 @@
   margin: -0.3rem 0;
   transition: all 0.5s;
 }
-
 
 .tab__icon:hover {
   background-color: #fff;
@@ -74,7 +70,8 @@
 
 .tab__icon--door {
   mask: url("../../assets/images/tab-no-commitment-icon.svg") center no-repeat;
-  -webkit-mask: url("../../assets/images/tab-no-commitment-icon.svg") center no-repeat;
+  -webkit-mask: url("../../assets/images/tab-no-commitment-icon.svg") center
+    no-repeat;
   transform: scale(1.5);
 }
 
@@ -91,8 +88,8 @@
   font-weight: 500;
   font-weight: 400;
 }
-.tabs__tab-title:hover{
-  color: white
+.tabs__tab-title:hover {
+  color: white;
 }
 
 .tab-content {
@@ -119,8 +116,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 1rem; */
-  padding-bottom: 4rem;
 }
 
 .tab-content__inner-cta {
@@ -202,7 +197,6 @@
   border-spacing: 0;
   margin: 0 auto;
   margin-top: -1.5rem;
-
 }
 
 .table__title {
@@ -259,7 +253,7 @@
   .tab-content__dynamic-date {
     align-self: start;
     grid-column: 2/3;
-    grid-row: 2/3 ;
+    grid-row: 2/3;
     /* margin-top: -2rem; */
   }
   .hero__cta-button {
@@ -276,6 +270,5 @@
 
     grid-column: 1/2;
     grid-row: 1/3;
-}
-
+  }
 }

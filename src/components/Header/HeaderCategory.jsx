@@ -6,12 +6,13 @@ import logo from "../../assets/Header/logo.png";
 import { useAuth } from "../../context/authContext";
 import { useState } from "react";
 import ModalConfig from "../modals/ModalConfig";
+import { Link } from "react-router-dom";
 
-const HeaderCategory = () => {
+const HeaderCategory = (imageHeader) => {
   const { user, logout } = useAuth();
   const [userModal, setUserModal] = useState(false);
   const [settingsUser, setSettingsUser] = useState(false);
-  const nameUser = localStorage.getItem('nombre');
+  const nameUser = localStorage.getItem("nombre");
 
   const handleLogout = async () => {
     try {
@@ -34,6 +35,7 @@ const HeaderCategory = () => {
       setSettingsUser(false);
     }
   };
+  console.log(imageHeader.imageHeader);
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -46,10 +48,17 @@ const HeaderCategory = () => {
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
           </figure>
-          <p className="header__username">{user.displayName || nameUser || user.email}</p>
-          <figure className="header__avatar-container">
-            <img src={avatar} className="avatar__image"></img>
-          </figure>
+          <p className="header__username">
+            {user.displayName || nameUser || user.email}
+          </p>
+          <Link to="/avatar">
+            <figure className="header__avatar-container">
+              <img
+                src={imageHeader.imageHeader}
+                className="avatar__image"
+              ></img>
+            </figure>
+          </Link>
           <button
             className="header__avatar-options"
             onClick={handleUserOptions}
@@ -65,10 +74,9 @@ const HeaderCategory = () => {
               <button
                 className="header__button-logout"
                 onClick={handleSettingsUser}
-                >
+              >
                 Editar Cuenta
               </button>
-
 
               <button className="header__button-logout" onClick={handleLogout}>
                 Cerrar Sesión

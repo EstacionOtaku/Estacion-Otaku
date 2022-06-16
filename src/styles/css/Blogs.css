@@ -1,0 +1,172 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.blog h3 {
+  margin: 0.5rem 0 1rem 0;
+  flex: 1;
+}
+
+.blog__description {
+  position: relative;
+  max-height: 50px;
+  overflow: hidden;
+  padding-right: 0.6rem;
+  font-size: 0.8rem;
+  color: #a9a9a9;
+}
+
+.blog__title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.blogs__title-main {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog__description::before {
+  position: absolute;
+  content: "...";
+  bottom: 0;
+  right: 0;
+}
+
+.blog footer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.blog__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog__author {
+  display: flex;
+  align-items: center;
+}
+
+.blog__date {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.blog__author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.blog__author p {
+  font-size: 0.6rem;
+  color: #a9a9a9;
+  font-weight: 600;
+}
+
+.blog__list-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .blog__list-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog__list-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.section__preguntas-title,
+.section__conoce-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.accordion-button,
+.accordion-body {
+  background-color: #0b1437;
+  color: white;
+}
+
+.accordion-body {
+  line-height: 25px;
+  text-align: justify;
+}
+
+.container_conoce {
+  /* background-image: url(./../../assets/preguntas/Rectangle\ 54.png); */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.container_conoce-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section__preguntas-title,
+.section__conoce-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.accordion-button,
+.accordion-body {
+  background-color: #0b1437;
+  color: white;
+}
+
+.accordion-body {
+  line-height: 25px;
+  text-align: justify;
+}
+
+.container_conoce {
+  /* background-image: url(./../../assets/preguntas/Rectangle\ 54.png); */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.container_conoce-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

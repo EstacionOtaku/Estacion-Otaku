@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/css/Spinner.css";
 
 const OnePiece = ({ setImageHeader }) => {
@@ -35,14 +36,16 @@ const OnePiece = ({ setImageHeader }) => {
           </div>
           <div className="card-cards">
             {onePiece.map((element, index) => (
-              <figure key={index} className="card-cards__image-container">
-                <img
-                  src={element.img}
-                  alt="img"
-                  className="card-cards__image"
-                  onClick={handleImg}
-                />
-              </figure>
+              <Link to="/inicio">
+                <figure key={index} className="card-cards__image-container">
+                  <img
+                    src={element.img}
+                    alt="img"
+                    className="card-cards__image"
+                    onClick={handleImg}
+                  />
+                </figure>
+              </Link>
             ))}
           </div>
         </section>

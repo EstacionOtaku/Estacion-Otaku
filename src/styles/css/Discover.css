@@ -1,0 +1,39 @@
+.discover {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.discover__subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: lightgrey;
+  margin-bottom: 15px;
+}
+
+.discover__title {
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.discover__text {
+  font-size: 18px;
+  text-align: center;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+.discover__button {
+  padding-bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.discover__juego {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 40px;
+}

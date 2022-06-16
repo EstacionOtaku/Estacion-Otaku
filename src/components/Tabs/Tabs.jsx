@@ -20,37 +20,70 @@ const Tabs = () => {
           <div className="tab-content__container">
             <div
               id="tab-1-content"
-              className={toggle === 1 ? "tab-1-content tab-content__item show" : "tab-1-content tab-content__item"}
+              className={
+                toggle === 1
+                  ? "tab-1-content tab-content__item show"
+                  : "tab-1-content tab-content__item"
+              }
             >
               <div className="tab-content__inner">
                 <TabContentCta CTAtext="Sin compromisos. Cancela en línea cuando quieras." />
                 <figure className="tab-content__image-container">
-                  <img className="tab-content__image" src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" />
+                  <img
+                    className="tab-content__image"
+                    src="https://i.ibb.co/J2xDJV7/tab-content-1.png"
+                    alt=""
+                  />
                 </figure>
               </div>
             </div>
             <div
               id="tab-2-content"
-              className={toggle === 2 ? "tab-2-content tab-content__item show" : "tab-2-content tab-content__item"}
+              className={
+                toggle === 2
+                  ? "tab-2-content tab-content__item show"
+                  : "tab-2-content tab-content__item"
+              }
             >
               <div className="tab-content__inner">
                 <TabContentCta CTAtext="Mira  animes favoritos donde quieras." />
                 <div className="tab-2-content-bottom">
                   <div>
-                    <img className="tab-content__image" src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt="" />
-                    <p className="tab-content__description-subtitle">Mira en tu TV</p>
+                    <img
+                      className="tab-content__image"
+                      src="https://i.postimg.cc/pXBWZ6Xh/tab-content-2-1.png"
+                      alt=""
+                    />
+                    <p className="tab-content__description-subtitle">
+                      Mira en tu TV
+                    </p>
                     <p className="text-dark">
-                      Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y más.
+                      Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+                      reproductores Blu-ray y más.
                     </p>
                   </div>
                   <div>
-                    <img className="tab-content__image" src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt="" />
-                    <p className="tab-content__description-subtitle">Mira al instante o descarga para mirar luego</p>
-                    <p className="text-dark">Disponible en teléfonos y tablets, donde sea que vayas.</p>
+                    <img
+                      className="tab-content__image"
+                      src="https://i.postimg.cc/W16k0nxX/tab-content-2-2.png"
+                      alt=""
+                    />
+                    <p className="tab-content__description-subtitle">
+                      Mira al instante o descarga para mirar luego
+                    </p>
+                    <p className="text-dark">
+                      Disponible en teléfonos y tablets, donde sea que vayas.
+                    </p>
                   </div>
                   <div>
-                    <img className="tab-content__image" src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt="" />
-                    <p className="tab-content__description-subtitle">Usa cualquier computadora</p>
+                    <img
+                      className="tab-content__image"
+                      src="https://i.postimg.cc/P5tbxJqL/tab-content-2-3.png"
+                      alt=""
+                    />
+                    <p className="tab-content__description-subtitle">
+                      Usa cualquier computadora
+                    </p>
                     <p className="text-dark">Mira en Netflix.com</p>
                   </div>
                 </div>
@@ -58,7 +91,11 @@ const Tabs = () => {
             </div>
             <div
               id="tab-3-content"
-              className={toggle === 3 ? "tab-3-content tab-content__item show" : "tab-3-content tab-content__item"}
+              className={
+                toggle === 3
+                  ? "tab-3-content tab-content__item show"
+                  : "tab-3-content tab-content__item"
+              }
             >
               <div className="tab-content__inner">
                 <TabContentCta CTAtext="Escoge un plan y disfruta ahora." />
@@ -73,7 +110,10 @@ const Tabs = () => {
                   </thead>
                   <tbody className="table__prices">
                     <tr>
-                      <td>El precio mensual después de que finalice el mes gratuito el {dateIn30Days()}</td>
+                      <td>
+                        El precio mensual después de que finalice el mes
+                        gratuito el {dateIn30Days()}
+                      </td>
                       <td>S/. 24.90</td>
                       <td>S/. 34.90</td>
                       <td>S/. 44.90</td>

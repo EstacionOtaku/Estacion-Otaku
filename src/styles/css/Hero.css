@@ -28,6 +28,7 @@
   z-index: 1;
   margin-top: 5rem;
 }
+
 .hero__cta-text {
   font-size: 3.5rem;
   font-weight: 600;
@@ -35,10 +36,22 @@
   text-align: center;
   line-height: 3.5rem;
   color: var(--main-white);
+<<<<<<< HEAD
 }
 
 .hero__transparency-layer-hero {
   background: linear-gradient(181.38deg, rgba(11, 20, 55, 0.79) 25.33%, rgba(11, 20, 55, 0) 50.6%);
+=======
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero__transparency-layer-hero {
+  background: linear-gradient(
+    181.38deg,
+    rgba(11, 20, 55, 0.79) 25.33%,
+    rgba(11, 20, 55, 0) 50.6%
+  );
+>>>>>>> main
   position: absolute;
   top: 0;
   left: 0;
@@ -76,6 +89,7 @@
   left: 0;
 }
 .mobile-hero__image-container {
+<<<<<<< HEAD
 width: 80%;
 z-index: 1;
   margin-top: auto;
@@ -83,15 +97,27 @@ z-index: 1;
   bottom: -1rem;
   left: 50%;
   transform: translate(-50%);
+=======
+  transform: scale(1.6);
+
+  margin-top: auto;
+>>>>>>> main
 }
 
 .hero__decoration-left-image-container,
 .hero__decoration-right-image-container {
   position: absolute;
+<<<<<<< HEAD
   transform: scale(0.9);
 }
 .hero__decoration-left-image-container {
   left: 2rem;
+=======
+  transform: scale(1.6);
+}
+.hero__decoration-left-image-container {
+  left: 4rem;
+>>>>>>> main
   top: 50%;
 }
 .hero__decoration-right-image-container {
@@ -102,6 +128,7 @@ z-index: 1;
 .hero__decoration-left-image,
 .hero__decoration-right-image {
   width: 100%;
+<<<<<<< HEAD
 }
 
 
@@ -110,4 +137,6 @@ z-index: 1;
     font-size: 2.5em;
     line-height: 1.1em;
   }
+=======
+>>>>>>> main
 }
