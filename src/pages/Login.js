@@ -46,23 +46,6 @@ const Login = () => {
       }
     }
   };
-  const handleGoogleSignin = async () => {
-    try {
-      await loginWithGoogle();
-      Swal.fire({
-        position: "center",
-        imageUrl: "https://i.postimg.cc/63m6pLNt/logo-estacion-otaku.jpg",
-        imageHeight: 300,
-        imageAlt: "A tall image",
-        title: "Wellcome to Estacion Otaku",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      navigate("/inicio");
-    } catch (error) {
-      setError(error.message);
-    }
-  };
 
   const handleResetPassword = async () => {
     if (!user.email) return setError("Porfavor ingrese su correo");
@@ -75,58 +58,63 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container-all">
-      <div className="form-message">
-        <h2 className="form-message-title">Inicia sesión </h2>
-        <h3 className="form-message-subtitle">
-          Ingresa tu dirección de correo eléctronico y contraseña para acceder a
-          tu cuenta
-        </h3>
+    <>
+      <div
+        className="back--button"
+        style={{ margin: "2rem 0 0 2rem", position: "absolute" }}
+      >
+        <Link to="/">⏪ Atrás</Link>
       </div>
-      {error && <AlertError mesagge={error} />}
-      <form onSubmit={handleSubmit} className="form-container">
-        <div className="form-input-container">
-          <input
-            className="form-input"
-            type="email"
-            placeholder="ingresa tú correo"
-            name="email"
-            id="email"
-            onChange={handleChange}
-          />
-
-          <input
-            className="form-input"
-            type="password"
-            placeholder="ingresa tú contraseña"
-            name="password"
-            id="password"
-            onChange={handleChange}
-          />
+      <div className="form-container-all">
+        <div className="form-message">
+          <h2 className="form-message-title">Inicia sesión </h2>
+          <h3 className="form-message-subtitle">
+            Ingresa tú dirección de correo eléctronico y contraseña para acceder
+            a tú cuenta
+          </h3>
         </div>
+        {error && <AlertError mesagge={error} />}
+        <form onSubmit={handleSubmit} className="form-container">
+          <div className="form-input-container">
+            <input
+              className="form-input"
+              type="email"
+              placeholder="ingresa tú nombre de usuario"
+              name="email"
+              id="email"
+              onChange={handleChange}
+            />
 
-        <section className="form__buttons">
-          <div className="button-register-container">
-            <button className="button-option">Iniciar Sesion</button>
-            <button className="button-option" onClick={handleGoogleSignin}>
-              Iniciar sesion con Google
-            </button>
+            <input
+              className="form-input"
+              type="password"
+              placeholder="ingresa tú contraseña"
+              name="password"
+              id="password"
+              onChange={handleChange}
+            />
           </div>
-          <div className="other_enlaces">
-            <Link to="/register" className="button-info-register">
-              ¿Eres nuevo por aquí? Registrate ahora
-            </Link>
-            <a
-              href="#!"
-              onClick={handleResetPassword}
-              className="forgot-passoword-register"
-            >
-              ¿Olvidaste tu contraseña?
-            </a>
-          </div>
-        </section>
-      </form>
-    </div>
+
+          <section className="form__buttons">
+            <div className="button-register-container">
+              <button className="button-option">Iniciar Sesion</button>
+            </div>
+            <div className="other_enlaces">
+              <Link to="/register" className="button-info-register">
+                ¿Eres nuevo por aquí? Registrate ahora
+              </Link>
+              <a
+                href="#!"
+                onClick={handleResetPassword}
+                className="forgot-passoword-register"
+              >
+                ¿Olvidaste tú contraseña?
+              </a>
+            </div>
+          </section>
+        </form>
+      </div>
+    </>
   );
 };
 
