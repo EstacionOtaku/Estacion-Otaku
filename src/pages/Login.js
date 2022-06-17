@@ -3,7 +3,9 @@ import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
+import portadaImagen from "../assets/portada/portada-singup.png";
 import "../styles/css/FormSesion.css";
+import Footer from "../components/Footer/Footer";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -59,9 +61,12 @@ const Login = () => {
 
   return (
     <>
+      <div className="singUp-Portada__container">
+        <img src={portadaImagen} className="singUp-Portada"></img>
+      </div>
       <div
         className="back--button"
-        style={{ margin: "2rem 0 0 2rem", position: "absolute" }}
+        style={{ margin: "12rem 0 0 5rem", position: "absolute" }}
       >
         <Link to="/">⏪ Atrás</Link>
       </div>
@@ -113,6 +118,15 @@ const Login = () => {
             </div>
           </section>
         </form>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "0",
+          width: "100%",
+        }}
+      >
+        <Footer></Footer>
       </div>
     </>
   );
