@@ -16,6 +16,7 @@ header {
   padding: 0 1rem;
   max-width: 1251px;
   margin: 0 auto;
+  position: relative;
 }
 .header-container-login,
 .header-container-logo {
@@ -74,38 +75,42 @@ header {
   padding: 0.1rem 0.2rem;
   @include letters(700, 0.625rem, 0.756rem);
 }
-.header__avatar-options{
+.header__avatar-options {
   display: flex;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.header__modal-user{
-  background-color: #0b1437;
-  z-index: 150;
-  padding: .5rem .75rem;
-  position: absolute;
-  top: 3.5rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem; 
-  border: .5px solid #fff;
-  border-end-end-radius: 2rem;
+.header__modal-user-container {
+  background-color: #fff;
+  z-index: 200;
 }
-.header__button-logout{
+.header__modal-user {
+  display: flex;
+  width: 200px;
+  gap: 0.5rem;
+  top: 65px;
+  right: 20px;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-end-end-radius: 2rem;
+  border: 0.5px solid #fff;
+  background-color: #0b1437;
+}
+.header__button-logout {
   background-color: transparent;
   display: flex;
   justify-content: center;
-  border: .5px solid;
-  border-radius: .5rem;
+  border: 0.5px solid;
+  border-radius: 0.5rem;
   width: 8rem;
-  padding: .1rem;
+  padding: 0.1rem;
   cursor: pointer;
   color: #fff;
   font-weight: 400;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 @media (min-width: 1200px) {
@@ -143,14 +148,14 @@ header {
     padding: 0.3rem 0.5rem;
     @include letters(700, 1.2rem, 0.756rem);
   }
-  .header__modal-user{
-    padding: 1rem 1.25rem;
-    left: 1380px;
-    top: 5.25rem;
-    gap: 0.75rem; 
+  .header__modal-user {
+    width: 250px;
+    top: 98px;
+    right: 60px;
   }
-  .header__button-logout{
-    padding: .25rem;
+  .header__button-logout {
+    width: 80%;
+    padding: 0.25rem;
     font-size: 1rem;
   }
 } ;
