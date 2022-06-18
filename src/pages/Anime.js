@@ -20,7 +20,6 @@ const Anime = () => {
           return element.mal_id == id;
         });
         setInfoAnime(animeSelected);
-        console.log(infoAnime);
       } catch (error) {
         console.log(error);
       } finally {

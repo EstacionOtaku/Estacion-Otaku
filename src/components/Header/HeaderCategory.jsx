@@ -8,7 +8,7 @@ import { useState } from "react";
 import ModalConfig from "../modals/ModalConfig";
 import { Link } from "react-router-dom";
 
-const HeaderCategory = (imageHeader) => {
+const HeaderCategory = ({ imageHeader, setMovie }) => {
   const { user, logout } = useAuth();
   const [userModal, setUserModal] = useState(false);
   const [settingsUser, setSettingsUser] = useState(false);
@@ -35,7 +35,9 @@ const HeaderCategory = (imageHeader) => {
       setSettingsUser(false);
     }
   };
-  console.log(imageHeader.imageHeader);
+  const handleChange = (value) => {
+    setMovie(value);
+  };
   return (
     <header className="header  ">
       <div className="header-container ">
@@ -45,6 +47,16 @@ const HeaderCategory = (imageHeader) => {
           </figure>
         </div>
         <div className="header-container-login">
+          <div className="input-group rounded" style={{ width: "" }}>
+            <input
+              type="search"
+              className="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+              onChange={(e) => handleChange(e.target.value)}
+            />
+          </div>
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
           </figure>
@@ -53,10 +65,7 @@ const HeaderCategory = (imageHeader) => {
           </p>
           <Link to="/avatar">
             <figure className="header__avatar-container">
-              <img
-                src={imageHeader.imageHeader}
-                className="avatar__image"
-              ></img>
+              <img src={imageHeader} className="avatar__image"></img>
             </figure>
           </Link>
           <button

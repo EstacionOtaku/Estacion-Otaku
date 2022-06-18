@@ -4,7 +4,6 @@ import { CategoriaImageData } from "../../data/PeliImageData";
 import { Link } from "react-router-dom";
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -60,7 +59,12 @@ const CategoriaCards = ({ setTema }) => {
         {CategoriaImageData.map((item, index) => {
           const { img, categoria } = item;
           return (
-            <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>
+            <MovieCard
+              key={index}
+              img={img}
+              categoria={categoria}
+              setTema={setTema}
+            ></MovieCard>
           );
         })}
       </Slider>
