@@ -86,14 +86,28 @@ const Anime = (imageHeader) => {
         imageHeader={urlImage}
         setMovie={setMovie}
       ></HeaderCategory>
-      {dataFilter.length ? (
+      {dataFilter.length >= 0 && movie.length ? (
         <>
           <h3 className="fs-3 text-center" style={{ marginTop: "2rem" }}>
             Busqueda Encontrada
           </h3>
-          <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-            <SearchMovie dataFilter={dataFilter}></SearchMovie>
-          </section>
+          {dataFilter.length ? (
+            <section
+              className="py-1 px-2 mx-auto"
+              style={{ maxWidth: "1600px" }}
+            >
+              <SearchMovie dataFilter={dataFilter}></SearchMovie>
+            </section>
+          ) : (
+            <section
+              className="py-4 px-2 mx-auto"
+              style={{ maxWidth: "1600px" }}
+            >
+              <div class="alert alert-danger text-center" role="alert">
+                Ups, No se encontro tu pelicula
+              </div>
+            </section>
+          )}
         </>
       ) : (
         <>
