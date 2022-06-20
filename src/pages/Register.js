@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
 import "../styles/css/FormSesion.css";
+import portadaImagen from "../assets/portada/portada-singup.png";
+import Footer from "../components/Footer/Footer";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -57,6 +59,15 @@ const Register = () => {
 
   return (
     <>
+      <div className="singUp-Portada__container">
+        <img src={portadaImagen} className="singUp-Portada"></img>
+      </div>
+      <div
+        className="back--button"
+        style={{ margin: "12rem 0 0 5rem", position: "absolute" }}
+      >
+        <Link to="/">⏪ Atrás</Link>
+      </div>
       <div className="form-container-all">
         <div className="form-message">
           <h2 className="form-message-title">Registrate aquí</h2>
@@ -69,19 +80,19 @@ const Register = () => {
           <div className="form-input-container">
             <input
               className="form-input"
-              type="text"
-              placeholder="Ingresa tu nombre"
-              name="name"
-              id="name"
+              type="email"
+              placeholder="Correo electrónico"
+              name="email"
+              id="email"
               onChange={handleChange}
             />
 
             <input
               className="form-input"
-              type="email"
-              placeholder="ingresa tú correo"
-              name="email"
-              id="email"
+              type="text"
+              placeholder="Nombre Completo"
+              name="name"
+              id="name"
               onChange={handleChange}
             />
 
@@ -103,13 +114,22 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-
           <div className="form__buttons">
             <button className="button-option">Registrate ahora</button>
-            <p>o</p>
-            <Link to="/login" className="other-option"> Iniciar sesión</Link>
+            <Link to="/login" className="other-option">
+              ¿Tienes una cuenta?
+            </Link>
           </div>
         </form>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "0",
+          width: "100%",
+        }}
+      >
+        <Footer></Footer>
       </div>
     </>
   );

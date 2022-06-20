@@ -6,7 +6,6 @@ import Slider from "react-slick/lib/slider";
 import { MasVistos } from "../../data/PeliImageData";
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -61,7 +60,9 @@ const LoMasVistoCards = () => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
+        const response = await fetch(
+          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
+        );
         const data = await response.json();
         setInfoAnime(data.results);
       } catch (error) {

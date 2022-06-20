@@ -1,9 +1,8 @@
-import React from "react";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
-import { Sugerencia } from "../../data/PeliImageData";
+import { Top10 } from "../../data/PeliImageData";
 
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
@@ -54,35 +53,24 @@ const carouselProperties = {
   ],
 };
 
-const Sugerencias = () => {
-  const [infoAnime, setInfoAnime] = useState([]);
-
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
-        const data = await response.json();
-        const animeSelected = data.results.filter(function(element) {
-          return element.airing === false;
-        });
-        setInfoAnime(animeSelected);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-    apiAnimes();
-  }, []);
-
+const SearchMovie = (dataFilter) => {
+  const movieFilter = dataFilter.dataFilter;
+  console.log(dataFilter);
   return (
-    <div style={{ margin: "30px" }} className="carousel">
-      <Slider {...carouselProperties}>
-        {infoAnime.map(({ image_url, mal_id }, index) => (
-          <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
-        ))}
-      </Slider>
+    <div
+      style={{
+        margin: "30px",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "1rem",
+        justifyContent: "center",
+      }}
+    >
+      {movieFilter.length
+        ? movieFilter.map(({ image_url, mal_id }, index) => (
+            <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
+          ))
+        : console.log("")}
     </div>
   );
 };
@@ -96,7 +84,7 @@ const MovieCard = ({ image_url, mal_id }) => {
           src={image_url}
           alt="movie"
           style={{
-            width: "100%",
+            width: "125px",
             height: "180px",
             objectFit: "contain",
             marginBottom: "10px",
@@ -106,4 +94,5 @@ const MovieCard = ({ image_url, mal_id }) => {
     </div>
   );
 };
-export default Sugerencias;
+
+export default SearchMovie;

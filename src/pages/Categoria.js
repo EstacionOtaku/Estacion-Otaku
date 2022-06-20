@@ -5,10 +5,61 @@ import Footer from "../components/Footer/Footer";
 import "../styles/scss/Categoria.scss";
 import { Link } from "react-router-dom";
 import CategoriaPeli from "../components/Cards/CategoriaPeli";
+import HeaderCategory from "../components/Header/HeaderCategory";
+import Swal from "sweetalert2";
+import SearchMovie from "../components/Cards/SearchMovie";
 
 const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
   const [gallery, setGallery] = useState([]);
+  const [data, setData] = useState([]);
+  const [movie, setMovie] = useState([]);
+  const [dataFilter, setDataFilter] = useState({});
+
+  useEffect(() => {
+    const apiAnimes = async () => {
+      try {
+        const response = await fetch(
+          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
+        );
+        const data = await response.json();
+        setData(data.results);
+      } catch (error) {
+        console.log(error);
+      } finally {
+      }
+    };
+    apiAnimes();
+  }, []);
+
+  useEffect(() => {
+    filterData(movie);
+  }, [movie]);
+
+  const filterData = (movie) => {
+    if (!movie) {
+      setDataFilter({});
+    } else {
+      const filteredData = data.filter((item) => {
+        return Object.keys(item).some((key) =>
+          item[key].toString().toLowerCase().includes(movie)
+        );
+      });
+      setDataFilter(filteredData);
+    }
+  };
+
+  useEffect(() => {
+    if (movie.length && dataFilter.length < 1) {
+      Swal.fire({
+        title: "Ups, tu pelicula no se encuentra!",
+        text: "Pero tienes mas opciones",
+        icon: "error",
+        timer: 2000,
+        confirmButtonText: "Ok",
+      });
+    }
+  }, [dataFilter]);
 
   useEffect(() => {
     const apiAnimes = async () => {
@@ -47,7 +98,10 @@ const Categoria = ({ tema, imageHeader }) => {
 
   return (
     <>
-      <HeaderInicio imageHeader={imageHeader}></HeaderInicio>
+      <HeaderCategory
+        imageHeader={imageHeader}
+        setMovie={setMovie}
+      ></HeaderCategory>
       <section className="categoria__portada">
         <figure className="categoria__portada-container">
           <img className="prueba_image" src={img} alt="portada" />
@@ -70,11 +124,33 @@ const Categoria = ({ tema, imageHeader }) => {
           </div>
         </div>
       </section>
-
-      {/* <CategoriaPeli /> */}
-
       <section className="py-4">
-        <Galeria data={gallery} />
+        {dataFilter.length >= 0 && movie.length ? (
+          <>
+            <h3 className="fs-3 text-center" style={{ marginTop: "2rem" }}>
+              Busqueda Encontrada
+            </h3>
+            {dataFilter.length ? (
+              <section
+                className="py-1 px-2 mx-auto"
+                style={{ maxWidth: "1600px" }}
+              >
+                <SearchMovie dataFilter={dataFilter}></SearchMovie>
+              </section>
+            ) : (
+              <section
+                className="py-4 px-2 mx-auto"
+                style={{ maxWidth: "1600px" }}
+              >
+                <div class="alert alert-danger text-center" role="alert">
+                  Ups, No se encontro tu pelicula
+                </div>
+              </section>
+            )}
+          </>
+        ) : (
+          <Galeria data={gallery} />
+        )}
       </section>
 
       <Footer></Footer>

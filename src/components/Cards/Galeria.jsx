@@ -10,7 +10,6 @@ const Galeria = (props) => {
   const numeroRamdom = getRandomArbitrary(1, 50);
   const dataRamdom = props.data.slice(numeroRamdom);
 
-  console.log(dataRamdom);
   return (
     <>
       <section className="paquete-page ">
@@ -28,7 +27,10 @@ const Galeria = (props) => {
               {dataRamdom.map((element) => {
                 console.log(element);
                 return (
-                  <article className="paquete-list-container" key={element.mal_id}>
+                  <article
+                    className="paquete-list-container"
+                    key={element.mal_id}
+                  >
                     <figure className="paquete-image-container">
                       <Link to={`/anime/${element.mal_id}`}>
                         <img src={element.image_url} alt={element.title} className="paquete-image zoom" />
