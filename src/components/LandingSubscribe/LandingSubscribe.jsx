@@ -1,16 +1,20 @@
 import "../../styles/css/LandingSubscribe.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import CtaButton from "../Buttons/CtaButton";
+import { MdEmail } from "react-icons/md";
+
 const LandingSubscribe = () => {
   return (
     <section className="subscribe-container">
-      <p className="subscribe__text">
-        ¿Quieres ver <span className="subscribe__text-bold">Estación Otaku</span> ya?
-        <br /> Crea tu cuenta gratis ahora.
-      </p>
-
-      <CtaButton text="Únete gratis" />
+      <div className="subscribe-text__container">
+        <h3 className="subscribe__title">Recibe nuestras ultimas novedades</h3>
+        <p className="subscribe__detail">Infórmate de las novedades y promociones que tenemos</p>
+      </div>
+      <form action="" className="subscribe-form">
+        <div className="subscribe-input_container">
+          <MdEmail className="input-icon" />
+          <input type="email" placeholder="Email" className="subscribe-input" />
+        </div>
+        <button className="subscribe-button">Suscribirse</button>
+      </form>
     </section>
   );
 };

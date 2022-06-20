@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
-=======
 import { Link } from "react-router-dom";
->>>>>>> d0778de59a30e894e20cb3a2ef3c6edd8adfec64
 import Portada from "../assets/Avatar/Portada.png";
 import logo from "../assets/Header/logo.png";
 import AttackTitanCard from "../components/Cards/AttackonTitanCard";
@@ -23,10 +20,7 @@ const Avatar = ({ setImageHeader }) => {
           <img src={Portada} className="portada__image"></img>
         </figure>
       </section>
-      <div
-        className="back--button"
-        style={{ margin: "1rem 0 0 5rem", position: "absolute" }}
-      >
+      <div className="back--button" style={{ margin: "1rem 0 0 5rem", position: "absolute" }}>
         <Link to="/inicio">⏪ Atrás</Link>
       </div>
       <section className="title ">
