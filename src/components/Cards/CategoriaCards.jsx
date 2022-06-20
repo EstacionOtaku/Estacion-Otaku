@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { CategoriaImageData } from "../../data/PeliImageData";
@@ -59,9 +60,7 @@ const CategoriaCards = ({ setTema }) => {
       <Slider {...carouselProperties}>
         {CategoriaImageData.map((item, index) => {
           const { img, categoria } = item;
-          return (
-            <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>
-          );
+          return <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>;
         })}
       </Slider>
     </div>

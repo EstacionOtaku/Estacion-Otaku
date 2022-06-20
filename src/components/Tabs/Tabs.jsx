@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import "../../styles/css/Tabs.css";

@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import Faq from "../components/Faq/Faq";
-=======
+import React from "react";
 import Discover from "../components/Discover/Discover";
 import Carousel from "../components/Carousel/Carousel";
 import BlogsCards from "../components/Cards/BlogsCards";
->>>>>>> main
 import Footer from "../components/Footer/Footer";
 import HeaderLanding from "../components/Header/HeaderLanding";
 import Hero from "../components/Hero";
@@ -18,12 +15,6 @@ const StarPage = () => {
     <>
       <HeaderLanding />
       <Hero />
-<<<<<<< HEAD
-      <Tabs />
-      <Faq />
-      <LandingSubscribe />
-      <Footer />
-=======
       <section className="px-2">
         <Tabs />
       </section>
@@ -43,7 +34,6 @@ const StarPage = () => {
       <section className="py-4">
         <Footer />
       </section>
->>>>>>> main
     </>
   );
 };

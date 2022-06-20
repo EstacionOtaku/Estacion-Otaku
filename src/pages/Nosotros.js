@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/scss/Nosotros.scss";
 import HeaderInicio from "../components/Header/HeaderInicio";
 import Portada from "../assets/Nosotros/portada.png";
@@ -19,10 +20,7 @@ const Nosotros = (imageHeader) => {
         <div className="ps-3 ">
           <h4 className="m-0 p-2 h2">Sobre Nosotros</h4>
           <p className="m-0 p-2 fs-5">
-            Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible
-            para estudiantes amantes de la cultura japonesa donde puedan encontrar contenido
-            relacionado a series y peliculas de Anime para que puedan disfrutar de la mejor
-            experiencia en un solo lugar.
+            Nuestro sueño es crear una plataforma de streaming peruana que sea low-cost y accesible para estudiantes amantes de la cultura japonesa donde puedan encontrar contenido relacionado a series y peliculas de Anime para que puedan disfrutar de la mejor experiencia en un solo lugar.
           </p>
         </div>
       </article>

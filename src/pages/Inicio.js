@@ -1,3 +1,4 @@
+import React from "react";
 import CategoriaCards from "../components/Cards/CategoriaCards";
 import Footer from "../components/Footer/Footer";
 import "../styles/scss/Inicio.scss";
@@ -12,11 +13,7 @@ const Inicio = ({ setTema, imageHeader }) => {
   return (
     <>
       <HeaderCategory imageHeader={imageHeader}></HeaderCategory>
-      <img
-        className="prueba_image"
-        src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg"
-        alt="portada"
-      />
+      <img className="prueba_image" src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg" alt="portada" />
       <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
         <CategoriaCards setTema={setTema}></CategoriaCards>
       </section>

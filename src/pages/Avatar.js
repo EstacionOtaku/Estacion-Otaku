@@ -1,3 +1,4 @@
+import React from "react";
 import Portada from "../assets/Avatar/Portada.png";
 import logo from "../assets/Header/logo.png";
 import AttackTitanCard from "../components/Cards/AttackonTitanCard";
@@ -22,9 +23,7 @@ const Avatar = ({ setImageHeader }) => {
           <img src={logo} className="title__image"></img>
         </figure>
         <h1 className="title__title-avatar">Elige a tu Avatar</h1>
-        <p className="title__title-description">
-          Elige un avatar de alguno de los animes mas populares para tu cuenta
-        </p>
+        <p className="title__title-description">Elige un avatar de alguno de los animes mas populares para tu cuenta</p>
       </section>
       <section className="card">
         <div className="card-container">
