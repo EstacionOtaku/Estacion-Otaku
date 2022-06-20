@@ -31,16 +31,16 @@
 
 .hero__cta-text {
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: var(--main-letter-spacing);
   text-align: center;
   line-height: 3.5rem;
   color: var(--main-white);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Inter;
 }
 
 .hero__transparency-layer-hero {
-  background: linear-gradient(181.38deg, rgba(11, 20, 55, 0.79) 25.33%, rgba(11, 20, 55, 0) 50.6%);
+  background: linear-gradient(180deg, #060a19 0%, #0b1334 40%, #060a19 100%);
   position: absolute;
   top: 0;
   left: 0;

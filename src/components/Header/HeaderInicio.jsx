@@ -2,7 +2,7 @@ import "../../styles/scss/Header.scss";
 import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 // import avatar from "../../assets/Header/avatar.png";
-import logo from "../../assets/Header/logo.png";
+import logo from "../../assets/Header/logo.svg";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -62,24 +62,15 @@ const HeaderInicio = (imageHeader) => {
           <Link to="/avatar">
             {imageHeader.imageHeader.imageHeader ? (
               <figure className="header__avatar-container">
-                <img
-                  src={imageHeader.imageHeader.imageHeader}
-                  className="avatar__image"
-                ></img>
+                <img src={imageHeader.imageHeader.imageHeader} className="avatar__image"></img>
               </figure>
             ) : (
               <figure className="header__avatar-container">
-                <img
-                  src={imageHeader.imageHeader}
-                  className="avatar__image"
-                ></img>
+                <img src={imageHeader.imageHeader} className="avatar__image"></img>
               </figure>
             )}
           </Link>
-          <button
-            className="header__avatar-options"
-            onClick={handleUserOptions}
-          >
+          <button className="header__avatar-options" onClick={handleUserOptions}>
             <figure className="header__arrow-container">
               <img src={arrow} className="arrow__image" alt="arrow"></img>
             </figure>

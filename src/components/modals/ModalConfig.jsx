@@ -1,4 +1,4 @@
-import logo from "../../assets/Header/logo.png";
+import logo from "../../assets/Header/logo.svg";
 import avatar from "../../assets/Header/avatar.png";
 import "../../styles/scss/ModalConfig.scss";
 import arrowLeft from "../../assets/Header/arrow-left.png";
@@ -26,26 +26,13 @@ const ModalConfig = () => {
               <img className="modal-about-description__image" src={avatar}></img>
             </figure>
             <div className="modal-about-description-name">
-              <label className="modal-about-description-name__label">
-                Ingrese tu Nombre de Perfil
-              </label>
-              <input
-                className="modal-about-description-name__input"
-                placeholder="nombre localstorage"
-              ></input>
+              <label className="modal-about-description-name__label">Ingrese tu Nombre de Perfil</label>
+              <input className="modal-about-description-name__input" placeholder="nombre localstorage"></input>
             </div>
           </div>
           <h3 className="modal-about__password">Cambia la contraseña de tu cuenta</h3>
-          <input
-            className="modal-about__input"
-            type="text"
-            placeholder="Ingresa la contraseña actual"
-          ></input>
-          <input
-            type="text"
-            className="modal-about__input"
-            placeholder="Ingresa la nueva contraseña"
-          ></input>
+          <input className="modal-about__input" type="text" placeholder="Ingresa la contraseña actual"></input>
+          <input type="text" className="modal-about__input" placeholder="Ingresa la nueva contraseña"></input>
           <div className="modal-about-button-container">
             <button className="modal-about-button__save">Guardar</button>
             <button className="modal-about-button__remove">Eliminar Cuenta</button>

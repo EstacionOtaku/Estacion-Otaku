@@ -2,7 +2,7 @@ import "../../styles/scss/Header.scss";
 import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 import avatar from "../../assets/Header/avatar.png";
-import logo from "../../assets/Header/logo.png";
+import logo from "../../assets/Header/logo.svg";
 import { Link } from "react-router-dom";
 
 const HeaderSearch = (imageHeader) => {
@@ -15,11 +15,7 @@ const HeaderSearch = (imageHeader) => {
           </figure>
         </div>
         <div className="header-container-login">
-          <input
-            type="text"
-            placeholder="Titulo, categorias"
-            className="header-container__search"
-          ></input>
+          <input type="text" placeholder="Titulo, categorias" className="header-container__search"></input>
           <Link to="/avatar">
             <figure className="header__avatar-container">
               <img src={imageHeader.imageHeader} className="avatar__image"></img>

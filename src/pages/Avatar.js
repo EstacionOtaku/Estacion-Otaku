@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Portada from "../assets/Avatar/Portada.png";
-import logo from "../assets/Header/logo.png";
+import logo from "../assets/Header/logo.svg";
 import AttackTitanCard from "../components/Cards/AttackonTitanCard";
 import DemonCard from "../components/Cards/DemonCard";
 import DragonBallz from "../components/Cards/DragonBallzCard";
