@@ -45,7 +45,7 @@ const Faq = () => {
 
         <div className="accordion">
           {accordionData.map((data, index) => (
-            <Accordion i={index} data={data} expanded={expanded} setExpanded={setExpanded} />
+            <Accordion key={index} i={index} data={data} expanded={expanded} setExpanded={setExpanded} />
           ))}
         </div>
       </div>

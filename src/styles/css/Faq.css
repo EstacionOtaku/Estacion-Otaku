@@ -5,7 +5,7 @@
 .faq,
 .faq_section {
   line-height: 1.5;
-  margin: 1.8rem 0 0;
+  margin: 5rem 0;
 }
 
 .faq {
@@ -30,9 +30,9 @@
 .faq-title {
   margin-bottom: 1rem;
   line-height: 1.1em;
-  font-weight: 700;
-  font-size: 3em;
-  margin-bottom: 4rem;
+  font-weight: 500;
+  font-size: 2.5em;
+  margin-bottom: 2rem;
 }
 
 .accordion {
@@ -55,7 +55,6 @@
   margin-bottom: 0.5rem;
   line-height: 1.7em;
   text-align: start;
-  background-color: #0b1437;
   color: white;
   padding: 2rem;
 }
