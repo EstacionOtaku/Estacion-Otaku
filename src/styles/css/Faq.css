@@ -1,7 +1,7 @@
- :root {
+:root {
   --faq-section-bg: transparent;
- }
- 
+}
+
 .faq,
 .faq_section {
   line-height: 1.5;
@@ -32,7 +32,7 @@
   line-height: 1.1em;
   font-weight: 700;
   font-size: 3em;
-  margin-bottom:4rem;
+  margin-bottom: 4rem;
 }
 
 .accordion {
@@ -40,61 +40,29 @@
   margin: 2rem auto;
 }
 
-#accordionItem {
-  background: none;
-  margin: 0 0 1.8rem 0;
+.accordion-item__header {
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-#button {
-  background: var(--faq-section-bg);
-  color: var(--text-color);
-  margin: 0 0 0.063rem;
-  width: 100%;
-  border: 0;
-  border-bottom: solid 0.3px rgba(255, 255, 255, 0.534);
-  font-weight: 400;
-  padding:1.8rem 0.5rem 1.5rem 0.5rem;
-  font-size: 0.9em;
-  font-weight: 400;
-
+.accordion-item__title {
+  font-size: 1.2em;
 }
-.bold {
- font-weight: 700;
-}
-.accordion-button:focus{
-    box-shadow:none !important;
-}
-.accordion-header {
-  margin: 0 0 0.063rem;
-}
-
-#collapseOne,
-#collapseTwo,
-#collapseThree,
-#collapseFour,
-#collapseFive,
-#collapseSix {
-  padding: 1.5rem 0;
-  border: 1px 0 solid var(--backgroud-color);
-  transition: 0.41s ease-in-out;
-  background-color: var(--faq-section-bg);
-  color: var(--text-color);
-  max-height: 75rem;
-}
-
-.accordion-body {
+.accordion-item__body {
   font-size: 1.1em;
   font-weight: 300;
   margin-bottom: 0.5rem;
-line-height: 1.7em;
+  line-height: 1.7em;
   text-align: start;
+  background-color: #0b1437;
+  color: white;
+  padding: 2rem;
+}
+.accordion-item__arrow {
+  font-size: 1.6em;
+}
 
+.accordion__item {
+  margin: 1rem 0;
 }
-/* arrow up */
-.accordion-button::after {
-    background-image: url("./../../assets/Faq/arrow-up.svg")!important;   
-}
-/* arrow down */
-.accordion-button:not(.collapsed)::after {
-    background-image: url("./../../assets/Faq/arrow-down.svg");
-} 

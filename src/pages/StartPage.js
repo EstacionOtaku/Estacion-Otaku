@@ -10,6 +10,7 @@ import Tabs from "../components/Tabs/Tabs.jsx";
 import "../styles/css/Blogs.css";
 import PreguntasCards from "../components/Cards/PreguntasCards";
 import Newsletter from "../components/Newsletter/Newsletter";
+import Faq from "../components/Faq/Faq";
 
 const StarPage = () => {
   return (
@@ -22,6 +23,7 @@ const StarPage = () => {
       <section>
         <Discover />
       </section>
+      <Faq />
       <LandingSubscribe />
       <section className="py-4">
         <Footer />
