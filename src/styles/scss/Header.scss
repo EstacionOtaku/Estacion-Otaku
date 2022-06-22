@@ -7,7 +7,7 @@
 
 header {
   background-color: transparent;
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
 }
 .header-container {
   display: flex;
@@ -66,7 +66,7 @@ header {
   background-color: #5e39f0;
   border: 0;
   padding: 0.5rem 1rem;
-  border-radius: 1.2rem;
+  border-radius: 50px;
   @include letters(700, 0.625rem, 0.756rem);
 }
 .header-container__search {
@@ -118,7 +118,7 @@ header {
     padding: 0.2rem 0;
   }
   .header-container {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
   }
   .header-container-login,
   .header-container-logo {
@@ -138,7 +138,11 @@ header {
   }
   .header__button {
     padding: 1rem 1.5rem;
+    transition: all 0.5s;
     @include letters(700, 1.2rem, 0.756rem);
+  }
+  .header__button:hover {
+    background: #4c2fc0;
   }
   .header__select,
   .header__username {

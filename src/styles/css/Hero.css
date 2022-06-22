@@ -9,13 +9,20 @@
 }
 .hero {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+}
+.hero__image {
+  height: 100%;
+}
+.hero__image-container {
+  z-index: 1;
+  transform: scale(0.8);
 }
 .hero-wrapper {
   display: flex;
@@ -37,6 +44,23 @@
   line-height: 3.5rem;
   color: var(--main-white);
   font-family: Inter;
+}
+.float {
+  z-index: 2;
+  position: absolute;
+  transform: scale(0.8);
+}
+.animeOne {
+  top: 30%;
+  left: 0;
+}
+.animeOne {
+  top: 0%;
+  left: 0%;
+}
+.animeTwo {
+  top: 0;
+  right: 0;
 }
 
 .hero__transparency-layer-hero {
