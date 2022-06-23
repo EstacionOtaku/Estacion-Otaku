@@ -1,6 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Portada from "../assets/Avatar/Portada.png";
-import logo from "../assets/Header/logo.png";
+import logo from "../assets/Header/logo.svg";
 import AttackTitanCard from "../components/Cards/AttackonTitanCard";
 import DemonCard from "../components/Cards/DemonCard";
 import DragonBallz from "../components/Cards/DragonBallzCard";
@@ -19,10 +20,7 @@ const Avatar = ({ setImageHeader }) => {
           <img src={Portada} className="portada__image"></img>
         </figure>
       </section>
-      <div
-        className="back--button"
-        style={{ margin: "1rem 0 0 5rem", position: "absolute" }}
-      >
+      <div className="back--button" style={{ margin: "1rem 0 0 5rem", position: "absolute" }}>
         <Link to="/inicio">⏪ Atrás</Link>
       </div>
       <section className="title ">
@@ -30,9 +28,7 @@ const Avatar = ({ setImageHeader }) => {
           <img src={logo} className="title__image"></img>
         </figure>
         <h1 className="title__title-avatar">Elige a tu Avatar</h1>
-        <p className="title__title-description">
-          Elige un avatar de alguno de los animes mas populares para tu cuenta
-        </p>
+        <p className="title__title-description">Elige un avatar de alguno de los animes mas populares para tu cuenta</p>
       </section>
       <section className="card-container">
         <DragonBallz setImageHeader={setImageHeader}></DragonBallz>

@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { CategoriaImageData } from "../../data/PeliImageData";

@@ -9,13 +9,20 @@
 }
 .hero {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+}
+.hero__image {
+  height: 100%;
+}
+.hero__image-container {
+  z-index: 1;
+  transform: scale(0.8);
 }
 .hero-wrapper {
   display: flex;
@@ -31,20 +38,33 @@
 
 .hero__cta-text {
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: var(--main-letter-spacing);
   text-align: center;
   line-height: 3.5rem;
   color: var(--main-white);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Inter;
+}
+.float {
+  z-index: 2;
+  position: absolute;
+  transform: scale(0.8);
+}
+.animeOne {
+  top: 30%;
+  left: 0;
+}
+.animeOne {
+  top: 0%;
+  left: 0%;
+}
+.animeTwo {
+  top: 0;
+  right: 0;
 }
 
 .hero__transparency-layer-hero {
-  background: linear-gradient(
-    181.38deg,
-    rgba(11, 20, 55, 0.79) 25.33%,
-    rgba(11, 20, 55, 0) 50.6%
-  );
+  background: linear-gradient(180deg, #060a19 0%, #0b1334 40%, #060a19 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -53,28 +73,9 @@
 }
 
 .hero__gradient-background {
-  background: linear-gradient(
-      180deg,
-      rgba(11, 20, 55, 0.5) 13.02%,
-      rgba(11, 20, 55, 0.332857) 29.69%,
-      rgba(11, 20, 55, 0.11) 47.4%
-    ),
-    conic-gradient(
-      from 180deg at 50% 50%,
-      rgba(94, 57, 240, 0.11) -99.38deg,
-      rgba(94, 57, 240, 0.24) 90deg,
-      rgba(10, 20, 55, 0) 178.12deg,
-      rgba(94, 57, 240, 0.11) 260.62deg,
-      rgba(94, 57, 240, 0.24) 450deg
-    ),
-    conic-gradient(
-      from 180deg at 50% 83.33%,
-      rgba(74, 36, 222, 0.61) 0deg,
-      rgba(71, 26, 248, 0.39) 76.88deg,
-      #0b1437 136.88deg,
-      #0b1437 210deg,
-      rgba(74, 36, 222, 0.61) 360deg
-    );
+  background: linear-gradient(180deg, rgba(11, 20, 55, 0.5) 13.02%, rgba(11, 20, 55, 0.332857) 29.69%, rgba(11, 20, 55, 0.11) 47.4%),
+    conic-gradient(from 180deg at 50% 50%, rgba(94, 57, 240, 0.11) -99.38deg, rgba(94, 57, 240, 0.24) 90deg, rgba(10, 20, 55, 0) 178.12deg, rgba(94, 57, 240, 0.11) 260.62deg, rgba(94, 57, 240, 0.24) 450deg),
+    conic-gradient(from 180deg at 50% 83.33%, rgba(74, 36, 222, 0.61) 0deg, rgba(71, 26, 248, 0.39) 76.88deg, #0b1437 136.88deg, #0b1437 210deg, rgba(74, 36, 222, 0.61) 360deg);
   width: 100%;
   height: 40%;
   position: absolute;

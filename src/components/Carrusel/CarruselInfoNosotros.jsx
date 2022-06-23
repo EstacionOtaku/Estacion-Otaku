@@ -1,3 +1,4 @@
+import React from "react";
 import FotoJeanFranco from "../../assets/Nosotros/Equipo/Jeanfranco.jpg";
 import FotoBruno from "../../assets/Nosotros/Equipo/Bruno.jpg";
 import FotoClarissa from "../../assets/Nosotros/Equipo/Clarissa.jpg";
@@ -12,50 +13,13 @@ const CarruselInfoNosotros = () => {
       <div className="container p-3">
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="5"
-              aria-label="Slide 6"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="6"
-              aria-label="Slide 7"
-            ></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active mb-4">
@@ -112,9 +76,7 @@ const CarruselInfoNosotros = () => {
               </div>
               <div className="col-lg-12 col-md-12 mb-4  text-center">
                 <div className="col-md-8 offset-md-2">
-                  <p className="py-1">
-                    El arte desafía a la tecnología y la tecnología inspira al arte
-                  </p>
+                  <p className="py-1">El arte desafía a la tecnología y la tecnología inspira al arte</p>
                   <h3 className="py-1">Valeria Cerpa</h3>
                   <h5 className="py-1">Frontend Developer - Arquitecta</h5>
                 </div>
@@ -126,9 +88,7 @@ const CarruselInfoNosotros = () => {
               </div>
               <div className="col-lg-12 col-md-12 mb-4  text-center">
                 <div className="col-md-8 offset-md-2">
-                  <p className="py-1">
-                    Me apasiona el potencial que tiene el Internet para cambiar y mejorar el mundo
-                  </p>
+                  <p className="py-1">Me apasiona el potencial que tiene el Internet para cambiar y mejorar el mundo</p>
                   <h3 className="py-1">Diego Huamán</h3>
                   <h5 className="py-1">Desarrollador - Diseñador</h5>
                 </div>
@@ -140,29 +100,17 @@ const CarruselInfoNosotros = () => {
               </div>
               <div className="col-lg-12 col-md-12 mb-4  text-center">
                 <div className="col-md-8 offset-md-2">
-                  <p className="py-1">
-                    El único modo de hacer un gran trabajo es amar lo que haces
-                  </p>
+                  <p className="py-1">El único modo de hacer un gran trabajo es amar lo que haces</p>
                   <h3 className="py-1">Meliodas</h3>
                   <h5 className="py-1">Frontend Developer - Docente de CeI</h5>
                 </div>
               </div>
             </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
-            >
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
             </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-            >
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
             </button>

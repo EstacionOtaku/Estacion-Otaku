@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/css/Galeria.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -32,11 +33,7 @@ const Galeria = (props) => {
                   >
                     <figure className="paquete-image-container">
                       <Link to={`/anime/${element.mal_id}`}>
-                        <img
-                          src={element.image_url}
-                          alt={element.title}
-                          className="paquete-image zoom"
-                        />
+                        <img src={element.image_url} alt={element.title} className="paquete-image zoom" />
                       </Link>
                     </figure>
                   </article>

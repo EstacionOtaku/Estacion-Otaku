@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -63,7 +64,7 @@ const Sugerencias = () => {
           "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
         );
         const data = await response.json();
-        const animeSelected = data.results.filter(function (element) {
+        const animeSelected = data.results.filter(function(element) {
           return element.airing === false;
         });
         setInfoAnime(animeSelected);

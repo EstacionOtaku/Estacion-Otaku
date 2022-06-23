@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/css/Spinner.css";
@@ -7,9 +8,7 @@ const DemonCard = ({ setImageHeader }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json"
-    )
+    fetch("https://raw.githubusercontent.com/EstacionOtaku/Estacion-Otaku/develop/src/api/avatar.json")
       .then((response) => {
         return response.json();
       })
@@ -28,22 +27,14 @@ const DemonCard = ({ setImageHeader }) => {
         <section className="card-cards-container">
           <div className="card-logo">
             <figure className="card-logo__image-container">
-              <img
-                className="card-log__image"
-                src="https://i.postimg.cc/6qCj2VhX/Demon-Slayer-Logo-1.png"
-              ></img>
+              <img className="card-log__image" src="https://i.postimg.cc/6qCj2VhX/Demon-Slayer-Logo-1.png"></img>
             </figure>
           </div>
           <div className="card-cards">
             {demon.map((element, index) => (
               <Link to="/inicio">
                 <figure key={index} className="card-cards__image-container">
-                  <img
-                    src={element.img}
-                    alt="img"
-                    className="card-cards__image"
-                    onClick={handleImg}
-                  />
+                  <img src={element.img} alt="img" className="card-cards__image" onClick={handleImg} />
                 </figure>
               </Link>
             ))}

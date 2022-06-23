@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,17 +9,16 @@
   color: #fff;
 }
 
-.main { 
-  background-color: #0B1437
+.main {
+  background-color: #060a19;
 }
 
-.prueba_image{
+.prueba_image {
   width: 100%;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   .footer-logo {
- width: 23%; 
-}
-  
+    width: 23%;
+  }
 }
