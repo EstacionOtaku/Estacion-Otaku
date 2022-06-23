@@ -15,7 +15,10 @@ const normalDuration = {
   visible: { opacity: 1, transition: { duration: 1 } },
   hidden: { opacity: 0 },
 };
-
+const ctaImageVariant = {
+  visible: { opacity: 1, transition: { duration: 1, delay: 0.5 }, y: 0 },
+  hidden: { opacity: 0, y: 100 },
+};
 const Hero = () => {
   const { scrollY } = useViewportScroll();
   const y1 = useTransform(scrollY, [0, 800], [0, 200]);
@@ -44,7 +47,7 @@ const Hero = () => {
           </motion.div>
         </div>
         <figure className="hero__image-container">
-          <img src={animeGroup} alt="" className="hero__image" />
+          <motion.img src={animeGroup} alt="" className="hero__image" variants={ctaImageVariant} initial="hidden" animate="visible" />
           <motion.img src={animeOne} style={{ y: y1, x: y1, top: -156, left: -235 }} alt="" className="animeOne float selector " ref={ref} variants={normalDuration} initial="hidden" animate={control} />
           <motion.img src={animeTwo} style={{ y: y1, x: y2, top: -56, right: -235 }} alt="" className="animeTwo float" ref={ref} variants={normalDuration} initial="hidden" animate={control} />
         </figure>

@@ -1,9 +1,11 @@
 .discover {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
-
+.discover-container {
+  padding: 5rem 0;
+}
 .discover__subtitle {
   font-size: 18px;
   text-align: center;

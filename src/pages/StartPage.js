@@ -9,17 +9,15 @@ import LandingSubscribe from "../components/LandingSubscribe/LandingSubscribe";
 import Tabs from "../components/Tabs/Tabs.jsx";
 import "../styles/css/Blogs.css";
 import PreguntasCards from "../components/Cards/PreguntasCards";
-import Newsletter from "../components/Newsletter/Newsletter";
 import Faq from "../components/Faq/Faq";
+import Info from "../components/Info/Info";
 
 const StarPage = () => {
   return (
     <>
       <HeaderLanding />
       <Hero />
-      <section className="px-2">
-        <Tabs />
-      </section>
+      <Info />
       <section>
         <Discover />
       </section>
