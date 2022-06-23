@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import portadaImagen from "../assets/portada/portada-singup.png";
 import "../styles/css/FormSesion.css";
 import Footer from "../components/Footer/Footer";
+import { IoMdArrowBack } from "react-icons/io";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -64,40 +65,22 @@ const Login = () => {
       <div className="singUp-Portada__container">
         <img src={portadaImagen} className="singUp-Portada"></img>
       </div>
-      <div
-        className="back--button"
-        style={{ margin: "12rem 0 0 5rem", position: "absolute" }}
-      >
-        <Link to="/">⏪ Atrás</Link>
+      <div className="back--button" style={{ margin: "12rem 0 0 5rem", position: "absolute" }}>
+        <Link to="/">
+          <IoMdArrowBack /> Atrás
+        </Link>
       </div>
       <div className="form-container-all">
         <div className="form-message">
           <h2 className="form-message-title">Inicia sesión </h2>
-          <h3 className="form-message-subtitle">
-            Ingresa tú dirección de correo eléctronico y contraseña para acceder
-            a tú cuenta
-          </h3>
+          <h3 className="form-message-subtitle">Ingresa tú dirección de correo eléctronico y contraseña para acceder a tú cuenta</h3>
         </div>
         {error && <AlertError mesagge={error} />}
         <form onSubmit={handleSubmit} className="form-container">
           <div className="form-input-container">
-            <input
-              className="form-input"
-              type="email"
-              placeholder="ingresa tú nombre de usuario"
-              name="email"
-              id="email"
-              onChange={handleChange}
-            />
+            <input className="form-input" type="email" placeholder="ingresa tú nombre de usuario" name="email" id="email" onChange={handleChange} />
 
-            <input
-              className="form-input"
-              type="password"
-              placeholder="ingresa tú contraseña"
-              name="password"
-              id="password"
-              onChange={handleChange}
-            />
+            <input className="form-input" type="password" placeholder="ingresa tú contraseña" name="password" id="password" onChange={handleChange} />
           </div>
 
           <section className="form__buttons">
@@ -108,26 +91,15 @@ const Login = () => {
               <Link to="/register" className="button-info-register">
                 ¿Eres nuevo por aquí? Registrate ahora
               </Link>
-              <a
-                href="#!"
-                onClick={handleResetPassword}
-                className="forgot-passoword-register"
-              >
+              <a href="#!" onClick={handleResetPassword} className="forgot-passoword-register">
                 ¿Olvidaste tú contraseña?
               </a>
             </div>
           </section>
         </form>
       </div>
-      <div
-        style={{
-          position: "absolute",
-          bottom: "0",
-          width: "100%",
-        }}
-      >
-        <Footer></Footer>
-      </div>
+
+      <Footer></Footer>
     </>
   );
 };

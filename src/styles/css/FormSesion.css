@@ -12,12 +12,14 @@
 
 .form-container-all {
   width: 100%;
-  height: 90vh;
+
   gap: 1rem;
   position: absolute;
+  padding: 10rem 0;
 }
 .back--button {
   z-index: 100;
+  transform: scale(0.9);
 }
 
 .form-message {
