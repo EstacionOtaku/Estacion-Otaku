@@ -6,6 +6,7 @@ import animeTwo from "../assets/Hero/anime_2.png";
 import { useEffect } from "react";
 import { useAnimation, useViewportScroll, motion, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useVisibleOnce } from "../hooks/useVisible";
 
 const fasterDuration = {
   visible: { opacity: 1, transition: { duration: 0.4 } },
@@ -24,6 +25,7 @@ const Hero = () => {
   const y1 = useTransform(scrollY, [0, 800], [0, 200]);
   const y2 = useTransform(scrollY, [0, 600], [0, -200]);
   const control = useAnimation();
+  const controlOnce = useAnimation();
   const [ref, inView] = useInView();
 
   useEffect(() => {
@@ -33,16 +35,16 @@ const Hero = () => {
       control.start("hidden");
     }
   }, [control, inView]);
-
+  useVisibleOnce(controlOnce, inView);
   return (
     <>
       <section className="hero">
         <div className="hero-wrapper">
-          <motion.h1 className="hero__cta-text" ref={ref} variants={fasterDuration} initial="hidden" animate={control}>
+          <motion.h1 className="hero__cta-text" ref={ref} variants={fasterDuration} initial="hidden" animate={controlOnce}>
             Tus animes favoritos, <br />
             en un solo lugar
           </motion.h1>
-          <motion.div ref={ref} variants={normalDuration} initial="hidden" animate={control}>
+          <motion.div ref={ref} variants={normalDuration} initial="hidden" animate={controlOnce}>
             <CtaButton text="Únete gratis" />
           </motion.div>
         </div>
