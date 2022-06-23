@@ -1,73 +1,70 @@
 .paquete-despliegue {
-    display: grid;
-    grid-gap: 20px;
+  display: grid;
+  grid-gap: 20px;
 }
 
 .paquete-container {
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .paquete__title {
-    margin-top: 121px;
-    font-size: 30px;
-    color: brown;
-    font-weight: 800;
-    text-align: center;
+  font-size: 30px;
+  color: brown;
+  font-weight: 800;
+  text-align: center;
 }
 
 .paquete-image {
-    width: 200px;
-    height: 300px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    border-radius: 3rem;
+  width: 200px;
+  height: 300px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 3rem;
 }
 
 .button__buy-container {
-    display: flex;
-   flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .buy_button {
-    padding: 10px 30px;
-    background-color: white;
-    color: #f5087e;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
+  padding: 10px 30px;
+  background-color: white;
+  color: #f5087e;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
 }
 
 .buy_button:hover {
-    background-color: rgb(228, 55, 219);
-    color: white;
-    transition: .5s;
+  background-color: rgb(228, 55, 219);
+  color: white;
+  transition: 0.5s;
 }
 
-.products-container{
-    justify-content: center;
-   
+.products-container {
+  justify-content: center;
 }
 
-@media (min-width:760px) {
-    .paquete-despliegue {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 20px;
-    }
+@media (min-width: 760px) {
+  .paquete-despliegue {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
 
-    .paquete__title {
-        margin-top: 121px;
-        font-size: 30px;
-        color: brown;
-        font-weight: 800;
-    }
+  .paquete__title {
+    font-size: 30px;
+    color: brown;
+    font-weight: 800;
+  }
 
-    .paquete-image {
-        width: 255px;
-        height: 315px;
-        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    }
+  .paquete-image {
+    width: 255px;
+    height: 315px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
 }

@@ -1,7 +1,8 @@
 .form-container-all,
 .form-message,
 .form-input-container,
-.form__buttons .button-register-container,
+.form__buttons,
+.button-register-container,
 .other_enlaces {
   display: flex;
   flex-direction: column;
@@ -11,8 +12,12 @@
 
 .form-container-all {
   width: 100%;
-  height: 100vh;
-  gap: 1.5rem;
+  height: 90vh;
+  gap: 1rem;
+  position: absolute;
+}
+.back--button {
+  z-index: 100;
 }
 
 .form-message {
@@ -32,7 +37,7 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2rem;
 }
 
 .form-input-container,
@@ -96,4 +101,13 @@
   font-style: italic;
   font-size: 0.9rem;
   text-decoration: underline;
+}
+
+.singUp-Portada__container {
+  width: 100%;
+  position: absolute;
+}
+.singUp-Portada {
+  width: 100%;
+  height: 350px;
 }

@@ -58,9 +58,6 @@ const HeaderInicio = (imageHeader) => {
           </select> */}
         </div>
         <div className="header-container-login">
-          <figure className="header__search-container">
-            <img src={search} className="search__image"></img>
-          </figure>
           <p className="header__username">{user.displayName || user.email}</p>
           <Link to="/avatar">
             {imageHeader.imageHeader.imageHeader ? (
