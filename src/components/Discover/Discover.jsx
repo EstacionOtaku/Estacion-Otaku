@@ -26,6 +26,12 @@ const settings = {
   speed: 8000,
   responsive: [
     {
+      breakpoint: 250,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
