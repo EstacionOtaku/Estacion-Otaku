@@ -4,27 +4,10 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { CategoriaImageData } from "../../data/PeliImageData";
 import { Link } from "react-router-dom";
 
-const PreviousBtn = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ArrowBackIos style={{ color: "purple", fontSize: "30px" }} />
-    </div>
-  );
-};
-const NextBtn = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ArrowForwardIos style={{ color: "purple", fontSize: "30px" }} />
-    </div>
-  );
-};
-
 const carouselProperties = {
-  prevArrow: <PreviousBtn />,
-  nextArrow: <NextBtn />,
-  slidesToShow: 7,
+  // prevArrow: <PreviousBtn />,
+  // nextArrow: <NextBtn />,
+  slidesToShow: 5,
   centerMode: true,
   centerPadding: "170px",
   responsive: [
@@ -47,7 +30,7 @@ const carouselProperties = {
       settings: {
         slidesToShow: 4,
         centerMode: false,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
       },
     },
   ],
@@ -55,18 +38,11 @@ const carouselProperties = {
 
 const CategoriaCards = ({ setTema }) => {
   return (
-    <div style={{ margin: "30px" }} className="carousel">
+    <div className="carousel">
       <Slider {...carouselProperties}>
         {CategoriaImageData.map((item, index) => {
           const { img, categoria } = item;
-          return (
-            <MovieCard
-              key={index}
-              img={img}
-              categoria={categoria}
-              setTema={setTema}
-            ></MovieCard>
-          );
+          return <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>;
         })}
       </Slider>
     </div>

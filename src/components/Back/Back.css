@@ -1,0 +1,24 @@
+.back--button {
+  z-index: 100;
+  transform: scale(0.9);
+  position: absolute;
+  top: 13rem;
+  left: 4rem;
+  transition: all 0.5s;
+}
+
+.back-icon {
+  transition: all 0.5s;
+}
+.back-icon:hover {
+  color: rgba(255, 255, 255, 0.589);
+}
+@media (max-width: 860px) {
+  .back-text {
+    display: none;
+  }
+  .back--button {
+    left: 2rem;
+    top: 8rem;
+  }
+}

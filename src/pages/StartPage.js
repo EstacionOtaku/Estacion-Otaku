@@ -1,20 +1,17 @@
 import React from "react";
 import Discover from "../components/Discover/Discover";
-import Carousel from "../components/Carousel/Carousel";
-import BlogsCards from "../components/Cards/BlogsCards";
 import Footer from "../components/Footer/Footer";
 import HeaderLanding from "../components/Header/HeaderLanding";
 import Hero from "../components/Hero";
 import LandingSubscribe from "../components/LandingSubscribe/LandingSubscribe";
-import Tabs from "../components/Tabs/Tabs.jsx";
-import "../styles/css/Blogs.css";
-import PreguntasCards from "../components/Cards/PreguntasCards";
+
 import Faq from "../components/Faq/Faq";
 import Info from "../components/Info/Info";
+import { motion } from "framer-motion";
 
 const StarPage = () => {
   return (
-    <>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <HeaderLanding />
       <Hero />
       <Info />
@@ -26,7 +23,7 @@ const StarPage = () => {
       <section className="py-4">
         <Footer />
       </section>
-    </>
+    </motion.main>
   );
 };
 

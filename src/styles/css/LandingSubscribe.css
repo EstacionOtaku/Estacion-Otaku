@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(0deg, rgba(6, 10, 25, 0.3), rgba(6, 10, 25, 0.3)), linear-gradient(359.22deg, #060a19 0.64%, rgba(11, 20, 55, 0.48) 31.6%, rgba(6, 10, 25, 0.42) 62.45%, #060a19 94.66%), url("../../../public/images/background-anime.jpg");
+  background: linear-gradient(0deg, rgba(6, 10, 25, 0.3), rgba(6, 10, 25, 0.3)), linear-gradient(359.22deg, #060a19 0.64%, rgba(11, 20, 55, 0.48) 31.6%, rgba(6, 10, 25, 0.42) 62.45%, #060a19 94.66%), url("../../assets/background-anime.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   gap: 2rem;

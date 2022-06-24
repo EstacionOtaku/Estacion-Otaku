@@ -1,0 +1,20 @@
+.screen-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #9a35ef, #132d8b, #4176d6);
+  transition: all 0.5s;
+}
+.screen-image-container {
+  width: 200px;
+}
+.screen-image {
+  width: 100%;
+  height: 100%;
+}
+.screen-spinner {
+  transform: scale(0.5);
+}

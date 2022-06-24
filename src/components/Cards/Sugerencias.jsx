@@ -4,86 +4,26 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick/lib/slider";
 import { Sugerencia } from "../../data/PeliImageData";
-
-const PreviousBtn = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ArrowBackIos style={{ color: "purple", fontSize: "30px" }} />
-    </div>
-  );
-};
-const NextBtn = (props) => {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ArrowForwardIos style={{ color: "purple", fontSize: "30px" }} />
-    </div>
-  );
-};
-
-const carouselProperties = {
-  prevArrow: <PreviousBtn />,
-  nextArrow: <NextBtn />,
-  slidesToShow: 7,
-  centerMode: true,
-  centerPadding: "170px",
-  responsive: [
-    {
-      breakpoint: 426,
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,
-      },
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 3,
-        centerMode: false,
-      },
-    },
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 4,
-        centerMode: false,
-        slidesToScroll: 2,
-      },
-    },
-  ],
-};
+import { carouselAnimeProperties } from "../../utils/carouselSettings";
+import useApiAnime from "../../hooks/useApiAnime";
+import RenderUI from "../../utils/RenderUI";
 
 const Sugerencias = () => {
-  const [infoAnime, setInfoAnime] = useState([]);
-
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
-        const data = await response.json();
-        const animeSelected = data.results.filter(function(element) {
-          return element.airing === false;
-        });
-        setInfoAnime(animeSelected);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-    apiAnimes();
-  }, []);
-
+  const apiAnime = useApiAnime();
+  const { data } = apiAnime;
+  const animeSelected = data?.results?.filter((element) => element.airing === false);
   return (
-    <div style={{ margin: "30px" }} className="carousel">
-      <Slider {...carouselProperties}>
-        {infoAnime.map(({ image_url, mal_id }, index) => (
-          <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
-        ))}
-      </Slider>
-    </div>
+    <section className="">
+      <RenderUI keyData={apiAnime}>
+        <div style={{ margin: "30px" }} className="carousel">
+          <Slider {...carouselAnimeProperties}>
+            {animeSelected?.map(({ image_url, mal_id }, index) => (
+              <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
+            ))}
+          </Slider>
+        </div>
+      </RenderUI>
+    </section>
   );
 };
 
@@ -98,7 +38,7 @@ const MovieCard = ({ image_url, mal_id }) => {
           style={{
             width: "100%",
             height: "180px",
-            objectFit: "contain",
+            objectFit: "cover",
             marginBottom: "10px",
           }}
         />

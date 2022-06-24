@@ -11,10 +11,10 @@ import OnePiece from "../components/Cards/OnePieceCard";
 import Footer from "../components/Footer/Footer";
 import HeaderInicio from "../components/Header/HeaderInicio";
 import "../styles/scss/Avatar.scss";
-
+import { motion } from "framer-motion";
 const Avatar = ({ setImageHeader }) => {
   return (
-    <>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <section className="portada">
         <figure className="portada__image-contaiener">
           <img src={Portada} className="portada__image"></img>
@@ -41,7 +41,7 @@ const Avatar = ({ setImageHeader }) => {
       <section className="footer-container">
         <Footer></Footer>
       </section>
-    </>
+    </motion.main>
   );
 };
 

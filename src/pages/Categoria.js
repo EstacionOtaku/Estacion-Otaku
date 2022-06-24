@@ -9,6 +9,7 @@ import CategoriaPeli from "../components/Cards/CategoriaPeli";
 import HeaderCategory from "../components/Header/HeaderCategory";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
+import { motion } from "framer-motion";
 
 const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
@@ -92,7 +93,7 @@ const Categoria = ({ tema, imageHeader }) => {
   const { titulo, img, año } = theme;
 
   return (
-    <>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <HeaderCategory imageHeader={imageHeader} setMovie={setMovie}></HeaderCategory>
       <section className="categoria__portada">
         <figure className="categoria__portada-container">
@@ -140,7 +141,7 @@ const Categoria = ({ tema, imageHeader }) => {
       </section>
 
       <Footer></Footer>
-    </>
+    </motion.main>
   );
 };
 

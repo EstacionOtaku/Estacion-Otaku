@@ -3,11 +3,13 @@ import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
-import portadaImagen from "../assets/portada/portada-singup.png";
+import portadaImagen from "../assets/background-anime.jpg";
 import "../styles/css/FormSesion.css";
 import Footer from "../components/Footer/Footer";
 import { IoMdArrowBack } from "react-icons/io";
-
+import BackButton from "../components/Back/Back";
+import Cover from "../components/Cover/Cover";
+import { motion } from "framer-motion";
 const Login = () => {
   const [user, setUser] = useState({
     email: "",
@@ -27,15 +29,6 @@ const Login = () => {
     } else {
       try {
         await login(user.email, user.password);
-        Swal.fire({
-          position: "center",
-          imageUrl: "https://i.postimg.cc/63m6pLNt/logo-estacion-otaku.jpg",
-          imageHeight: 300,
-          imageAlt: "A tall image",
-          title: "Wellcome to Estacion Otaku",
-          showConfirmButton: false,
-          timer: 1500,
-        });
         navigate("/inicio");
       } catch (error) {
         setError(error.mesagge);
@@ -61,15 +54,9 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="singUp-Portada__container">
-        <img src={portadaImagen} className="singUp-Portada"></img>
-      </div>
-      <div className="back--button" style={{ margin: "12rem 0 0 5rem", position: "absolute" }}>
-        <Link to="/">
-          <IoMdArrowBack /> Atrás
-        </Link>
-      </div>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <Cover />
+      <BackButton route="/" />
       <div className="form-container-all">
         <div className="form-message">
           <h2 className="form-message-title">Inicia sesión </h2>
@@ -100,7 +87,7 @@ const Login = () => {
       </div>
 
       <Footer></Footer>
-    </>
+    </motion.main>
   );
 };
 
