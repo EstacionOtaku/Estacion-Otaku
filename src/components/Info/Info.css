@@ -22,9 +22,9 @@
 .details-container {
   display: grid;
   gap: 5rem;
-  grid-template-columns: repeat(3, 1fr);
   width: 70vw;
   padding-top: 2rem;
+  grid-template-columns: 1fr;
 }
 .details__text {
   border-top: solid 3px #5e39f0;
@@ -33,4 +33,9 @@
   font-size: 1.2em;
   line-height: 1.2em;
   font-weight: 400;
+}
+@media (min-width: 860px) {
+  .details-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

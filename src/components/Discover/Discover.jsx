@@ -24,7 +24,32 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   speed: 8000,
-
+  responsive: [
+    {
+      breakpoint: 250,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+  ],
   cssEase: "ease",
   infinite: true,
   pauseOnHover: true,

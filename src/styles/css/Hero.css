@@ -37,18 +37,18 @@
 }
 
 .hero__cta-text {
-  font-size: 3.5rem;
+  font-size: 3.5em;
   font-weight: 500;
   letter-spacing: var(--main-letter-spacing);
   text-align: center;
   line-height: 3.5rem;
   color: var(--main-white);
   font-family: Inter;
+  margin-bottom: 1rem;
 }
 .float {
   z-index: 2;
   position: absolute;
-  transform: scale(0.8);
 }
 .animeOne {
   top: 30%;
@@ -105,4 +105,11 @@
 .hero__decoration-left-image,
 .hero__decoration-right-image {
   width: 100%;
+}
+
+@media (max-width: 860px) {
+  .hero__cta-text {
+    font-size: 2.7em;
+    line-height: 2.4rem;
+  }
 }

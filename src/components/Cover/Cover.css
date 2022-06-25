@@ -1,0 +1,21 @@
+.singUp-Portada__container {
+  height: 360px;
+  width: 100vw;
+  background: linear-gradient(180.15deg, rgba(6, 10, 25, 0) -10.73%, rgba(6, 10, 25, 0.49) 10%, #060a19 60.53%), url(../../assets/background-anime.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin-bottom: -20rem;
+}
+.singUp-Portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .singUp-Portada__container {
+    height: 200px;
+    margin-bottom: -15rem;
+  }
+}

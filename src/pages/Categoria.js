@@ -1,3 +1,4 @@
+import React from "react";
 import HeaderInicio from "../components/Header/HeaderInicio";
 import Galeria from "../components/Cards/Galeria";
 import { useEffect, useState } from "react";
@@ -8,6 +9,7 @@ import CategoriaPeli from "../components/Cards/CategoriaPeli";
 import HeaderCategory from "../components/Header/HeaderCategory";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
+import { motion } from "framer-motion";
 
 const Categoria = ({ tema, imageHeader }) => {
   const [theme, setTheme] = useState({});
@@ -19,9 +21,7 @@ const Categoria = ({ tema, imageHeader }) => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
         const data = await response.json();
         setData(data.results);
       } catch (error) {
@@ -41,9 +41,7 @@ const Categoria = ({ tema, imageHeader }) => {
       setDataFilter({});
     } else {
       const filteredData = data.filter((item) => {
-        return Object.keys(item).some((key) =>
-          item[key].toString().toLowerCase().includes(movie)
-        );
+        return Object.keys(item).some((key) => item[key].toString().toLowerCase().includes(movie));
       });
       setDataFilter(filteredData);
     }
@@ -64,9 +62,7 @@ const Categoria = ({ tema, imageHeader }) => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
         const data = await response.json();
         setGallery(data.results);
         //console.log(data.galeria);
@@ -97,11 +93,8 @@ const Categoria = ({ tema, imageHeader }) => {
   const { titulo, img, año } = theme;
 
   return (
-    <>
-      <HeaderCategory
-        imageHeader={imageHeader}
-        setMovie={setMovie}
-      ></HeaderCategory>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <HeaderCategory imageHeader={imageHeader} setMovie={setMovie}></HeaderCategory>
       <section className="categoria__portada">
         <figure className="categoria__portada-container">
           <img className="prueba_image" src={img} alt="portada" />
@@ -131,17 +124,11 @@ const Categoria = ({ tema, imageHeader }) => {
               Busqueda Encontrada
             </h3>
             {dataFilter.length ? (
-              <section
-                className="py-1 px-2 mx-auto"
-                style={{ maxWidth: "1600px" }}
-              >
+              <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
                 <SearchMovie dataFilter={dataFilter}></SearchMovie>
               </section>
             ) : (
-              <section
-                className="py-4 px-2 mx-auto"
-                style={{ maxWidth: "1600px" }}
-              >
+              <section className="py-4 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
                 <div class="alert alert-danger text-center" role="alert">
                   Ups, No se encontro tu pelicula
                 </div>
@@ -154,7 +141,7 @@ const Categoria = ({ tema, imageHeader }) => {
       </section>
 
       <Footer></Footer>
-    </>
+    </motion.main>
   );
 };
 

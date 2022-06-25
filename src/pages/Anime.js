@@ -6,7 +6,7 @@ import "../styles/css/Anime.css";
 import Top10Cards from "../components/Cards/Top10Cards";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
-
+import { motion } from "framer-motion";
 const Anime = (imageHeader) => {
   const { id } = useParams();
   const [infoAnime, setInfoAnime] = useState([]);
@@ -18,9 +18,7 @@ const Anime = (imageHeader) => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
         const data = await response.json();
         setData(data.results);
       } catch (error) {
@@ -40,9 +38,7 @@ const Anime = (imageHeader) => {
       setDataFilter({});
     } else {
       const filteredData = data.filter((item) => {
-        return Object.keys(item).some((key) =>
-          item[key].toString().toLowerCase().includes(movie)
-        );
+        return Object.keys(item).some((key) => item[key].toString().toLowerCase().includes(movie));
       });
       setDataFilter(filteredData);
     }
@@ -63,9 +59,7 @@ const Anime = (imageHeader) => {
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(
-          "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1"
-        );
+        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
         const data = await response.json();
         const animeSelected = data.results.filter(function (element) {
           return element.mal_id == id;
@@ -81,28 +75,19 @@ const Anime = (imageHeader) => {
   }, []);
 
   return (
-    <>
-      <HeaderCategory
-        imageHeader={urlImage}
-        setMovie={setMovie}
-      ></HeaderCategory>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <HeaderCategory imageHeader={urlImage} setMovie={setMovie}></HeaderCategory>
       {dataFilter.length >= 0 && movie.length ? (
         <>
           <h3 className="fs-3 text-center" style={{ marginTop: "2rem" }}>
             Busqueda Encontrada
           </h3>
           {dataFilter.length ? (
-            <section
-              className="py-1 px-2 mx-auto"
-              style={{ maxWidth: "1600px" }}
-            >
+            <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
               <SearchMovie dataFilter={dataFilter}></SearchMovie>
             </section>
           ) : (
-            <section
-              className="py-4 px-2 mx-auto"
-              style={{ maxWidth: "1600px" }}
-            >
+            <section className="py-4 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
               <div class="alert alert-danger text-center" role="alert">
                 Ups, No se encontro tu pelicula
               </div>
@@ -111,25 +96,19 @@ const Anime = (imageHeader) => {
         </>
       ) : (
         <>
-          {infoAnime.map(
-            ({ image_url, info, mal_id, episodes, title }, index) => {
-              return (
-                <section className="portada-anime-container" key={index}>
-                  <div className="portada-anime-presentacion">
-                    <img
-                      className="portada-anime__image"
-                      src={image_url}
-                      alt={title}
-                    />
-                    <div className="portada-anime__text-container">
-                      <h2 className="portada-anime__text-title">{title} </h2>
-                      <p className="portada-anime__text-paragraph">{info}</p>
-                    </div>
+          {infoAnime.map(({ image_url, info, mal_id, episodes, title }, index) => {
+            return (
+              <section className="portada-anime-container" key={index}>
+                <div className="portada-anime-presentacion">
+                  <img className="portada-anime__image" src={image_url} alt={title} />
+                  <div className="portada-anime__text-container">
+                    <h2 className="portada-anime__text-title">{title} </h2>
+                    <p className="portada-anime__text-paragraph">{info}</p>
                   </div>
-                </section>
-              );
-            }
-          )}
+                </div>
+              </section>
+            );
+          })}
 
           <div className="episodes-container">
             <h2 className="episodios-title">Episodios</h2>
@@ -140,11 +119,7 @@ const Anime = (imageHeader) => {
                   <h3>EP1</h3>
                   <figure className="image-container">
                     <Link to={`/anime/${mal_id}-${0}`}>
-                      <img
-                        src={episodes[0].image}
-                        alt="im"
-                        className="image-episode"
-                      />
+                      <img src={episodes[0].image} alt="im" className="image-episode" />
                     </Link>
                     <div className="play"></div>
                   </figure>
@@ -159,11 +134,7 @@ const Anime = (imageHeader) => {
                   <h3>EP2 </h3>
                   <figure className="image-container">
                     <Link to={`/anime/${mal_id}-${1}`}>
-                      <img
-                        src={episodes[1].image}
-                        alt="im"
-                        className="image-episode"
-                      />
+                      <img src={episodes[1].image} alt="im" className="image-episode" />
                     </Link>
                     <div className="play"></div>
                   </figure>
@@ -178,11 +149,7 @@ const Anime = (imageHeader) => {
                   <h3>EP3 </h3>
                   <figure className="image-container">
                     <Link to={`/anime/${mal_id}-${2}`}>
-                      <img
-                        src={episodes[2].image}
-                        alt="im"
-                        className="image-episode"
-                      />
+                      <img src={episodes[2].image} alt="im" className="image-episode" />
                     </Link>
                     <div className="play"></div>
                   </figure>
@@ -197,11 +164,7 @@ const Anime = (imageHeader) => {
                   <h3>EP4 </h3>
                   <figure className="image-container">
                     <Link to={`/anime/${mal_id}-${3}`}>
-                      <img
-                        src={episodes[3].image}
-                        alt="im"
-                        className="image-episode"
-                      />
+                      <img src={episodes[3].image} alt="im" className="image-episode" />
                     </Link>
                     <div className="play"></div>
                     <div>
@@ -221,7 +184,7 @@ const Anime = (imageHeader) => {
         </>
       )}
       <Footer></Footer>
-    </>
+    </motion.main>
   );
 };
 

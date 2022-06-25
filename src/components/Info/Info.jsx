@@ -3,7 +3,7 @@ import "./Info.css";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import useVisible from "../../hooks/useVisible";
+import { useEffect } from "react";
 
 const infoData = ["Disfruta de todo nuestro contenido en un solo lugar y vive una experiencia diseñada especialmente para ti", "Te acompañamos donde quiera que vayas para que no te pierdas ninguna de nuestras novedades", "Ponemos a tu disposición más de 100 series y peliculas de anime."];
 
@@ -28,7 +28,13 @@ const titleVariant = {
 const Info = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
-  useVisible(control, inView);
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <section className="info">
       <motion.h4 className="info-title" ref={ref} variants={titleVariant} initial="hidden" animate={control} layout>
