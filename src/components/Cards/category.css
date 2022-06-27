@@ -1,0 +1,6 @@
+.category-card__container {
+}
+.category-card__image {
+  object-fit: cover;
+  width: 100%;
+}

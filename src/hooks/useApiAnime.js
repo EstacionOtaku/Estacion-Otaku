@@ -15,7 +15,7 @@ const useApiAnime = () => {
         console.log(response);
         const fetchedData = await response.json();
         console.log(fetchedData);
-        setData(fetchedData);
+        setData(fetchedData.results);
       } catch (err) {
         console.log(err);
         setError(err);

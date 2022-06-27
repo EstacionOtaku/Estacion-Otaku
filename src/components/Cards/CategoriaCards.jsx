@@ -1,15 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+
 import { CategoriaImageData } from "../../data/PeliImageData";
 import { Link } from "react-router-dom";
 
 const carouselProperties = {
-  // prevArrow: <PreviousBtn />,
-  // nextArrow: <NextBtn />,
   slidesToShow: 5,
   centerMode: true,
   centerPadding: "170px",
+
   responsive: [
     {
       breakpoint: 426,
@@ -42,22 +41,22 @@ const CategoriaCards = ({ setTema }) => {
       <Slider {...carouselProperties}>
         {CategoriaImageData.map((item, index) => {
           const { img, categoria } = item;
-          return <MovieCard key={index} img={img} categoria={categoria} setTema={setTema}></MovieCard>;
+          return <CategoryCard key={index} img={img} categoria={categoria} setTema={setTema}></CategoryCard>;
         })}
       </Slider>
     </div>
   );
 };
 
-const MovieCard = ({ img, categoria, setTema }) => {
+const CategoryCard = ({ img, categoria, setTema }) => {
   const onClickImage = (e) => {
     setTema(e.target.alt);
   };
   return (
     <Link to="/categoria">
-      <div style={{ textAlign: "center" }} onClick={onClickImage}>
+      <figure style={{ textAlign: "center" }} onClick={onClickImage} className="category-card__container">
         <img
-          className="card__multi-image"
+          className="category-card__image"
           src={img}
           alt={categoria}
           style={{
@@ -67,7 +66,7 @@ const MovieCard = ({ img, categoria, setTema }) => {
             marginBottom: "10px",
           }}
         />
-      </div>
+      </figure>
     </Link>
   );
 };

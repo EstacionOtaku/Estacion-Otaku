@@ -4,37 +4,21 @@ import Footer from "../components/Footer/Footer";
 import "../styles/scss/Inicio.scss";
 import { motion } from "framer-motion";
 import HeaderCategory from "../components/Header/HeaderCategory";
-import LoMasVistoCards from "../components/Cards/LoMasVistoCards";
-import Top10Cards from "../components/Cards/Top10Cards";
-import Sugerencias from "../components/Cards/Sugerencias";
+
 import NosotrosButton from "../components/Buttons/NosotrosButton.jsx";
 import { useEffect } from "react";
 import { useState } from "react";
 import SearchMovie from "../components/Cards/SearchMovie";
 import Swal from "sweetalert2";
 import ScreenLoader from "../components/Loaders/ScreenLoader";
+import Carousel from "../components/Cards/Carousel";
+import useApiAnime from "../hooks/useApiAnime";
 
 const Inicio = ({ setTema, imageHeader }) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
-        const data = await response.json();
-        setData(data.results);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    apiAnimes();
-  }, []);
+  const { loading, data, error } = useApiAnime();
 
   useEffect(() => {
     filterData(movie);
@@ -70,6 +54,12 @@ const Inicio = ({ setTema, imageHeader }) => {
       </motion.main>
     );
   }
+  const top10Data = data?.filter((element) => {
+    return element.airing === true;
+  });
+  const sugerenciasData = data?.filter((element) => {
+    return element.airing === false;
+  });
 
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -77,7 +67,7 @@ const Inicio = ({ setTema, imageHeader }) => {
       {dataFilter.length >= 0 && movie.length ? (
         <>
           <h3 className="fs-3 text-center" style={{ marginTop: "2rem" }}>
-            Busqueda Encontrada
+            Búsqueda Encontrada
           </h3>
           {dataFilter.length ? (
             <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
@@ -94,28 +84,12 @@ const Inicio = ({ setTema, imageHeader }) => {
       ) : (
         <>
           <img className="prueba_image" src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg" alt="portada" />
-          <section>
-            <CategoriaCards setTema={setTema}></CategoriaCards>
-          </section>
 
-          <h3 className="">Top 10 Perú</h3>
-          <section className="" style={{ maxWidth: "1600px" }}>
-            <Top10Cards></Top10Cards>
-          </section>
+          <CategoriaCards setTema={setTema}></CategoriaCards>
 
-          <h3 className="">Sugerencias</h3>
-          <section className="" style={{ maxWidth: "1600px" }}>
-            <Sugerencias></Sugerencias>
-          </section>
-
-          <h3 className="">Lo más visto</h3>
-          <section className="" style={{ maxWidth: "1600px" }}>
-            <LoMasVistoCards></LoMasVistoCards>
-          </section>
-
-          <div className="discover__button">
-            <NosotrosButton text="Conoce al equipo" />
-          </div>
+          <Carousel title="Top 10 Perú" data={top10Data}></Carousel>
+          <Carousel title="Sugerencias" data={sugerenciasData}></Carousel>
+          <Carousel title="Los más vistos" data={data}></Carousel>
         </>
       )}
       <Footer></Footer>
