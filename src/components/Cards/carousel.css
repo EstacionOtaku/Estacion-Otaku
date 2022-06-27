@@ -1,0 +1,40 @@
+.carousel__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.carousel__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(6, 10, 25, 0.18531162464985995) 6%, rgba(4, 4, 31, 0) 50%, rgba(6, 10, 25, 0.19) 94%, rgba(6, 10, 25, 1) 100%);
+}
+
+.carousel__title-container {
+  width: min(90%, 1250px);
+  margin: auto;
+}
+.carousel__title {
+  font-size: 1.5em;
+}
+
+.carousel__container:before,
+.carousel__container:after {
+  content: "";
+  width: calc((100% - 1000px) / 2); /*setting the width to the 100% minus your desired header's width / 2 so it will occupy the rest of your content*/
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.carousel__container:before {
+  background: linear-gradient(90deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0) 90%);
+  left: 0;
+  z-index: 1;
+}
+.carousel__container:after {
+  background: linear-gradient(90deg, rgba(6, 10, 25, 0) 0%, rgba(6, 10, 25, 1) 100%);
+  right: 0;
+}

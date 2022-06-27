@@ -1,0 +1,50 @@
+.category-card__image-container {
+  display: block;
+}
+.category-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.category-card__name {
+  font-size: 1.4em;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.category-card__container {
+  position: relative;
+  width: fit-content;
+}
+.card-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(6, 10, 25, 0.248) 0%, rgba(6, 10, 25, 0.8) 48.96%, rgba(0, 0, 0, 0.433333) 100%, rgba(6, 10, 25, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel__container {
+  position: relative;
+}
+.carousel__container:before,
+.carousel__container:after {
+  content: "";
+  width: calc((100% - 1000px) / 2);
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.carousel__container:before {
+  background: linear-gradient(90deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0) 90%);
+  left: 0;
+  z-index: 1;
+}
+.carousel__container:after {
+  background: linear-gradient(90deg, rgba(6, 10, 25, 0) 0%, rgba(6, 10, 25, 1) 100%);
+  right: 0;
+}

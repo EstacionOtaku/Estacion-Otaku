@@ -3,7 +3,6 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/css/Anime.css";
-import Top10Cards from "../components/Cards/Top10Cards";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
 import { motion } from "framer-motion";
@@ -178,9 +177,9 @@ const Anime = (imageHeader) => {
           </div>
           <h2 className="py-3 fs-4 text-center">Animes similares a éste</h2>
 
-          <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
+          {/* <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
             <Top10Cards></Top10Cards>
-          </section>
+          </section> */}
         </>
       )}
       <Footer></Footer>

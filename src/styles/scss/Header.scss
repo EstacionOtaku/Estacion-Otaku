@@ -8,6 +8,7 @@
 header {
   background-color: transparent;
   padding: 0.5rem 0;
+  z-index: 200;
 }
 .header-container {
   display: flex;
@@ -98,6 +99,7 @@ header {
   border-end-end-radius: 2rem;
   border: 0.5px solid #fff;
   background-color: #0b1437;
+  z-index: 200;
 }
 .header__button-logout {
   background-color: transparent;

@@ -15,9 +15,9 @@ const StarPage = () => {
       <HeaderLanding />
       <Hero />
       <Info />
-      <section>
-        <Discover />
-      </section>
+
+      <Discover />
+
       <Faq />
       <LandingSubscribe />
       <section className="py-4">
