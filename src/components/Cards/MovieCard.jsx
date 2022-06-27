@@ -10,9 +10,10 @@ const MovieCard = ({ image_url, mal_id }) => {
           alt="movie"
           style={{
             width: "180px",
-            height: "220px",
+            height: "280px",
             objectFit: "cover",
             marginBottom: "10px",
+            borderRadius: "20px",
           }}
         />
       </Link>

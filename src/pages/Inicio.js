@@ -13,12 +13,15 @@ import Swal from "sweetalert2";
 import ScreenLoader from "../components/Loaders/ScreenLoader";
 import Carousel from "../components/Cards/Carousel";
 import useApiAnime from "../hooks/useApiAnime";
+import PlayBlock from "../components/PlayBlock/PlayBlock";
+import RenderUI from "../utils/RenderUI.jsx";
 
 const Inicio = ({ setTema, imageHeader }) => {
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
-  const { loading, data, error } = useApiAnime();
+  const apiData = useApiAnime();
+  const { loading, data, error } = apiData;
 
   useEffect(() => {
     filterData(movie);
@@ -60,6 +63,7 @@ const Inicio = ({ setTema, imageHeader }) => {
   const sugerenciasData = data?.filter((element) => {
     return element.airing === false;
   });
+  const CTAPlayBlock = top10Data[6];
 
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -82,15 +86,15 @@ const Inicio = ({ setTema, imageHeader }) => {
           )}
         </>
       ) : (
-        <>
-          <img className="prueba_image" src="https://i.postimg.cc/MH2VXPvw/fondoanime.jpg" alt="portada" />
-
+        <RenderUI keyData={apiData}>
+          <PlayBlock data={CTAPlayBlock} />
           <CategoriaCards setTema={setTema}></CategoriaCards>
-
-          <Carousel title="Top 10 Perú" data={top10Data}></Carousel>
-          <Carousel title="Sugerencias" data={sugerenciasData}></Carousel>
-          <Carousel title="Los más vistos" data={data}></Carousel>
-        </>
+          <section style={{ paddingTop: "4rem" }}>
+            <Carousel title="Top 10 Perú" data={top10Data}></Carousel>
+            <Carousel title="Sugerencias" data={sugerenciasData}></Carousel>
+            <Carousel title="Los más vistos" data={data}></Carousel>
+          </section>
+        </RenderUI>
       )}
       <Footer></Footer>
     </motion.main>

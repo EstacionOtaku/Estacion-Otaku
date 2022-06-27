@@ -1,8 +1,6 @@
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
-import Slider from "react-slick/lib/slider";
-import { Top10 } from "../../data/PeliImageData";
 
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
@@ -55,7 +53,7 @@ const carouselProperties = {
 
 const SearchMovie = (dataFilter) => {
   const movieFilter = dataFilter.dataFilter;
-  console.log(dataFilter);
+
   return (
     <div
       style={{
@@ -66,11 +64,7 @@ const SearchMovie = (dataFilter) => {
         justifyContent: "center",
       }}
     >
-      {movieFilter.length
-        ? movieFilter.map(({ image_url, mal_id }, index) => (
-            <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
-          ))
-        : console.log("")}
+      {movieFilter.length ? movieFilter.map(({ image_url, mal_id }, index) => <MovieCard key={index} image_url={image_url} mal_id={mal_id} />) : console.log("")}
     </div>
   );
 };
@@ -86,7 +80,8 @@ const MovieCard = ({ image_url, mal_id }) => {
           style={{
             width: "125px",
             height: "180px",
-            objectFit: "contain",
+            objectFit: "cover",
+            borderRadius: "20px",
             marginBottom: "10px",
           }}
         />

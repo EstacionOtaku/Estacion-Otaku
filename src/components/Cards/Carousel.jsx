@@ -14,7 +14,7 @@ const carouselProperties = {
   centerPadding: "170px",
   responsive: [
     {
-      breakpoint: 426,
+      breakpoint: 570,
       settings: {
         slidesToShow: 2,
         centerMode: false,
