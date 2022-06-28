@@ -88,6 +88,7 @@ const Inicio = ({ setTema, imageHeader }) => {
       ) : (
         <RenderUI keyData={apiData}>
           <PlayBlock data={CTAPlayBlock} />
+
           <CategoriaCards setTema={setTema}></CategoriaCards>
           <section style={{ paddingTop: "4rem" }}>
             <Carousel title="Top 10 Perú" data={top10Data}></Carousel>

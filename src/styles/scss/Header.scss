@@ -8,7 +8,7 @@
 header {
   background-color: transparent;
   padding: 0.5rem 0;
-  z-index: 200;
+  z-index: 500;
 }
 .header-container {
   display: flex;
@@ -18,6 +18,7 @@ header {
   max-width: 1251px;
   margin: 0 auto;
   position: relative;
+  z-index: 500;
 }
 .header-container-login,
 .header-container-logo {

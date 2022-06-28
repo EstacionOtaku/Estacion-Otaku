@@ -76,8 +76,7 @@ const carouselProperties = {
 
 const CategoriaCards = ({ setTema }) => {
   return (
-    <>
-      <h3>Categorías</h3>
+    <div style={{ zIndex: 10, position: "relative" }}>
       <div className="carousel carousel__container">
         <Slider {...carouselProperties}>
           {data.map((item, index) => {
@@ -86,7 +85,7 @@ const CategoriaCards = ({ setTema }) => {
           })}
         </Slider>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -104,7 +103,9 @@ const CategoryCard = ({ image, categoryName, setTema }) => {
         <motion.div
           className="card-background"
           initial={false}
-          animate={{ background: isHovered ? "linear-gradient(180deg, rgba(6, 10, 25, 0.248) 0%, rgba(6, 10, 25, 0.6) 30%, rgba(0, 0, 0, 0.2) 100%, rgba(6, 10, 25, 0) 100%)" : " linear-gradient(0deg, rgba(6, 10, 25, 0.6), rgba(6, 10, 25, 0.6))", transition: { duration: 1 } }}
+          animate={{
+            background: isHovered ? "linear-gradient(180deg, rgba(6, 10, 25, 0.248) 0%, rgba(6, 10, 25, 0.6) 30%, rgba(0, 0, 0, 0.2) 100%, rgba(6, 10, 25, 0) 100%)" : "linear-gradient(180deg, rgba(54, 65, 105, 0) 0%, rgba(6, 10, 25, 0.6) 48.96%, rgba(0, 0, 0, 0) 100%, rgba(6, 10, 25, 0) 100%),",
+          }}
           style={{ borderRadius: "20px" }}
         ></motion.div>
         <motion.h3 className="category-card__name" initial={false} animate={{ top: isHovered ? 50 : 70 }}>

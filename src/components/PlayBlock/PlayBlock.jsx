@@ -1,4 +1,3 @@
-import image from "../../assets/playblock-cta.png";
 import { FaPlay } from "react-icons/fa";
 import "./PlayBlock.css";
 import { motion } from "framer-motion";

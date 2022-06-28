@@ -1,32 +1,40 @@
 import Footer from "../components/Footer/Footer";
 import HeaderCategory from "../components/Header/HeaderCategory";
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "../styles/css/Anime.css";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useViewportScroll } from "framer-motion";
+import ScreenLoader from "../components/Loaders/ScreenLoader";
+import { useApiAnimeParam } from "../hooks/useApiAnime";
+import RenderUI from "../utils/RenderUI";
+
+const colorTransition = {
+  visible: { background: "linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 200% 21%, transparent, rgba(6, 10, 25, 1))", transition: { duration: 0.6 } },
+  initial: { background: "linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 73% 21%, transparent, rgba(6, 10, 25, 1))" },
+};
+
 const Anime = (imageHeader) => {
+  const { scrollY } = useViewportScroll();
+  const control = useAnimation();
+  scrollY.onChange((y) => {
+    if (y > 50) {
+      control.start("visible");
+    } else {
+      control.start("initial");
+    }
+    console.log(y);
+  });
   const { id } = useParams();
-  const [infoAnime, setInfoAnime] = useState([]);
+
   const urlImage = Object.values(imageHeader);
-  const [data, setData] = useState([]);
+
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
-        const data = await response.json();
-        setData(data.results);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-    apiAnimes();
-  }, []);
+  const useApiAnime = useApiAnimeParam(id);
+  const { data, loading, error } = useApiAnime;
 
   useEffect(() => {
     filterData(movie);
@@ -55,23 +63,13 @@ const Anime = (imageHeader) => {
     }
   }, [dataFilter]);
 
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
-        const data = await response.json();
-        const animeSelected = data.results.filter(function (element) {
-          return element.mal_id == id;
-        });
-        setInfoAnime(animeSelected);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-
-    apiAnimes();
-  }, []);
+  if (loading) {
+    return (
+      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <ScreenLoader />
+      </motion.main>
+    );
+  }
 
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -94,25 +92,35 @@ const Anime = (imageHeader) => {
           )}
         </>
       ) : (
-        <>
-          {infoAnime.map(({ image_url, info, mal_id, episodes, title }, index) => {
+        <RenderUI keyData={useApiAnime}>
+          {data.map(({ image_url, info, mal_id, episodes, title }, index) => {
             return (
-              <section className="portada-anime-container" key={index}>
-                <div className="portada-anime-presentacion">
-                  <img className="portada-anime__image" src={image_url} alt={title} />
-                  <div className="portada-anime__text-container">
-                    <h2 className="portada-anime__text-title">{title} </h2>
-                    <p className="portada-anime__text-paragraph">{info}</p>
-                  </div>
+              <section className="anime-section" key={index}>
+                <div className="anime__image-container">
+                  <img src={image_url} alt="" className="anime__image" />
+                  <motion.div
+                    className="anime__background"
+                    // ref={ref}
+                    variants={colorTransition}
+                    initial="initial"
+                    animate={control}
+                  ></motion.div>
+                </div>
+                <div className="anime__details">
+                  <h1 className="anime__details-title">{title}</h1>
+                  <div className="anime__details-episodes"> {episodes.length} episodios </div>
+                  <h3 className="anime__details-info">{info}</h3>
+                  {/* {episodios.map()} */}
                 </div>
               </section>
             );
           })}
 
-          <div className="episodes-container">
+          {/* <div className="episodes-container">
             <h2 className="episodios-title">Episodios</h2>
 
-            {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
+            {data.map(({ image, synopsis, mal_id, episodes }, index) => {
+              console.log(index);
               return (
                 <article className="episodes-list" key={mal_id}>
                   <h3>EP1</h3>
@@ -173,14 +181,9 @@ const Anime = (imageHeader) => {
                   <p className="sysnopsis-text"> {episodes[3].synopsis} </p>
                 </article>
               );
-            })}
-          </div>
-          <h2 className="py-3 fs-4 text-center">Animes similares a éste</h2>
-
-          {/* <section className="py-1 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-            <Top10Cards></Top10Cards>
-          </section> */}
-        </>
+            })} 
+          </div>*/}
+        </RenderUI>
       )}
       <Footer></Footer>
     </motion.main>

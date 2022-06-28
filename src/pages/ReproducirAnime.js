@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 
 const ReproducirAnime = () => {
   const { id, n } = useParams();
-
+  console.log(n, id);
+  console.log(useParams());
   const [infoAnime, setInfoAnime] = useState([]);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ const ReproducirAnime = () => {
       <HeaderCategory></HeaderCategory>
       <div className="page-reproductor">
         {infoAnime.map(({ title, episodes, mal_id }) => {
+          console.log(episodes);
           return (
             <>
               <h1 className="title-video">{title}</h1>
