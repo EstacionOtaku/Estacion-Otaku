@@ -42,9 +42,11 @@ const HeaderCategory = ({ imageHeader, setMovie }) => {
     <header className="header  ">
       <div className="header-container ">
         <div className="header-container-logo">
-          <figure className="header__image-container">
-            <img src={logo} className="header__image"></img>
-          </figure>
+          <Link to={"/inicio"}>
+            <figure className="header__image-container">
+              <img src={logo} className="header__image"></img>
+            </figure>
+          </Link>
         </div>
         <div className="header-container-login">
           <div className="input-group rounded" style={{ width: "" }}>

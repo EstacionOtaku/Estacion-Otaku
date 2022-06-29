@@ -1,0 +1,9 @@
+.episode-carousel__section {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.episode-carousel__title {
+  font-size: 2.2em;
+}

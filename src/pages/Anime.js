@@ -1,7 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import HeaderCategory from "../components/Header/HeaderCategory";
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/css/Anime.css";
 import Swal from "sweetalert2";
 import SearchMovie from "../components/Cards/SearchMovie";
@@ -9,9 +9,13 @@ import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import ScreenLoader from "../components/Loaders/ScreenLoader";
 import { useApiAnimeParam } from "../hooks/useApiAnime";
 import RenderUI from "../utils/RenderUI";
+import Slider from "react-slick";
+import MovieCard from "../components/Cards/MovieCard";
+import EpisodeCarousel from "../components/Carousel/EpisodeCarousel";
+import { shortText } from "../utils/shortText";
 
 const colorTransition = {
-  visible: { background: "linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 200% 21%, transparent, rgba(6, 10, 25, 1))", transition: { duration: 0.6 } },
+  visible: { background: "linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 200% 21%, transparent, rgba(6, 10, 25, 1))", transition: { duration: 0.4 } },
   initial: { background: "linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 73% 21%, transparent, rgba(6, 10, 25, 1))" },
 };
 
@@ -24,7 +28,6 @@ const Anime = (imageHeader) => {
     } else {
       control.start("initial");
     }
-    console.log(y);
   });
   const { id } = useParams();
 
@@ -64,11 +67,7 @@ const Anime = (imageHeader) => {
   }, [dataFilter]);
 
   if (loading) {
-    return (
-      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <ScreenLoader />
-      </motion.main>
-    );
+    return <ScreenLoader />;
   }
 
   return (
@@ -98,91 +97,19 @@ const Anime = (imageHeader) => {
               <section className="anime-section" key={index}>
                 <div className="anime__image-container">
                   <img src={image_url} alt="" className="anime__image" />
-                  <motion.div
-                    className="anime__background"
-                    // ref={ref}
-                    variants={colorTransition}
-                    initial="initial"
-                    animate={control}
-                  ></motion.div>
+                  <motion.div className="anime__background" variants={colorTransition} initial="initial" animate={control}></motion.div>
                 </div>
                 <div className="anime__details">
                   <h1 className="anime__details-title">{title}</h1>
                   <div className="anime__details-episodes"> {episodes.length} episodios </div>
-                  <h3 className="anime__details-info">{info}</h3>
-                  {/* {episodios.map()} */}
+                  <h3 className="anime__details-info">{shortText(info)}</h3>
+                  <div className="anime__episode-carousel">
+                    <EpisodeCarousel data={episodes} route={mal_id} />
+                  </div>
                 </div>
               </section>
             );
           })}
-
-          {/* <div className="episodes-container">
-            <h2 className="episodios-title">Episodios</h2>
-
-            {data.map(({ image, synopsis, mal_id, episodes }, index) => {
-              console.log(index);
-              return (
-                <article className="episodes-list" key={mal_id}>
-                  <h3>EP1</h3>
-                  <figure className="image-container">
-                    <Link to={`/anime/${mal_id}-${0}`}>
-                      <img src={episodes[0].image} alt="im" className="image-episode" />
-                    </Link>
-                    <div className="play"></div>
-                  </figure>
-                  <p className="sysnopsis-text"> {episodes[0].synopsis} </p>
-                </article>
-              );
-            })}
-
-            {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-              return (
-                <article className="episodes-list" key={mal_id}>
-                  <h3>EP2 </h3>
-                  <figure className="image-container">
-                    <Link to={`/anime/${mal_id}-${1}`}>
-                      <img src={episodes[1].image} alt="im" className="image-episode" />
-                    </Link>
-                    <div className="play"></div>
-                  </figure>
-                  <p className="sysnopsis-text"> {episodes[1].synopsis} </p>
-                </article>
-              );
-            })}
-
-            {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-              return (
-                <article className="episodes-list" key={mal_id}>
-                  <h3>EP3 </h3>
-                  <figure className="image-container">
-                    <Link to={`/anime/${mal_id}-${2}`}>
-                      <img src={episodes[2].image} alt="im" className="image-episode" />
-                    </Link>
-                    <div className="play"></div>
-                  </figure>
-                  <p className="sysnopsis-text"> {episodes[2].synopsis} </p>
-                </article>
-              );
-            })}
-
-            {infoAnime.map(({ image, synopsis, mal_id, episodes }) => {
-              return (
-                <article className="episodes-list" key={mal_id}>
-                  <h3>EP4 </h3>
-                  <figure className="image-container">
-                    <Link to={`/anime/${mal_id}-${3}`}>
-                      <img src={episodes[3].image} alt="im" className="image-episode" />
-                    </Link>
-                    <div className="play"></div>
-                    <div>
-                      <p> {episodes[3].episodio_1} </p>
-                    </div>
-                  </figure>
-                  <p className="sysnopsis-text"> {episodes[3].synopsis} </p>
-                </article>
-              );
-            })} 
-          </div>*/}
         </RenderUI>
       )}
       <Footer></Footer>

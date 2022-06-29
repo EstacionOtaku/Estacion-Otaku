@@ -7,6 +7,10 @@
   flex-direction: column;
   background-image: linear-gradient(to right, #9a35ef, #132d8b, #4176d6);
   transition: all 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 .screen-image-container {
   width: 200px;

@@ -129,7 +129,9 @@
     width: 40rem;
     padding: 0.75rem;
   }
-
+  /* 
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+*/
   .episodes-container {
     width: 1200px;
   }
@@ -160,11 +162,11 @@
 
 .anime-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 .anime__image-container {
-  height: 40vh;
+  min-height: 40vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -179,27 +181,37 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background: linear-gradient(180deg, rgba(6, 10, 25, 1) 0%, rgba(6, 10, 25, 0.3) 10%, rgba(6, 10, 25, 0) 20%), radial-gradient(farthest-side at 73% 21%, transparent, rgba(6, 10, 25, 1));
   top: 0;
   left: 0;
 }
 .anime__details {
-  z-index: 600;
+  z-index: 200;
   position: relative;
   width: min(90%, 1250px);
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 8rem 0 3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 .anime__details-title {
-  max-width: 60vw;
+  max-width: 600px;
+  line-height: 1.2em;
   font-size: 1.8em;
   font-weight: 600;
 }
 .anime__details-info {
   line-height: 1.4em;
   font-size: 1.1em;
-  color: #ffffff98;
+  color: #ffffffbc;
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .anime__details-title {
+    font-size: 2.2em;
+  }
+  .anime__image-container {
+    height: 150vh;
+  }
 }

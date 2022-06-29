@@ -1,8 +1,10 @@
 import { FaPlay } from "react-icons/fa";
 import "./PlayBlock.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const PlayBlock = ({ data }) => {
-  const { Category, image_url, title } = data;
+  console.log(data);
+  const { Category, image_url, title, mal_id } = data;
   return (
     <section className="play-block">
       <figure className="play-block__image-container">
@@ -11,9 +13,11 @@ const PlayBlock = ({ data }) => {
       <div className="play-block__details-container">
         <h5 className="play-block__details-subtitle">{Category} | 2018</h5>
         <h4 className="play-block__details-title">{title}</h4>
-        <motion.a whileHover={{ scale: 1.2 }} style={{ cursor: "pointer" }} className="play-block__details-button">
-          Reproducir <FaPlay />
-        </motion.a>
+        <Link to={`/anime/${mal_id}`}>
+          <motion.div whileHover={{ scale: 1.1 }} style={{ cursor: "pointer" }} className="play-block__details-button">
+            Reproducir <FaPlay />
+          </motion.div>
+        </Link>
       </div>
       {/* <div className="play-block__gradient-background"></div> */}
     </section>

@@ -1,0 +1,57 @@
+.episode__card {
+  /* margin: 0 5rem; */
+  line-height: 1.2em;
+}
+.episode__title {
+  font-size: 1em;
+}
+.episode__synopsis {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  color: #ffffff98;
+}
+
+.episode__details {
+  padding: 0.5rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* the slides */
+.slick-slide {
+  /* margin: 0 27px; */
+  padding: 1rem 0.5rem;
+}
+
+/* the parent */
+.slick-list {
+  /* margin: 0 -27px; */
+}
+
+.slick-slide {
+  height: auto;
+}
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  /* padding: 5rem 0 ; */
+}
+
+.episode__image {
+  width: 250px;
+}
+
+@media (min-width: 350px) {
+  .episode__image {
+    width: 200px;
+  }
+}
+@media (min-width: 769px) {
+  .episode__image {
+    width: 250px;
+  }
+}

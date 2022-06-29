@@ -1,4 +1,5 @@
 import React from "react";
+import ScreenLoader from "../components/Loaders/ScreenLoader.jsx";
 import Spinner from "../components/Loaders/Spinner.jsx";
 import isEmpty from "./isEmpty";
 
@@ -32,8 +33,7 @@ export default function RenderUI({ keyData, children, noDataMessage = "No data" 
       return <div>{error}</div>;
 
     case "noData":
-      return <div>{noDataMessage}</div>;
-
+      return <ScreenLoader />;
     default:
       return children;
   }

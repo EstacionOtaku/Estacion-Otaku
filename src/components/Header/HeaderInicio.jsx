@@ -30,9 +30,11 @@ const HeaderInicio = (imageHeader) => {
     <header className="header  ">
       <div className="header-container ">
         <div className="header-container-logo">
-          <figure className="header__image-container">
-            <img src={logo} className="header__image"></img>
-          </figure>
+          <Link to={"/inicio"}>
+            <figure className="header__image-container">
+              <img src={logo} className="header__image"></img>
+            </figure>
+          </Link>
           {/* <select
             name="Generos"
             id="generos-select

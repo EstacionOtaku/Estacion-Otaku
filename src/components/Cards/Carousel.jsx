@@ -2,15 +2,15 @@ import React from "react";
 
 import Slider from "react-slick/lib/slider";
 import { NextBtn, PreviousBtn } from "./Arrows";
-import { motion } from "framer-motion";
+
 import MovieCard from "./MovieCard";
 import "./carousel.css";
 
 const carouselProperties = {
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,
-  slidesToShow: 5,
-  centerMode: true,
+  slidesToShow: 6,
+  // centerMode: true,
   centerPadding: "170px",
   responsive: [
     {
@@ -49,8 +49,8 @@ const Carousel = ({ title, data }) => {
       </div>
       <div style={{ position: "relative" }} className="carousel carousel__container ">
         <Slider {...carouselProperties}>
-          {data?.map(({ image_url, mal_id }, index) => (
-            <MovieCard key={index} image_url={image_url} mal_id={mal_id} />
+          {data?.map((data, index) => (
+            <MovieCard key={index} data={data} />
           ))}
         </Slider>
       </div>
