@@ -10,25 +10,25 @@ import ImagenToei from "../../assets/Nosotros/Aliados/toei.png";
 import ImagenTrigger from "../../assets/Nosotros/Aliados/trigger.png";
 const CarruselAliadosNosotros = () => {
   return (
-    <div id="carouselExampleControlsNoTouching" class="carousel slide py-4" data-bs-touch="false" data-bs-interval="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active" style={{ textAlign: "center" }}>
+    <div id="carouselExampleControlsNoTouching" className="carousel slide py-4" data-bs-touch="false" data-bs-interval="false">
+      <div className="carousel-inner">
+        <div className="carousel-item active" style={{ textAlign: "center" }}>
           <img src={ImagenPeru} className="card-img-top" style={{ width: "100px" }} alt="" />
         </div>
-        <div class="carousel-item" style={{ textAlign: "center" }}>
+        <div className="carousel-item" style={{ textAlign: "center" }}>
           <img src={ImagenPierrot} className="card-img-top" style={{ width: "100px" }} alt="" />
         </div>
-        <div class="carousel-item" style={{ textAlign: "center" }}>
+        <div className="carousel-item" style={{ textAlign: "center" }}>
           <img src={ImagenSunsire} className="card-img-top" style={{ width: "100px" }} alt="" />
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
       </button>
     </div>
   );

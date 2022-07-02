@@ -44,7 +44,7 @@ const CategoriaCards = ({ setTema, data }) => {
     <div style={{ zIndex: 10, position: "relative" }}>
       <div className="carousel carousel__container">
         <Slider {...carouselProperties}>
-          {data.map((item, index) => {
+          {data?.map((item, index) => {
             return <CategoryCard key={index} data={item} setTema={setTema}></CategoryCard>;
           })}
         </Slider>

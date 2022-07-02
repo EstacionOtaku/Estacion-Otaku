@@ -128,7 +128,7 @@ const Categoria = ({ tema, imageHeader }) => {
               </section>
             ) : (
               <section className="py-4 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-                <div class="alert alert-danger text-center" role="alert">
+                <div className="alert alert-danger text-center" role="alert">
                   Ups, No se encontro tu pelicula
                 </div>
               </section>

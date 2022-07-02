@@ -2,7 +2,7 @@ import "./SmallLoader.css";
 const SmallLoader = () => {
   return (
     <>
-      <div class="loader"></div>
+      <div className="loader"></div>
     </>
   );
 };

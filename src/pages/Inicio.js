@@ -35,7 +35,7 @@ const Inicio = ({ setTema, imageHeader }) => {
     if (!movie) {
       setDataFilter({});
     } else {
-      const filteredData = data.filter((item) => {
+      const filteredData = data?.filter((item) => {
         return Object.keys(item).some((key) => item[key].toString().toLowerCase().includes(movie));
       });
       setDataFilter(filteredData);
@@ -88,7 +88,7 @@ const Inicio = ({ setTema, imageHeader }) => {
             </section>
           ) : (
             <section className="py-4 px-2 mx-auto" style={{ maxWidth: "1600px" }}>
-              <div class="alert alert-danger text-center" role="alert">
+              <div className="alert alert-danger text-center" role="alert">
                 Ups, No se encontro tu pelicula
               </div>
             </section>

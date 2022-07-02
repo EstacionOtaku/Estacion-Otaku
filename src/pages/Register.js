@@ -37,41 +37,32 @@ const Register = () => {
     setError("");
     if (user.password !== user.passwordConfirm) {
       setError("Las contraseñas son distintas.");
+      console.log(user);
     } else {
       try {
+        // delete user.passwordConfirm;
         setLoading(true);
-        delete user.passwordConfirm;
-        const method = "POST";
-        const resource = "/auth/signup";
-        const options = {
-          method,
-          url: resource,
-          data: user,
-        };
-        const { data } = await axiosInstance(options);
-        setUser(initialData);
-        setLoading(false);
+        const data = await fetch("https://estacion-otaku-b.herokuapp.com/auth/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        });
+        const json = await data.json();
+        console.log(json);
         Swal.fire({
           position: "center",
           icon: "success",
-          title: `Gracias ${data.first_name} por unirte!`,
+          title: `Gracias ${data?.first_name} por unirte!`,
           showConfirmButton: false,
           timer: 1500,
         });
+        setUser(initialData);
         navigate("/login");
+        setLoading(false);
       } catch (error) {
         setError(error.mesagge);
-        if (error.code === "auth/internal-error") {
-          setError("El correo ingresado no es válido");
-        } else if (error.code === "auth/invalid-email") {
-          setError("El correo ingresado no es válido");
-        } else if (error.code === "auth/weak-password") {
-          setError("La contraseña debe contener mas de 6 caracteres");
-        } else if (error.code === "auth/email-already-in-use") {
-          setError("Este correo ya está registrado");
-        } else if (user.password !== user.passwordConfirm) {
-          setError("Las contraseñas son distintas");
-        }
       }
     }
   };

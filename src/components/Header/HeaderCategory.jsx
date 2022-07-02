@@ -3,23 +3,26 @@ import avatar from "../../assets/Header/avatar.png";
 import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 import logo from "../../assets/Header/logo.svg";
-import { useAuth } from "../../context/authContext";
 import { useState } from "react";
 import ModalConfig from "../modals/ModalConfig";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HeaderCategory = ({ imageHeader, setMovie }) => {
-  const { user, logout } = useAuth();
+  // const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [userModal, setUserModal] = useState(false);
   const [settingsUser, setSettingsUser] = useState(false);
   const nameUser = localStorage.getItem("nombre");
 
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.log(error);
-    }
+  const handleLogout = () => {
+    sessionStorage.removeItem("accessToken");
+    navigate("/");
+    // try {
+    //   await logout();
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   const handleUserOptions = () => {
     if (!userModal) {
@@ -55,7 +58,11 @@ const HeaderCategory = ({ imageHeader, setMovie }) => {
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
           </figure>
-          <p className="header__username">{user.displayName || nameUser || user.email}</p>
+          <p className="header__username">
+            {
+              // user.displayName || nameUser || user.email
+            }
+          </p>
           <Link to="/avatar">
             <figure className="header__avatar-container">
               <img src={imageHeader} className="avatar__image"></img>

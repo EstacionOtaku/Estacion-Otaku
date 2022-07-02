@@ -3,19 +3,18 @@ import search from "../../assets/Header/Search.png";
 import arrow from "../../assets/Header/arrow-down.png";
 // import avatar from "../../assets/Header/avatar.png";
 import logo from "../../assets/Header/logo.svg";
-import { useAuth } from "../../context/authContext";
+// import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeaderInicio = (imageHeader) => {
-  const { user, logout } = useAuth();
+  // const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [userModal, setUserModal] = useState(false);
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.log(error);
-    }
+  const handleLogout = () => {
+    sessionStorage.removeItem("accessToken");
+    navigate("/");
   };
   const handleUserOptions = () => {
     if (!userModal) {
@@ -59,7 +58,11 @@ const HeaderInicio = (imageHeader) => {
           </select> */}
         </div>
         <div className="header-container-login">
-          <p className="header__username">{user.displayName || user.email}</p>
+          <p className="header__username">
+            {
+              // user.displayName || user.email
+            }
+          </p>
           <Link to="/avatar">
             {imageHeader.imageHeader.imageHeader ? (
               <figure className="header__avatar-container">
