@@ -24,7 +24,7 @@
 .carousel__container:before,
 .carousel__container:after {
   content: "";
-  width: calc((100% - 1000px) / 2); /*setting the width to the 100% minus your desired header's width / 2 so it will occupy the rest of your content*/
+  width: 100px;
   height: 100%;
   position: absolute;
   top: 0;
