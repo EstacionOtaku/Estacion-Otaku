@@ -28,9 +28,8 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    console.log(user);
     if (user.password !== user.passwordconfirm) {
-      setError("Las contraseñas son distintas");
+      setError("Las contraseñas son distintas.");
     } else {
       try {
         await signup(user.email, user.password);
@@ -46,11 +45,11 @@ const Register = () => {
       } catch (error) {
         setError(error.mesagge);
         if (error.code === "auth/internal-error") {
-          setError("El correo ingresado es invalido");
+          setError("El correo ingresado no es válido");
         } else if (error.code === "auth/invalid-email") {
-          setError("El correo ingresado es invalido");
+          setError("El correo ingresado no es válido");
         } else if (error.code === "auth/weak-password") {
-          setError("La contraseña debe contener más de 6 caracteres");
+          setError("La contraseña debe contener mas de 6 caracteres");
         } else if (error.code === "auth/email-already-in-use") {
           setError("Este correo ya está registrado");
         } else if (user.password !== user.passwordconfirm) {
@@ -66,7 +65,7 @@ const Register = () => {
       <BackButton route={"/"} />
       <div className="form-container-all">
         <div className="form-message">
-          <h2 className="form-message-title">Registrate aquí</h2>
+          <h2 className="form-message-title">Regístrate aquí</h2>
           <h3 className="form-message-subtitle">Ingresa tus datos para registrarte.</h3>
         </div>
         {error && <AlertError mesagge={error} />}
@@ -81,7 +80,7 @@ const Register = () => {
             <input className="form-input" type="password" placeholder="Confirma tu contraseña" name="passwordconfirm" id="passwordconfirm" onChange={handleChange} />
           </div>
           <div className="form__buttons">
-            <button className="button-option">Registrate ahora</button>
+            <button className="button-option">Regístrate ahora</button>
             <Link to="/login" className="other-option">
               ¿Tienes una cuenta?
             </Link>

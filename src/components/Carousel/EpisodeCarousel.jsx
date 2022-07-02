@@ -45,7 +45,6 @@ const carouselProperties = {
 };
 
 const EpisodeCarousel = ({ data, route }) => {
-  console.log(data);
   return (
     <section
       className="episode-carousel__section
@@ -56,7 +55,6 @@ const EpisodeCarousel = ({ data, route }) => {
       <div style={{ position: "relative" }} className="">
         <Slider {...carouselProperties}>
           {data?.map((single, index) => {
-            console.log(index);
             return <EpisodeCard data={single} key={index} index={index} route={route} />;
           })}
         </Slider>

@@ -4,43 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./category.css";
 import { NextBtn, PreviousBtn } from "./Arrows";
-const categoryData = [
-  {
-    id: 1,
-    categoryName: "Aventura",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/adventure.png",
-  },
-  {
-    id: 2,
-    categoryName: "Kids",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/kids.png",
-  },
-  {
-    id: 3,
-    categoryName: "Pelea",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/martial-arts.png",
-  },
-  {
-    id: 4,
-    categoryName: "Comedia",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/comedy.png",
-  },
-  {
-    id: 5,
-    categoryName: "Fantasía",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/fantasy.png",
-  },
-  {
-    id: 6,
-    categoryName: "Drama",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352998/animes/anime-categories/drama.png",
-  },
-  {
-    id: 7,
-    categoryName: "Ciencia Ficción",
-    image: "https://res.cloudinary.com/estacion-otaku/image/upload/v1656352997/animes/anime-categories/science-fiction.png",
-  },
-];
 
 const carouselProperties = {
   slidesToShow: 5,
@@ -77,7 +40,6 @@ const carouselProperties = {
 };
 
 const CategoriaCards = ({ setTema, data }) => {
-  console.log(data);
   return (
     <div style={{ zIndex: 10, position: "relative" }}>
       <div className="carousel carousel__container">
@@ -99,7 +61,7 @@ const CategoryCard = ({ data, setTema }) => {
   };
 
   return (
-    <Link to="/categoria">
+    <Link to={`/categories/${id}`}>
       <div className="category-card__container" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <figure style={{ height: "150px", width: "150px" }} onClick={onClickImage} className="category-card__image-container">
           <img className="category-card__image" src={image} alt={""} />

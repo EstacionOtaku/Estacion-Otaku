@@ -65,7 +65,6 @@ const Categoria = ({ tema, imageHeader }) => {
         const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
         const data = await response.json();
         setGallery(data.results);
-        //console.log(data.galeria);
       } catch (error) {
         console.log(error);
       } finally {

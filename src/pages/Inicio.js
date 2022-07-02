@@ -15,8 +15,10 @@ import Carousel from "../components/Cards/Carousel";
 import useApiAnime from "../hooks/useApiAnime";
 import PlayBlock from "../components/PlayBlock/PlayBlock";
 import RenderUI from "../utils/RenderUI.jsx";
+import { getRandomInt } from "../utils/getRandomInt";
 
 const Inicio = ({ setTema, imageHeader }) => {
+  const [isAnimeSelected, setIsAnimeSelected] = useState();
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
@@ -52,12 +54,16 @@ const Inicio = ({ setTema, imageHeader }) => {
     }
   }, [dataFilter]);
 
+  useEffect(() => {
+    if (data) {
+      const animesLength = data.length;
+      const randomAnime = getRandomInt(animesLength);
+      setIsAnimeSelected(randomAnime);
+    }
+  }, [data]);
+
   if (loading) {
-    return (
-      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <ScreenLoader />
-      </motion.main>
-    );
+    return <ScreenLoader />;
   }
   const top10Data = data?.filter((element) => {
     return element.is_active === true;
@@ -67,7 +73,7 @@ const Inicio = ({ setTema, imageHeader }) => {
     return element.is_active === true;
   });
 
-  const CTAPlayBlock = top10Data[0];
+  const CTAPlayBlock = top10Data[isAnimeSelected];
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <HeaderCategory imageHeader={imageHeader} setMovie={setMovie}></HeaderCategory>

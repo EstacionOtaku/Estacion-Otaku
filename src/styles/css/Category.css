@@ -1,0 +1,73 @@
+.category-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  overflow-y: hidden;
+  width: min(90%, 1250px);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+  z-index: 200;
+  position: relative;
+}
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 22vh;
+  left: 8%;
+  z-index: 200;
+}
+.category-gallery__list-container {
+}
+.category-gallery__image-container {
+  height: 250px;
+  /* width: 150px; */
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  position: relative;
+}
+.category-gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.category-card__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.533);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.4em;
+  padding: 1rem 1rem;
+}
+.category-card__episodes {
+  font-size: 0.9em;
+}
+.category-card__title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.category-card__play {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+@media (min-width: 760px) {
+  .category-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .category-title {
+    top: 30vh;
+  }
+}

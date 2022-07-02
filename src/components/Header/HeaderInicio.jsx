@@ -25,7 +25,6 @@ const HeaderInicio = (imageHeader) => {
     }
   };
 
-  // console.log(imageHeader.imageHeader.imageHeader.length);
   return (
     <header className="header  ">
       <div className="header-container ">

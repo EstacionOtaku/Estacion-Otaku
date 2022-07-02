@@ -6,7 +6,6 @@ import "./movieCard.css";
 import { useState } from "react";
 
 const MovieCard = ({ data }) => {
-  console.log(data);
   const [isHover, setIsHover] = useState(false);
   const { sample_image, id, seasons, category_id, name } = data;
 
@@ -15,7 +14,6 @@ const MovieCard = ({ data }) => {
   const episodesNumber = seasons.map((season) => {
     return season.episodes.map((ep) => ep);
   });
-  console.log(episodesNumber.length);
   return (
     <motion.div style={{ textAlign: "center" }} whileHover={{ scale: 1.04, transition: { duration: 0.4 } }} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
       <Link to={`/anime/${id}`}>

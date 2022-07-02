@@ -21,6 +21,10 @@ const colorTransition = {
 
 const Anime = (imageHeader) => {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const useApiAnime = useApiAnimeParam(id, "animes");
+  const { data, loading, error } = useApiAnime;
+
   const { scrollY } = useViewportScroll();
   const control = useAnimation();
   scrollY.onChange((y) => {
@@ -30,14 +34,9 @@ const Anime = (imageHeader) => {
       control.start("initial");
     }
   });
-  const { id } = useParams();
   const urlImage = Object.values(imageHeader);
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
-
-  const useApiAnime = useApiAnimeParam(id, "animes");
-  const { data, loading, error } = useApiAnime;
-  console.log(data);
 
   useEffect(() => {
     filterData(movie);

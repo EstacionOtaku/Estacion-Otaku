@@ -4,7 +4,6 @@ import { findDOMNode } from "react-dom";
 import { toast } from "react-toastify";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
-import HeaderCategory from "../components/Header/HeaderCategory";
 import "../styles/css/ReproducirAnime.css";
 import { IoChevronBackSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -35,16 +34,10 @@ const ReproducirAnime = () => {
     setFullscreenMode(document.fullscreenElement !== null);
   };
 
-  const handleClick = () => {
-    // 👇️ replace set to true
-  };
-
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="page-play">
-      {/* <HeaderCategory></HeaderCategory> */}
       <div className="page-reproductor">
         {data.map(({ name, seasons, id }) => {
-          console.log(seasons[0].episodes);
           const episodes = seasons[0].episodes;
           const episodeSelected = episodes.find((item) => item.id.toString() === n);
           const episodeURL = episodeSelected.url;

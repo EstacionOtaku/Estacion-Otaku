@@ -13,11 +13,9 @@ const useApiAnime = (path) => {
       try {
         setLoading(true);
         const response = await fetch(`https://${url}/${path}`);
-        console.log(response);
         const fetchedData = await response.json();
         setData(fetchedData);
       } catch (err) {
-        console.log(err);
         setError(err);
       } finally {
         setLoading(false);

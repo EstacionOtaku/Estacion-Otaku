@@ -13,6 +13,7 @@ import Avatar from "../pages/Avatar";
 
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Category from "../pages/Category";
 
 const AnimatedRoutes = () => {
   let LocalHeaderImage = JSON.parse(localStorage.getItem("image-url-header"));
@@ -72,6 +73,14 @@ const AnimatedRoutes = () => {
           }
         />
         <Route
+          path="/categories/:id"
+          element={
+            <ProtectedRoute>
+              <Category imageHeader={imageHeader} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/anime/:id"
           element={
             <ProtectedRoute>
@@ -87,11 +96,6 @@ const AnimatedRoutes = () => {
             </ProtectedRoute>
           }
         />
-        {/* <Route exact path="/anime/:id" render={(props) => (
-    <ProtectedRoute>
-    <Anime id={props.match.params.id} />
-    </ProtectedRoute>
-  )} /> */}
 
         <Route
           path="/inicio"

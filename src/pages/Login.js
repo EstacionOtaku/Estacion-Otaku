@@ -37,7 +37,7 @@ const Login = () => {
         } else if (error.code === "auth/weak-password") {
           setError("La contraseña debe contener más de 6 caracteres");
         } else if (error.code === "auth/wrong-password") {
-          setError("La contraseña ingresa es incorrecta");
+          setError("La contraseña ingresada no es correcta");
         }
       }
     }
@@ -47,7 +47,7 @@ const Login = () => {
     if (!user.email) return setError("Porfavor ingrese su correo");
     try {
       await resetPassword(user.email);
-      alert("Se envio un mensaje a su correo");
+      alert("Se envió un mensaje a su correo.");
     } catch (error) {
       setError(error.mesagge);
     }
@@ -59,27 +59,26 @@ const Login = () => {
       <BackButton route="/" />
       <div className="form-container-all">
         <div className="form-message">
-          <h2 className="form-message-title">Inicia sesión </h2>
-          <h3 className="form-message-subtitle">Ingresa tú dirección de correo eléctronico y contraseña para acceder a tú cuenta</h3>
+          <h2 className="form-message-title">Inicia sesión</h2>
+          <h3 className="form-message-subtitle">Ingresa tu dirección de correo electrónico y contraseña para acceder a tu cuenta.</h3>
         </div>
         {error && <AlertError mesagge={error} />}
         <form onSubmit={handleSubmit} className="form-container">
           <div className="form-input-container">
-            <input className="form-input" type="email" placeholder="ingresa tú nombre de usuario" name="email" id="email" onChange={handleChange} />
-
-            <input className="form-input" type="password" placeholder="ingresa tú contraseña" name="password" id="password" onChange={handleChange} />
+            <input className="form-input" type="email" placeholder="Ingresa tu nombre de usuario" name="email" id="email" onChange={handleChange} />
+            <input className="form-input" type="password" placeholder="Ingresa tu contraseña" name="password" id="password" onChange={handleChange} />
           </div>
 
           <section className="form__buttons">
             <div className="button-register-container">
-              <button className="button-option">Iniciar Sesion</button>
+              <button className="button-option">Iniciar Sesión</button>
             </div>
             <div className="other_enlaces">
               <Link to="/register" className="button-info-register">
-                ¿Eres nuevo por aquí? Registrate ahora
+                ¿Eres nuevo por aquí? Regístrate ahora
               </Link>
               <a href="#!" onClick={handleResetPassword} className="forgot-passoword-register">
-                ¿Olvidaste tú contraseña?
+                ¿Olvidaste tu contraseña?
               </a>
             </div>
           </section>

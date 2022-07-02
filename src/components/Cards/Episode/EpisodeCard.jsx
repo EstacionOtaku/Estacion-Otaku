@@ -8,8 +8,7 @@ const EpisodeCard = ({ data, index, route }) => {
   const [isHover, setIsHover] = useState(false);
 
   const { image, duration, description, episode_number, id, url, season_id, name } = data;
-  // const episodeNumber = index + 1;
-  // const [episodeName] = Object.values(data);
+
   const shortSynopsis = shortText(description);
 
   return (
