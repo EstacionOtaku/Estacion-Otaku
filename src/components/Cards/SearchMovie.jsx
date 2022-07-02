@@ -64,7 +64,7 @@ const SearchMovie = (dataFilter) => {
         justifyContent: "center",
       }}
     >
-      {movieFilter.length ? movieFilter.map(({ image_url, mal_id }, index) => <MovieCard key={index} image_url={image_url} mal_id={mal_id} />) : console.log("")}
+      {movieFilter.length ? movieFilter.map(({ sample_id, id }, index) => <MovieCard key={index} image_url={sample_id} mal_id={id} />) : console.log("")}
     </div>
   );
 };

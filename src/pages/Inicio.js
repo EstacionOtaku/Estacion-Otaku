@@ -20,8 +20,10 @@ const Inicio = ({ setTema, imageHeader }) => {
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
-  const apiData = useApiAnime();
+  const apiData = useApiAnime("animes");
   const { loading, data, error } = apiData;
+
+  const { data: categoryData } = useApiAnime("categories");
 
   useEffect(() => {
     filterData(movie);
@@ -58,13 +60,14 @@ const Inicio = ({ setTema, imageHeader }) => {
     );
   }
   const top10Data = data?.filter((element) => {
-    return element.airing === true;
+    return element.is_active === true;
   });
-  const sugerenciasData = data?.filter((element) => {
-    return element.airing === false;
-  });
-  const CTAPlayBlock = top10Data[6];
 
+  const sugerenciasData = data?.filter((element) => {
+    return element.is_active === true;
+  });
+
+  const CTAPlayBlock = top10Data[0];
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <HeaderCategory imageHeader={imageHeader} setMovie={setMovie}></HeaderCategory>
@@ -89,7 +92,7 @@ const Inicio = ({ setTema, imageHeader }) => {
         <RenderUI keyData={apiData}>
           <PlayBlock data={CTAPlayBlock} />
 
-          <CategoriaCards setTema={setTema}></CategoriaCards>
+          <CategoriaCards data={categoryData} setTema={setTema}></CategoriaCards>
           <section style={{ paddingTop: "4rem" }}>
             <Carousel title="Top 10 Perú" data={top10Data}></Carousel>
             <Carousel title="Sugerencias" data={sugerenciasData}></Carousel>

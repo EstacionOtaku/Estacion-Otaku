@@ -11,6 +11,7 @@ const carouselProperties = {
   nextArrow: <NextBtn />,
   slidesToShow: 6,
   // centerMode: true,
+  adaptiveHeight: true,
   centerPadding: "170px",
   responsive: [
     {

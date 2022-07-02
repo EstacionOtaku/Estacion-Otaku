@@ -5,16 +5,15 @@ import { useState } from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const EpisodeCard = ({ data, index, route }) => {
-  console.log(data);
   const [isHover, setIsHover] = useState(false);
 
-  const { image, link, synopsis } = data;
-  const episodeNumber = index + 1;
-  const [episodeName] = Object.values(data);
-  const shortSynopsis = shortText(synopsis);
+  const { image, duration, description, episode_number, id, url, season_id, name } = data;
+  // const episodeNumber = index + 1;
+  // const [episodeName] = Object.values(data);
+  const shortSynopsis = shortText(description);
 
   return (
-    <Link to={`/anime/${route}-${index}`}>
+    <Link to={`/anime/${route}-${id}`}>
       <motion.div className="episode__card" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} animate={{ scale: isHover ? 1.03 : 1 }}>
         <figure style={{ position: "relative" }}>
           <motion.img
@@ -29,8 +28,9 @@ const EpisodeCard = ({ data, index, route }) => {
           </motion.div>
         </figure>
         <div className="episode__details">
+          <p className="episode__synopsis">{duration} m</p>
           <h3 className="episode__title">
-            {episodeNumber}. {episodeName}
+            {episode_number}. {name}
           </h3>
           <p className="episode__synopsis">{shortSynopsis}</p>
         </div>

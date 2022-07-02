@@ -28,6 +28,7 @@
     "react-scripts": "5.0.0",
     "react-scroll-motion": "^0.3.0",
     "react-slick": "^0.28.1",
+    "react-toastify": "^9.0.5",
     "sass": "^1.49.10",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.4.8",

@@ -1,45 +1,86 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { findDOMNode } from "react-dom";
+import { toast } from "react-toastify";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
 import HeaderCategory from "../components/Header/HeaderCategory";
 import "../styles/css/ReproducirAnime.css";
+import { IoChevronBackSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { useApiAnimeParam } from "../hooks/useApiAnime";
 
 const ReproducirAnime = () => {
   const { id, n } = useParams();
-  console.log(n, id);
-  console.log(useParams());
-  const [infoAnime, setInfoAnime] = useState([]);
 
-  useEffect(() => {
-    const apiAnimes = async () => {
-      try {
-        const response = await fetch("https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1");
-        const data = await response.json();
-        const animeSelected = data.results.filter(function (element) {
-          return element.mal_id == id;
+  const { loading, data, error } = useApiAnimeParam(id, "animes");
+
+  const navigate = useNavigate();
+
+  const [fullscreenMode, setFullscreenMode] = useState(false);
+  let player = null;
+  const ref = (p) => {
+    player = p;
+  };
+  const onStart = () => {
+    if (fullscreenMode)
+      findDOMNode(player)
+        .requestFullscreen()
+        .catch((err) => {
+          toast.error("Could not activate full-screen mode :(");
         });
-        setInfoAnime(animeSelected);
-        console.log(infoAnime);
-      } catch (error) {
-        console.log(error);
-      } finally {
-      }
-    };
-    apiAnimes();
-  }, []);
+  };
+
+  const onEnded = () => {
+    setFullscreenMode(document.fullscreenElement !== null);
+  };
+
+  const handleClick = () => {
+    // 👇️ replace set to true
+  };
 
   return (
-    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <HeaderCategory></HeaderCategory>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="page-play">
+      {/* <HeaderCategory></HeaderCategory> */}
       <div className="page-reproductor">
-        {infoAnime.map(({ title, episodes, mal_id }) => {
-          console.log(episodes);
+        {data.map(({ name, seasons, id }) => {
+          console.log(seasons[0].episodes);
+          const episodes = seasons[0].episodes;
+          const episodeSelected = episodes.find((item) => item.id.toString() === n);
+          const episodeURL = episodeSelected.url;
+          const episodeName = episodeSelected.name;
+          const episodeNumber = episodeSelected.episode_number.slice(2);
           return (
             <>
-              <h1 className="title-video">{title}</h1>
+              <motion.div className="title-video" initial={{ opacity: 0.4 }} whileHover={{ opacity: 1 }}>
+                <motion.div className="go-back" onClick={() => navigate(-1)} whileHover={{ scale: 1.1, cursor: "pointer" }}>
+                  <IoChevronBackSharp />
+                </motion.div>
+                <div>
+                  <h1>{name}</h1>
+                  <p className="episode-name">
+                    Episodio {episodeNumber} | {episodeName}
+                  </p>
+                </div>
+              </motion.div>
+
               <section className="video-container">
-                <ReactPlayer width="100%" height="100%" url={episodes[n].link} controls playing onPlay={() => alert("Anime reproducido por ESTACION OTAKU")} />
+                <ReactPlayer
+                  ref={ref}
+                  width="100%"
+                  height="80vh"
+                  url={episodeURL}
+                  controls
+                  playing
+                  onStart={onStart}
+                  onEnded={onEnded}
+                  light={episodeSelected.image}
+                  // config={{
+                  //   youtube: {
+                  //     playerVars: { showinfo: 1 },
+                  //   },
+                  // }}
+                />
               </section>
             </>
           );

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 // import axios from "axios";
 
-const url = "https://api.jsonbin.io/b/6250d0207b69e806cf4ae55d/1";
+const url = process.env.REACT_APP_BASE_API_URL;
 
-const useApiAnime = () => {
+const useApiAnime = (path) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -12,11 +12,10 @@ const useApiAnime = () => {
     const apiAnimes = async () => {
       try {
         setLoading(true);
-        const response = await fetch(url);
+        const response = await fetch(`https://${url}/${path}`);
         console.log(response);
         const fetchedData = await response.json();
-        console.log(fetchedData);
-        setData(fetchedData.results);
+        setData(fetchedData);
       } catch (err) {
         console.log(err);
         setError(err);
@@ -30,16 +29,16 @@ const useApiAnime = () => {
   return { data, error, loading };
 };
 
-export const useApiAnimeParam = (id) => {
+export const useApiAnimeParam = (id, path) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const apiAnimes = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(`https://${url}/${path}`);
         const data = await response.json();
-        const animeSelected = data.results.filter((element) => element.mal_id == id);
+        const animeSelected = data.filter((element) => element.id == id);
         setData(animeSelected);
       } catch (err) {
         console.log(err);

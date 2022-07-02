@@ -29,11 +29,18 @@
 }
 .play-block__details-subtitle {
   font-size: 1.4em;
+  margin-bottom: 1rem;
 }
 .play-block__details-title {
   font-size: 3em;
   font-weight: 600;
   max-width: 50vw;
+}
+.play-block__details-description {
+  width: min(60%, 500px);
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin-top: 0.7rem;
 }
 .play-block__details-button {
   margin-top: 1rem;
@@ -74,4 +81,10 @@
   height: 700px;
   background: linear-gradient(180deg, rgba(6, 10, 25, 0) 10%, rgba(6, 10, 25, 1) 100%);
   bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .play-block__details-description {
+    font-size: 1.5em;
+  }
 }

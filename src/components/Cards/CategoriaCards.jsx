@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./category.css";
 import { NextBtn, PreviousBtn } from "./Arrows";
-const data = [
+const categoryData = [
   {
     id: 1,
     categoryName: "Aventura",
@@ -46,6 +46,8 @@ const carouselProperties = {
   slidesToShow: 5,
   centerMode: true,
   centerPadding: "170px",
+  adaptiveHeight: true,
+
   prevArrow: <PreviousBtn />,
   nextArrow: <NextBtn />,
   responsive: [
@@ -74,14 +76,14 @@ const carouselProperties = {
   ],
 };
 
-const CategoriaCards = ({ setTema }) => {
+const CategoriaCards = ({ setTema, data }) => {
+  console.log(data);
   return (
     <div style={{ zIndex: 10, position: "relative" }}>
       <div className="carousel carousel__container">
         <Slider {...carouselProperties}>
           {data.map((item, index) => {
-            const { image, categoryName } = item;
-            return <CategoryCard key={index} image={image} setTema={setTema} categoryName={categoryName}></CategoryCard>;
+            return <CategoryCard key={index} data={item} setTema={setTema}></CategoryCard>;
           })}
         </Slider>
       </div>
@@ -89,11 +91,13 @@ const CategoriaCards = ({ setTema }) => {
   );
 };
 
-const CategoryCard = ({ image, categoryName, setTema }) => {
+const CategoryCard = ({ data, setTema }) => {
+  const { image, name, animes, id } = data;
   const [isHovered, setIsHovered] = useState(false);
   const onClickImage = (e) => {
     setTema(e.target.alt);
   };
+
   return (
     <Link to="/categoria">
       <div className="category-card__container" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -108,8 +112,12 @@ const CategoryCard = ({ image, categoryName, setTema }) => {
           }}
           style={{ borderRadius: "20px" }}
         ></motion.div>
-        <motion.h3 className="category-card__name" initial={false} animate={{ top: isHovered ? 50 : 70 }}>
-          {categoryName}
+        <motion.h3 className="category-card__name" initial={false} animate={{ top: isHovered ? 60 : 80 }}>
+          {name}
+          <motion.span initial={false} animate={{ opacity: isHovered ? 1 : 0 }} className="category-card__name-animes">
+            {animes.length}
+            <span>Animes</span>
+          </motion.span>
         </motion.h3>
       </div>
     </Link>

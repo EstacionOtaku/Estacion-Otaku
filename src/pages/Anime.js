@@ -9,8 +9,8 @@ import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import ScreenLoader from "../components/Loaders/ScreenLoader";
 import { useApiAnimeParam } from "../hooks/useApiAnime";
 import RenderUI from "../utils/RenderUI";
-import Slider from "react-slick";
-import MovieCard from "../components/Cards/MovieCard";
+import { useNavigate } from "react-router-dom";
+import { IoChevronBackSharp } from "react-icons/io5";
 import EpisodeCarousel from "../components/Carousel/EpisodeCarousel";
 import { shortText } from "../utils/shortText";
 
@@ -20,6 +20,7 @@ const colorTransition = {
 };
 
 const Anime = (imageHeader) => {
+  const navigate = useNavigate();
   const { scrollY } = useViewportScroll();
   const control = useAnimation();
   scrollY.onChange((y) => {
@@ -30,14 +31,13 @@ const Anime = (imageHeader) => {
     }
   });
   const { id } = useParams();
-
   const urlImage = Object.values(imageHeader);
-
   const [movie, setMovie] = useState([]);
   const [dataFilter, setDataFilter] = useState({});
 
-  const useApiAnime = useApiAnimeParam(id);
+  const useApiAnime = useApiAnimeParam(id, "animes");
   const { data, loading, error } = useApiAnime;
+  console.log(data);
 
   useEffect(() => {
     filterData(movie);
@@ -92,19 +92,23 @@ const Anime = (imageHeader) => {
         </>
       ) : (
         <RenderUI keyData={useApiAnime}>
-          {data.map(({ image_url, info, mal_id, episodes, title }, index) => {
+          {data.map(({ front_image, description, id, seasons, name }, index) => {
+            const { episodes } = seasons[0];
             return (
               <section className="anime-section" key={index}>
                 <div className="anime__image-container">
-                  <img src={image_url} alt="" className="anime__image" />
+                  <img src={front_image} alt="" className="anime__image" />
                   <motion.div className="anime__background" variants={colorTransition} initial="initial" animate={control}></motion.div>
                 </div>
                 <div className="anime__details">
-                  <h1 className="anime__details-title">{title}</h1>
+                  <motion.div style={{ position: "absolute", top: "3rem", left: "0rem", fontSize: "1.1em", opacity: 0.8 }} onClick={() => navigate(-1)} whileHover={{ scale: 1.1, cursor: "pointer", opacity: 1 }}>
+                    <IoChevronBackSharp /> Atrás
+                  </motion.div>
+                  <h1 className="anime__details-title">{name}</h1>
                   <div className="anime__details-episodes"> {episodes.length} episodios </div>
-                  <h3 className="anime__details-info">{shortText(info)}</h3>
+                  <h3 className="anime__details-info">{shortText(description)}</h3>
                   <div className="anime__episode-carousel">
-                    <EpisodeCarousel data={episodes} route={mal_id} />
+                    <EpisodeCarousel data={episodes} route={id} />
                   </div>
                 </div>
               </section>
