@@ -12,9 +12,16 @@ const useApiAnime = (path) => {
     const apiAnimes = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://${url}/${path}`);
-        const fetchedData = await response.json();
-        setData(fetchedData);
+        const response = await fetch(`https://${url}/${path}`, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        console.log(response);
+        const json = await response.json();
+        console.log(json);
+        setData(json);
       } catch (err) {
         setError(err);
       } finally {
