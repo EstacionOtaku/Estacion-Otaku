@@ -91,12 +91,12 @@ const Anime = (imageHeader) => {
         </>
       ) : (
         <RenderUI keyData={useApiAnime}>
-          {data.map(({ front_image, description, id, seasons, name }, index) => {
+          {data.map(({ sample_image, description, id, seasons, name }, index) => {
             const { episodes } = seasons[0];
             return (
               <section className="anime-section" key={index}>
                 <div className="anime__image-container">
-                  <img src={front_image} alt="" className="anime__image" />
+                  <img src={sample_image} alt="" className="anime__image" />
                   <motion.div className="anime__background" variants={colorTransition} initial="initial" animate={control}></motion.div>
                 </div>
                 <div className="anime__details">

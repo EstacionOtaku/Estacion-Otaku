@@ -83,6 +83,14 @@
   bottom: 0;
 }
 
+.anime__background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media (min-width: 760px) {
   .play-block__details-description {
     font-size: 1.5em;

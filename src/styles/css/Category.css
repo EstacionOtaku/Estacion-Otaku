@@ -10,12 +10,17 @@
   position: relative;
 }
 .category-title {
-  font-size: 1.8rem;
   font-weight: 600;
   position: absolute;
-  top: 22vh;
+  top: 15vh;
   left: 8%;
   z-index: 200;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+.category-title__title {
+  font-size: 1.8rem;
 }
 .category-gallery__list-container {
 }
@@ -68,6 +73,6 @@
     grid-template-columns: repeat(4, 1fr);
   }
   .category-title {
-    top: 30vh;
+    top: 20vh;
   }
 }

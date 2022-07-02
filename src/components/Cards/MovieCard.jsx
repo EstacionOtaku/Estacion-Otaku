@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const MovieCard = ({ data }) => {
   const [isHover, setIsHover] = useState(false);
-  const { sample_image, id, seasons, category_id, name } = data;
+  const { front_image, id, seasons, category_id, name } = data;
 
   const seasonsNumber = seasons?.length;
 
@@ -20,7 +20,7 @@ const MovieCard = ({ data }) => {
         <div style={{ position: "relative", width: "fit-content" }}>
           <img
             className="card__multi-image_url"
-            src={sample_image}
+            src={front_image}
             alt="movie"
             style={{
               width: "180px",

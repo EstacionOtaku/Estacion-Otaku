@@ -11,6 +11,7 @@ import HeaderCategory from "../components/Header/HeaderCategory";
 import Swal from "sweetalert2";
 import Footer from "../components/Footer/Footer";
 import { getRandomInt } from "../utils/getRandomInt";
+import { IoChevronBackSharp } from "react-icons/io5";
 
 const Category = (imageHeader) => {
   const [isHover, setIsHover] = useState(null);
@@ -70,7 +71,13 @@ const Category = (imageHeader) => {
   return (
     <RenderUI keyData={useApiAnime}>
       <HeaderCategory imageHeader={urlImage} setMovie={setMovie}></HeaderCategory>
-      <h1 className="category-title">{categoryName}</h1>
+
+      <div className="category-title">
+        <motion.div style={{ fontSize: "1.1em", opacity: 0.8 }} onClick={() => navigate(-1)} whileHover={{ scale: 1.1, cursor: "pointer", opacity: 1 }}>
+          <IoChevronBackSharp /> Atrás
+        </motion.div>
+        <h1 className="category-title__title">{categoryName}</h1>
+      </div>
       <PlayBlock data={CTAData} showCategory={false} loading={loading} />
       <h3 style={{ zIndex: 200, position: "relative", fontSize: "2rem", width: "min(90%,1250px)", margin: "0 auto", fontWeight: 600 }}>Animes de {categoryName}</h3>
       <div className="category-gallery">
@@ -85,7 +92,7 @@ const Category = (imageHeader) => {
                   animate={{ boxShadow: isHover === element.id ? "0px 0px 0px 5px rgba(255, 255, 255, 0.727), rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px" : "10px 10px 10px rgba(0, 0, 0, 0.5)", transition: { ease: "easeOut" }, scale: isHover === element.id ? 1.03 : 1 }}
                   className="category-gallery__image-container"
                 >
-                  <img src={element.sample_image} alt={element.name} className="category-gallery__image " />
+                  <img src={element.front_image} alt={element.name} className="category-gallery__image " />
 
                   <motion.div className="category-card__inner" initial={{ opacity: 0 }} animate={{ opacity: isHover === element.id ? 1 : 0 }}>
                     <p className="category-card__episodes">{element.seasons[0].episodes.length} episodios</p>
