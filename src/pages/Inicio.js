@@ -16,6 +16,7 @@ import useApiAnime from "../hooks/useApiAnime";
 import PlayBlock from "../components/PlayBlock/PlayBlock";
 import RenderUI from "../utils/RenderUI.jsx";
 import { getRandomInt } from "../utils/getRandomInt";
+import { shuffle, shuffle2, shuffle3 } from "../utils/shuffle";
 
 const Inicio = ({ setTema, imageHeader }) => {
   const [isAnimeSelected, setIsAnimeSelected] = useState();
@@ -65,13 +66,10 @@ const Inicio = ({ setTema, imageHeader }) => {
   if (loading) {
     return <ScreenLoader />;
   }
-  const top10Data = data?.filter((element) => {
-    return element.is_active === true;
-  });
+  const top10Data = [...shuffle(data)];
 
-  const sugerenciasData = data?.filter((element) => {
-    return element.is_active === true;
-  });
+  const sugerenciasData = [...shuffle2(data)];
+  const mostViewed = [...shuffle3(data)];
 
   const CTAPlayBlock = top10Data[isAnimeSelected];
   return (
@@ -102,7 +100,7 @@ const Inicio = ({ setTema, imageHeader }) => {
           <section style={{ paddingTop: "4rem" }}>
             <Carousel title="Top 10 Perú" data={top10Data}></Carousel>
             <Carousel title="Sugerencias" data={sugerenciasData}></Carousel>
-            <Carousel title="Los más vistos" data={data}></Carousel>
+            <Carousel title="Los más vistos" data={mostViewed}></Carousel>
           </section>
         </RenderUI>
       )}

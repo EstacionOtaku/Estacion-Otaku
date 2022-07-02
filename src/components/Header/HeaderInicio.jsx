@@ -13,7 +13,7 @@ const HeaderInicio = (imageHeader) => {
   const navigate = useNavigate();
   const [userModal, setUserModal] = useState(false);
   const handleLogout = async () => {
-    localStorage.removeItem("accessToken");
+    localStorage.clear();
     navigate("/");
   };
   const handleUserOptions = () => {
