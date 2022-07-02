@@ -82,7 +82,6 @@ const Category = (imageHeader) => {
       <h3 style={{ zIndex: 200, position: "relative", fontSize: "2rem", width: "min(90%,1250px)", margin: "0 auto", fontWeight: 600 }}>Animes de {categoryName}</h3>
       <div className="category-gallery">
         {data[0]?.animes.map((element) => {
-          console.log(element);
           return (
             <article className="category-gallery__list-container" key={element.id}>
               <Link to={`/anime/${element.id}`}>
