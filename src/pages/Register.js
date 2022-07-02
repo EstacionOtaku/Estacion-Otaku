@@ -4,20 +4,27 @@ import { Link, useNavigate } from "react-router-dom";
 import { AlertError } from "../components/Alert/AlertError";
 import Swal from "sweetalert2";
 import "../styles/css/FormSesion.css";
-import portadaImagen from "../assets/portada/portada-singup.png";
 import Footer from "../components/Footer/Footer";
 import BackButton from "../components/Back/Back";
 import Cover from "../components/Cover/Cover";
 import { motion } from "framer-motion";
+import axiosInstance from "../config/axiosInstance";
+import Spinner from "../components/Loaders/Spinner";
+import SmallLoader from "../components/Loaders/SmallLoader";
+
+const initialData = {
+  email: "",
+  password: "",
+  username: "",
+  first_name: "",
+  last_name: "",
+};
 
 const Register = () => {
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+  const [user, setUser] = useState(initialData);
   const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { signup } = useAuth();
 
   const handleChange = (e) => {
     const {
@@ -28,16 +35,26 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    if (user.password !== user.passwordconfirm) {
+    if (user.password !== user.passwordConfirm) {
       setError("Las contraseñas son distintas.");
     } else {
       try {
-        await signup(user.email, user.password);
-        localStorage.setItem("nombre", user.name);
+        setLoading(true);
+        delete user.passwordConfirm;
+        const method = "POST";
+        const resource = "/auth/signup";
+        const options = {
+          method,
+          url: resource,
+          data: user,
+        };
+        const { data } = await axiosInstance(options);
+        setUser(initialData);
+        setLoading(false);
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Te has registrado con éxito",
+          title: `Gracias ${data.first_name} por unirte!`,
           showConfirmButton: false,
           timer: 1500,
         });
@@ -52,7 +69,7 @@ const Register = () => {
           setError("La contraseña debe contener mas de 6 caracteres");
         } else if (error.code === "auth/email-already-in-use") {
           setError("Este correo ya está registrado");
-        } else if (user.password !== user.passwordconfirm) {
+        } else if (user.password !== user.passwordConfirm) {
           setError("Las contraseñas son distintas");
         }
       }
@@ -73,14 +90,20 @@ const Register = () => {
           <div className="form-input-container">
             <input className="form-input" type="email" placeholder="Correo electrónico" name="email" id="email" onChange={handleChange} />
 
-            <input className="form-input" type="text" placeholder="Nombre Completo" name="name" id="name" onChange={handleChange} />
+            <input className="form-input" type="text" placeholder="Nombre" name="first_name" id="first_name" onChange={handleChange} />
+
+            <input className="form-input" type="text" placeholder="Apellido" name="last_name" id="last_name" onChange={handleChange} />
+
+            <input className="form-input" type="text" placeholder="Nombre de usuario" name="username" id="username" onChange={handleChange} />
 
             <input className="form-input" type="password" placeholder="Contraseña" name="password" id="password" onChange={handleChange} />
 
-            <input className="form-input" type="password" placeholder="Confirma tu contraseña" name="passwordconfirm" id="passwordconfirm" onChange={handleChange} />
+            <input className="form-input" type="password" placeholder="Confirma tu contraseña" name="passwordConfirm" id="passwordConfirm" onChange={handleChange} />
           </div>
           <div className="form__buttons">
-            <button className="button-option">Regístrate ahora</button>
+            <button className="button-option" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              Regístrate ahora {loading && <SmallLoader></SmallLoader>}
+            </button>
             <Link to="/login" className="other-option">
               ¿Tienes una cuenta?
             </Link>
