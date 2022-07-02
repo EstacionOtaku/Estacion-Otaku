@@ -16,7 +16,7 @@ const HeaderCategory = ({ imageHeader, setMovie }) => {
   const nameUser = localStorage.getItem("nombre");
 
   const handleLogout = () => {
-    sessionStorage.removeItem("accessToken");
+    localStorage.removeItem("accessToken");
     navigate("/");
     // try {
     //   await logout();

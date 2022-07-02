@@ -12,8 +12,8 @@ const HeaderInicio = (imageHeader) => {
   // const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [userModal, setUserModal] = useState(false);
-  const handleLogout = () => {
-    sessionStorage.removeItem("accessToken");
+  const handleLogout = async () => {
+    localStorage.removeItem("accessToken");
     navigate("/");
   };
   const handleUserOptions = () => {
