@@ -52,12 +52,12 @@ const HeaderCategory = ({ imageHeader, setMovie }) => {
           </Link>
         </div>
         <div className="header-container-login">
-          <div className="input-group rounded" style={{ width: "" }}>
+          {/* <div className="input-group rounded" style={{ width: "" }}>
             <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" onChange={(e) => handleChange(e.target.value)} />
           </div>
           <figure className="header__search-container">
             <img src={search} className="search__image"></img>
-          </figure>
+          </figure> */}
           <p className="header__username">
             {
               // user.displayName || nameUser || user.email
@@ -77,9 +77,9 @@ const HeaderCategory = ({ imageHeader, setMovie }) => {
           {settingsUser && <ModalConfig />}
           {userModal && (
             <div className="header__modal-user">
-              <button className="header__button-logout" onClick={handleSettingsUser}>
+              {/* <button className="header__button-logout" onClick={handleSettingsUser}>
                 Editar Cuenta
-              </button>
+              </button> */}
 
               <button className="header__button-logout" onClick={handleLogout}>
                 Cerrar Sesión

@@ -82,9 +82,9 @@ const HeaderInicio = (imageHeader) => {
 
           {userModal && (
             <div className="header__modal-user">
-              <Link to="/settings-acount" className="header__button-logout">
+              {/* <Link to="/settings-acount" className="header__button-logout">
                 Editar Cuenta
-              </Link>
+              </Link> */}
               <button className="header__button-logout" onClick={handleLogout}>
                 Cerrar Sesión
               </button>
