@@ -1,4 +1,4 @@
-import ctaDevice from "../../assets/Info/device_car_eng.png";
+import ctaDevice from "../../assets/device_card.png";
 import "./Info.css";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
