@@ -16,6 +16,7 @@ import useApiAnime from "../hooks/useApiAnime";
 import PlayBlock from "../components/PlayBlock/PlayBlock";
 import RenderUI from "../utils/RenderUI.jsx";
 import { getRandomInt } from "../utils/getRandomInt";
+import { shuffle } from "../utils/shuffle";
 
 const Inicio = ({ setTema, imageHeader }) => {
   const [isAnimeSelected, setIsAnimeSelected] = useState();
@@ -65,13 +66,9 @@ const Inicio = ({ setTema, imageHeader }) => {
   if (loading) {
     return <ScreenLoader />;
   }
-  const top10Data = data?.filter((element) => {
-    return element.is_active === true;
-  });
+  const top10Data = data && shuffle(data);
 
-  const sugerenciasData = data?.filter((element) => {
-    return element.is_active === true;
-  });
+  const sugerenciasData = data && shuffle(data);
 
   const CTAPlayBlock = top10Data[isAnimeSelected];
   return (
